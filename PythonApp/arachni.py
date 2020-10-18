@@ -133,13 +133,8 @@ if __name__ == '__main__':
    a = ArachniClient()
    a.profile('./profiles/default.json')
    #'http://testphp.vulnweb.com/','http://23.88.112.156/xvwa/'
-   a.target('https://c37fe70347e3.ngrok.io/')
-   #print a.start_scan()
-   print a.get_status('5d3600c55c5727a25fb03a56678aefa9')
-   print a.get_scans()
-   print a.get_report('5d3600c55c5727a25fb03a56678aefa9', 'xml')
-   b = a.get_report('5d3600c55c5727a25fb03a56678aefa9', 'xml')
-   c = open("report.txt","a")
-   c.write(b)
-   c.close()
+   a.target('https://acf49629d204.ngrok.io/')
+   #print(a.start_scan())
+   print a.get_status('277cddcd61aa225c1a8579a4ee9864ed')
+   print a.get_report('277cddcd61aa225c1a8579a4ee9864ed', 'xml')
    
