@@ -137,4 +137,11 @@ if __name__ == '__main__':
    #print(a.start_scan())
    print a.get_status('277cddcd61aa225c1a8579a4ee9864ed')
    print a.get_report('277cddcd61aa225c1a8579a4ee9864ed', 'xml')
+   #b = a.get_report("132d179516d25424a4cdcabe193e83ea","xml")
+   #b= b+"<link rel='stylesheet' href='mystyle.css'>"
+   #b= b+"<title>scanning report</title>"
+   #b = "<h1>Scanning Report</h1>" + b
+   #c = open("reporttesthtml.html","a")
+   #c.write(b)
+   #c.close()
    
