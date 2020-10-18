@@ -131,17 +131,17 @@ class ArachniClient(object):
  
 if __name__ == '__main__':
    a = ArachniClient()
-   a.profile('./profiles/default.json')
+   a.profile('./profiles/sql_injection.json')
    #'http://testphp.vulnweb.com/','http://23.88.112.156/xvwa/'
-   a.target('https://acf49629d204.ngrok.io/')
+   a.target('https://89dddca4e4d8.ngrok.io')
    #print(a.start_scan())
-   print a.get_status('277cddcd61aa225c1a8579a4ee9864ed')
-   print a.get_report('277cddcd61aa225c1a8579a4ee9864ed', 'xml')
-   #b = a.get_report("132d179516d25424a4cdcabe193e83ea","xml")
+   print a.get_status('119075032cbe49989dd2025b7a2a5e37')
+   print a.get_report('119075032cbe49989dd2025b7a2a5e37', 'xml')
+   #b = a.get_report("65b5a404763de4bcadfbed3eb732c190","xml")
    #b= b+"<link rel='stylesheet' href='mystyle.css'>"
    #b= b+"<title>scanning report</title>"
    #b = "<h1>Scanning Report</h1>" + b
-   #c = open("reporttesthtml.html","a")
+   #c = open("reporttesthtml.html","w")
    #c.write(b)
    #c.close()
    

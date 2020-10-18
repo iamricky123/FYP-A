@@ -5,7 +5,7 @@ client = ArachniClient()
 readURL = open("id.txt","r")
 URL = readURL.readlines()
 
-client.profile('./profiles/default.json')
+
 client.target(URL[0]) # set target url
 container = client.start_scan()
 
