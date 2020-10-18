@@ -13,7 +13,7 @@ execfile("PythonApp.py") #get scan ID
 
 f = open("id.txt", "r")
 readFile = f.readlines()
-getID = 'd3a9e39d51e3f39cfbd58c7bd657dc4b'
+getID = readFile[0]
 
 while(1):
     if(client.get_report(getID, 'xml') == "None"):
