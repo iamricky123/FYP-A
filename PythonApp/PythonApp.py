@@ -1,22 +1,26 @@
 from arachni import *
+import json
+
+
 
 client = ArachniClient()
+client.profile('./profiles/default.json')
 
-readURL = open("id.txt","r")
-URL = readURL.readlines()
+jsonOpen = open('./input/input.json', 'r')
+data = json.load(jsonOpen)
+url = data["url"]
+jsonOpen.close()
 
-
-client.target(URL[0]) # set target url
+client.target(url) # set target url
 container = client.start_scan()
 
-readURL.close()
-
-f = open("id.txt","w+")
+jsonOpen2 = open('./input/input.json', 'w')
 _id = container.get("id")
-print(_id)
-f.write(_id)
-f.close()
-        
-#client.get_scans() # you can get scan ids that are requested.
-#client.get_report('f708c31c5532b84f9d76e0c79570752c', 'xml') # get report in several format
+data["scan_id"] = _id
+json.dump(data, jsonOpen2, indent=4)
+jsonOpen2.close()
+
+##client.get_status('0c3ed20a3bc3bc4f3473d2282367b61b')
+##client.get_scans() # you can get scan ids that are requested.
+##client.get_report('0c3ed20a3bc3bc4f3473d2282367b61b', 'xml') # get report in several format
  
