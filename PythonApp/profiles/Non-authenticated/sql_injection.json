@@ -65,20 +65,13 @@
   "checks" : [
     "sql_injection",
     "sql_injection_differential",
-    "sql_injection_timing"
+    "sql_injection_timing",
+	"no_sql_injection", 
+    "no_sql_injection_differential", 
   ],
   "platforms" : [],
   "plugins" : {
-	"autologin" : {
-      "url" : "https://e388a4cea58f.ngrok.io",
-      "parameters" : "email=admin@admin.com&password=password",
-      "check" : "logout"
-    },
-    "autothrottle" : {},
-    "discovery" : {},
-    "healthmap" : {},
-    "timing_attacks" : {},
-    "uniformity" : {}
+
   },
   "no_fingerprinting" : false,
   "authorized_by" : null

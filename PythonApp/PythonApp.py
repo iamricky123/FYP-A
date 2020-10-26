@@ -4,13 +4,14 @@ import json
 
 
 client = ArachniClient()
-client.profile('./profiles/default.json')
 
 jsonOpen = open('./input/input.json', 'r')
 data = json.load(jsonOpen)
 url = data["url"]
+profile = data["profile"]
 jsonOpen.close()
 
+client.profile('./profiles/'+ profile + '.json')
 client.target(url) # set target url
 container = client.start_scan()
 
