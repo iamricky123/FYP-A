@@ -50,12 +50,13 @@ DELETE /scans/:id
  
 '''
  
-import urllib2
+import urllib.request
 import json
  
 class ArachniClient(object):
+
  
-   with open('./profiles/default.json') as f:
+   with open('./profiles/Non-authenticated/webapp.json') as f:
       default_profile = json.load(f)
  
    def __init__(self, arachni_url = 'http://127.0.0.1:7331'):
@@ -63,23 +64,27 @@ class ArachniClient(object):
       self.options = ArachniClient.default_profile
  
    def get_http_request(self, api_path):
-      return urllib2.urlopen(self.arachni_url + api_path).read()
+      with urllib.request.urlopen(self.arachni_url + api_path) as response:
+         return response.read()
  
    def post_api(self, api_path):
-      options = json.dumps(self.options)
-      request = urllib2.Request(self.arachni_url + api_path, options)
+      options = json.dumps(self.options).encode('utf-8')
+      request = urllib.request.Request(self.arachni_url + api_path, options)
       request.add_header('Content-Type', 'application/json')
-      return urllib2.urlopen(request).read()
+      with urllib.request.urlopen(request) as response :
+         return response.read()
  
    def put_request(self, api_path):
-      request = urllib2.Request(self.arachni_url + api_path)
+      request = urllib.request(self.arachni_url + api_path)
       request.get_method = lambda: 'PUT'
-      return urllib2.urlopen(request).read()
+      with urllib.request.urlopen(request) as response :
+         return response.read()
  
    def delete_request(self, api_path):
-      request = urllib2.Request(self.arachni_url + api_path)
+      request = urllib.request(self.arachni_url + api_path)
       request.get_method = lambda: 'DELETE'
-      return urllib2.urlopen(request).read()
+      with urllib.request.urlopen(request) as response :
+         return response.read()
    #获取扫描    
    def get_scans(self):
       return json.loads(self.get_http_request('/scans'))
@@ -104,10 +109,10 @@ class ArachniClient(object):
          elif report_format == None:
             return self.get_http_request('/scans/' + scan_id + '/report')
          else:
-            print 'your requested format is not available.'
+            print('your requested format is not available.')
  
       else:
-         print 'your requested scan is in progress.'
+         print('Scanning In Progress......')
    #删除扫描
    def delete_scan(self, scan_id):
       return self.delete_request('/scans/' + scan_id)
@@ -116,14 +121,14 @@ class ArachniClient(object):
       if self.options['url']:
          return json.loads(self.post_api('/scans'))
       else:
-         print 'Target is not set!'
+         print('Target is not set!')
  
    def target(self, target_url):
       try:
-         urllib2.urlopen(target_url)
+         urllib.request.urlopen(target_url)
          self.options['url'] = target_url
-      except urllib2.HTTPError, e:
-         print e.code
+      except urllib.request.HTTPError as e:
+         print(e.code)
  
    def profile(self, profile_path):
       with open(profile_path) as f:
@@ -131,17 +136,10 @@ class ArachniClient(object):
  
 if __name__ == '__main__':
    a = ArachniClient()
-   a.profile('./profiles/sql_injection.json')
+   a.profile('./profiles/default.json')
    #'http://testphp.vulnweb.com/','http://23.88.112.156/xvwa/'
-   a.target('https://89dddca4e4d8.ngrok.io')
-   #print(a.start_scan())
-   print a.get_status('119075032cbe49989dd2025b7a2a5e37')
-   print a.get_report('119075032cbe49989dd2025b7a2a5e37', 'xml')
-   #b = a.get_report("65b5a404763de4bcadfbed3eb732c190","xml")
-   #b= b+"<link rel='stylesheet' href='mystyle.css'>"
-   #b= b+"<title>scanning report</title>"
-   #b = "<h1>Scanning Report</h1>" + b
-   #c = open("reporttesthtml.html","w")
-   #c.write(b)
-   #c.close()
+   a.target('http://testphp.vulnweb.com/')
+   print(a.start_scan())
+##   print(a.get_status('277cddcd61aa225c1a8579a4ee9864ed'))
+##   print (a.get_report('277cddcd61aa225c1a8579a4ee9864ed', 'xml'))
    

@@ -74,7 +74,7 @@
   "platforms" : [],
   "plugins" : {
 	"autologin" : {
-      "url" : "https://1db49b2d35d3.ngrok.io/",
+      "url" : "http://710377d96d5c.ngrok.io/login",,
       "parameters" : "email=admin@admin.com&password=password",
       "check" : "logout"
     },
