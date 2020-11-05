@@ -67,12 +67,20 @@
     "sql_injection_differential",
     "sql_injection_timing",
 	"no_sql_injection", 
+<<<<<<< HEAD
     "no_sql_injection_differential", 
+=======
+    "no_sql_injection_differential" 
+>>>>>>> Ming
   ],
   "platforms" : [],
   "plugins" : {
 	"autologin" : {
+<<<<<<< HEAD
       "url" : "http://710377d96d5c.ngrok.io/login",,
+=======
+      "url" : "http://710377d96d5c.ngrok.io/login",
+>>>>>>> Ming
       "parameters" : "email=admin@admin.com&password=password",
       "check" : "logout"
     },
