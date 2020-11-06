@@ -20,7 +20,7 @@
     "request_headers" : {},
     "response_max_size" : 500000,
     "cookies" : {},
-    "authentication_type" : "auto"
+	"authentication_type" : "auto"
   },
   "audit" : {
     "parameter_values" : true,
@@ -63,36 +63,15 @@
     "force" : false
   },
   "checks" : [
-    "sql_injection",
-    "sql_injection_differential",
-    "sql_injection_timing",
-	"no_sql_injection", 
-<<<<<<< HEAD
-    "no_sql_injection_differential", 
-  ],
-  "platforms" : [],
-  "plugins" : {
-<<<<<<<< HEAD:PythonApp/profiles/Non-authenticated/sql_injection.json
-
-========
-	"autologin" : {
-      "url" : "http://710377d96d5c.ngrok.io/login",,
-      "parameters" : "email=admin@admin.com&password=password",
-      "check" : "logout"
-    },
-    "autothrottle" : {},
-    "discovery" : {},
-    "healthmap" : {},
-    "timing_attacks" : {},
-    "uniformity" : {}
->>>>>>>> Ming:PythonApp/profiles/xss.json
-=======
-    "no_sql_injection_differential"
+		"sql_injection",
+		"sql_injection_differential",
+		"sql_injection_timing",
+		"no_sql_injection", 
+		"no_sql_injection_differential", 
   ],
   "platforms" : [],
   "plugins" : {
 
->>>>>>> Ming
   },
   "no_fingerprinting" : false,
   "authorized_by" : null

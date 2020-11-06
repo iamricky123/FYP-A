@@ -77,10 +77,6 @@
         "common_files", 
         "interesting_responses", 
         "mixed_resource",
-<<<<<<< HEAD
-        "trainer", 
-=======
         "trainer"
->>>>>>> Ming
     ]
 }

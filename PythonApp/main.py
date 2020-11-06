@@ -96,19 +96,19 @@ def profile():
 def profile_descriptions():
     print("Web Application Scan")
     print("-----------------------")
-    print("The web application scan focuses on the vulnerabilities of the web application such as..... ")
+    print("The web application scan focuses on the vulnerabilities of the web application such as XSS attacks, brute force and CSRF")
     print("\n")
     print("Server Scan")
     print("-----------------------")
-    print("The server scan does checks such as..... ")
+    print("The server scan does checks such as backdoors, directories, files and mixed resources")
     print("\n")
     print("SQL Injection scan")
     print("-----------------------")
-    print("SQL Injection sql focuses on the server side...")
+    print("SQL Injection sql is a injection attack which control database server behind the web application")
     print("\n")
     print("Full Audit scan")
     print("-----------------------")
-    print("Performs a full scan on the web application including server side")
+    print("Performs a full scan on the web application including server side and databases")
 
 
 #Prompts user for URL and saved in the json file for other functions to reference

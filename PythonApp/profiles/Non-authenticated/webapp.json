@@ -47,13 +47,10 @@
     }, 
     "platforms": [], 
     "session": {}, 
-<<<<<<< HEAD
     "plugins": {
 
     }, 
-=======
     "plugins": {}, 
->>>>>>> Ming
     "authorized_by": null, 
     "scope": {
         "exclude_content_patterns": [], 
