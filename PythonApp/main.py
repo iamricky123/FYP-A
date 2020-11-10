@@ -2,6 +2,9 @@ from arachni import *
 import time
 import json
 import os
+import xml.etree.ElementTree as ET
+import webbrowser
+
 
 
 def clear(): 
@@ -24,7 +27,7 @@ def auth_scan_parameters(URL, user, _pass):
     json.dump(data, file1, indent=4)
     file1.close()
 
-#Get current selected profile from json file 
+#Get current selected profile from json file
 def get_Profile():
     file = open('./input/input.json', 'r')#open input json file 
     data = json.load(file)
@@ -57,7 +60,7 @@ def edit_profile(insert_prof):
 
 #Displays the profiles available
 def profile():
-    while(1):
+     while(1):
         print("----------Scan Profiles-----------")
         print("[1] Web Application Scan")
         print("[2] Full Audit Scan")
@@ -125,6 +128,7 @@ def userInput():
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
+
 
 #Gets the current scan ID from the json file
 def get_ID():
@@ -225,7 +229,76 @@ def authenticate():
             clear()
     return True
 
+#Generate final report with auto-open browser
+def generateReport():
+    report_tree = ET.parse('reporthtml.xml')
+    report_root = report_tree.getroot()
+    solution_tree = ET.parse('solution.xml')
+    solution_root = solution_tree.getroot()
+    
+    if (report_root.text == 'None'):
+        f = open("ScanningReport.html","w")
+        f.write("<html lang='en'>")
+        f.write("<head>")
+        f.write("<link rel='stylesheet' href='mystyle1.css'>")
+        f.write("</head>")
+        f.write("<body>")
+        f.write("<div class='report'>")
+        f.write("<h1>Scanning Report</h1>")
+        f.write("<p class='name'>None</p>")
+        f.write("</div>")
+        f.write("</body>")
+        f.write("</html>")
+        f.close()
+    else:
+        f = open("ScanningReport.html","w")
+        f.write("<html lang='en'>")
+        f.write("<head>")
+        f.write("<link rel='stylesheet' href='mystyle1.css'>")
+        f.write("</head>")
+        f.write("<body>")
+        f.write("<div class='report'>")
+        f.write("<h1>Scanning Report</h1>")
+        f.write("<p class='name'>Issue(s)</p>")
+        f.write("<p class='description'>Description</p>")
+        f.write("<p class='solution'>Solution</p>")
+        f.write("<p class='url'>URL</p>")
 
+        for report1 in report_root:
+            for report2 in report1:
+                for report3 in report2:
+                    for report4 in report2.findall('description'):
+                        for report5 in report3.findall('name'):
+                            report_description = report4.text
+                            report_name = report5.text
+                            for report6 in report2.findall('vector'):
+                                for report7 in report6.findall('url'):
+                                    report_url = report7.text
+                                    for solution1 in solution_root.findall('select'):
+                                        for solution2 in solution1.findall('name'):
+                                            for solution3 in solution1.findall('description'):
+                                                for solution4 in solution1.findall('solution'):
+                                                    solution_name = solution2.text
+                                                    solution_description = solution3.text
+                                                    solution_solution = solution4.text
+                                                    if (solution_name == report_name):
+                                                        f.write("<p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>")
+                                                        f.write("<p class='name'>"+solution_name+"</p>")
+                                                        f.write("<p class='description'>"+report_description+"</p>")
+                                                        f.write("<p class='solution'>"+solution_solution+"</p>")
+                                                        f.write("<p class='url'>"+report_url+"</p>")
+                                                        
+                                                
+
+
+        f.write("</div>")
+        f.write("</body>")
+        f.write("</html>")  
+        f.close()
+
+    filename = "ScanningReport.html"
+    webbrowser.open_new_tab(filename)
+    
 
 def main():
     client = ArachniClient()
@@ -250,13 +323,14 @@ def main():
                 print(client.get_status(get_ID()))
                 print(client.get_report(get_ID(), 'xml'))
                 b = client.get_report(get_ID(), 'xml')
-                b = b + "<link rel='stylesheet' href='mystyle.css'>"
-                b = b + "<title>scanning report</title>"
-                b = "<h1>scanning report</h1>" + b
-                c = open("reporttesthtml.html","w")
+                if (type(b) == bytes):
+                    b = b.decode("utf-8")
+                elif (b == None):
+                    b = "<?xml version='1.0'?><report>None</report>"
+                c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                f.close()
+                generateReport()
                 break
         
     else:
@@ -268,13 +342,14 @@ def main():
                 print(client.get_status(get_ID()))
                 print(client.get_report(get_ID(), 'xml'))
                 b = client.get_report(get_ID(), 'xml')
-                b = b + "<link rel='stylesheet' href='mystyle.css'>"
-                b = b + "<title>scanning report</title>"
-                b = "<h1>scanning report</h1>" + b
-                c = open("reporttesthtml.html","w")
+                if (type(b) == bytes):
+                    b = b.decode("utf-8")
+                elif (b == None):
+                    b = "<?xml version='1.0'?><report>None</report>"
+                c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                f.close()
+                generateReport()
                 break
 
             
