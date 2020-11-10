@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<data>
+<select>
+	<name>Backdoors</name>
+	<description>Common Backdoors on server</description>
+	<solution>Implement firewalls in place that can block entry points from all but authorized users</solution>
+</select>
+
+<select>
+	<name>Backup Directories</name>
+	<description>Backup Directories is the directories which saved all the backups
+</description>
+	<solution>Isolate the backups by implementing authentication on the backups</solution>
+</select>
+
+<select>
+	<name>CAPTCHA</name>
+	<description>There is CAPTCHA test implemented </description>
+	<solution>Ensure wide range of type of CAPTCHA is implemented to avoid CAPTCHA bypass
+</solution>
+</select>
+
+<select>
+	<name>Common Directories</name>
+	<description>Common Directories are the directories which contained files shared by the server and client parts of the application</description>
+	<solution>Ensure users’ access rights are restricted to the correct privilege level</solution>
+</select>
+
+<select>
+	<name>Cookie Set for Parent Domain</name>
+	<description>When the cookie is set for the parent domain, rather than the host, this could indicate that the same cookie could be used to access other hosts within that domain.</description>
+	<solution>Remove the explicit domain attribute from the Set-cookie directive, then the cookie will have default scope which is safe and appropriate in most situations
+</solution>
+</select>
+
+<select>
+	<name>Credit Card Number Disclosure</name>
+	<description>Application sometimes disclose sensitive financial information such as credit card numbers</description>
+	<solution>Application sometimes disclose sensitive financial information such as credit card numbers</solution>
+</select>
+
+<select>
+	<name>CVS/SVN Users</name>
+	<description>Concurrent Version System (CVS) and Subversion (SVN) provide a method for application developers to control different versions of their code.</description>
+	<solution>Do not display the CVS and SVN information to end user by putting this information into a server-side code comment block.</solution>
+</select>
+
+<select>
+	<name>Directory Listing</name>
+	<description>An automated listing that list the contents of directories that do not have an index page present</description>
+	<solution>Configure the web server to prevent directory listings for all paths beneath the web root</solution>
+</select>
+
+<select>
+	<name>E-mail Address</name>
+	<description>Email addresses disclosed in the application which might be used at the application’s login or social engineering attacks</description>
+	<solution>Remove email addresses that are unnecessary or replacing personal addresses with anonymous mailbox addresses</solution>
+</select>
+
+<select>
+	<name>Form-based File Upload</name>
+	<description>A form in an HTMl document can contain an input element ‘type=”file”’ which enable user include one or more files into the form submission</description>
+	<solution>Perform scanning and filtering on the uploaded files before being made available to other users. Discard the file once it's in doubt</solution>
+</select>
+
+<select>
+	<name>HTTP Strict Transport Security</name>
+	<description>The application fails to prevent users from connecting to it over unencrypted connections</description>
+	<solution>Restrict the instruct web browsers to only access the application using HTTPS</solution>
+</select>
+
+<select>
+	<name>.htaccess LIMIT Misconfiguration</name>
+	<description>A blacklisting approach which server administrator may accidentally miss adding certain HTTp methods to be blocked</description>
+	<solution>Preferred configuration is to prevent the use of unauthorised HTTP methods by utilising the ‘(LimitExcept)’ directive.</solution>
+</select>
+
+<select>
+	<name>HTML Objects</name>
+	<description>The ‘(object)’ tag defines a container for an external resource</description>
+	<solution>Avoid exposing object references in URLs and verify authorization to all reference objects.</solution>
+</select>
+
+<select>
+	<name>HttpOnly Cookies</name>
+	<description>An additional flag included in a Set-Cookie HTTp response header</description>
+	<solution>Implement HttpOnly Cookies in the application to prevent the session cookie being theft or modified by malicious script</solution>
+</select>
+
+<select>
+	<name>HTTP PUT</name>
+	<description>The HTTP PUT method is normally used to upload data that is saved on the server at a user-supplied URL</description>
+	<solution>Disable HTTP PUT method on the server</solution>
+</select>
+
+<select>
+	<name>Insecure Client-access Policy</name>
+	<description>When a domain is specified in ClientAcessPolicy.xml file, the site declares that it is willing to allow the operators of any servers in that domain to obtain any document on the server where the policy file resides.</description>
+	<solution>Carefully evaluate which sites will be allowed to make cross-domain calls</solution>
+</select>
+
+<select>
+	<name>Insecure Cookies</name>
+	<description>Cookies that are served over an encrypted channel but without having the ‘secure’ flag set</description>
+	<solution>Cookies must be marked as secure and only be transmitted if the communications channel with the host is a secure one</solution>
+</select>
+
+<select>
+	<name>Insecure CORS Policy</name>
+	<description>An insecure CORS configuration allows any website to trigger request with user credentials to the target application and read the responses</description>
+	<solution>The application should be configured with an allowlist including only specific and trusted domains to perform CORS requests</solution>
+</select>
+
+<select>
+	<name>Insecure Cross-domain Policy</name>
+	<description>When a domain is specified in crossdomain.xml file, the site declares that it is willing to allow the operators of any servers in that domain to obtain any document on the server where the policy file resides.</description>
+	<solution>Carefully evaluate which sites will be allowed to make cross-domain calls</solution>
+</select>
+
+<select>
+	<name>Interesting Responses</name>
+	<description>Non 200 (OK) server responses</description>
+	<solution>Select the most recent system restore point and run System Restore
+</solution>
+</select>
+
+<select>
+	<name>Localstart.asp</name>
+	<description>Checks for localstart.asp to prevent brute force attack</description>
+	<solution>If the pages being protected are not required for the functionality of the web application they should be removed, otherwise, it is recommended that basis and basic realm authentication are not used to protect against pages requiring authentication</solution>
+</select>
+
+<select>
+	<name>Mixed Resource</name>
+	<description>Looks for resources served over HTTP when the HTML code is server over HTTPS  as the server might serve resources over an unencrypted channel as well, which can lead to compromise of data</description>
+	<solution>All pages and/or resources on the affected side should be secured equally, utilising the latest and most secure encryption protocols</solution>
+</select>
+
+<select>
+	<name>Origin Spoof Access Restriction Bypass</name>
+	<description>Retries denied requests with a spoofed origin header to trick the web application into thinking that the request originated from localhost and checks whether the restrictions was bypassed</description>
+	<solution>The origin header should never be used to validate a client’s access as it is trivial to change</solution>
+</select>
+
+<select>
+	<name>Password field with auto-complete</name>
+	<description>Greps pages for forms which have password fields without explicitly disabling auto-complete as the attacker can captured the passwords stored to gain control over.</description>
+	<solution>Include the attribute ‘autocomplete=”off”’ within the FORM tag of within the relevant INPUT tags to prevent browsers or applications from storing credentials entered into HTML forms</solution>
+</select>
+
+<select>
+	<name>Private IP address finder</name>
+	<description>Scans pages for private IP addresses to prevent attacker carries out network-layer attacks</description>
+	<solution>Configure services to mask the private address</solution>
+</select>
+
+<select>
+	<name>SSN</name>
+	<description>Greps pages for disclosed US Social Security Numbers</description>
+	<solution>Prevent from exposing Social Security Numbers on the website or application</solution>
+</select>
+
+<select>
+	<name>Unencrypted password forms</name>
+	<description>Looks for password inputs that don’t submit data over a encrypted channel which the attacker might attempt to compromise credentials passed</description>
+	<solution>The site should be secured utilising the latest and most secure encryption protocols</solution>
+</select>
+
+<select>
+	<name>WebDAV</name>
+	<description>Checks for WebDAV enabled directories which might allow authorised users to remotely add and change content on your web server</description>
+	<solution>It is recommended to disable this extension if its not been used</solution>
+</select>
+
+<select>
+	<name>Missing X-Frame-Options header</name>
+	<description>Checks the host for a missing “X-Frame-Options” header</description>
+	<solution>Employing defensive code in the UI to ensure that the current frame is the most top level window</solution>
+</select>
+
+<select>
+	<name>XST</name>
+	<description>Sends an HTTP TRACE request and checks if it succeeded as XST could be used as a method user’s cookies</description>
+	<solution>Set the TraceEnable “off” in the main configuration file</solution>
+</select>
+
+<select>
+	<name>Code injection</name>
+	<description>Code injection is defined as injecting codes that executed by the application, these types of attack is made possible because of the lack of proper input or output data validation such as data format, number of characters, number of data.</description>
+	<solution>Use prepared statements when you are creating application.</solution>
+</select>
+
+<select>
+	<name>Code injection</name>
+	<description>Code injection is defined as injecting codes that executed by the application, these types of attack is made possible because of the lack of proper input or output data validation such as data format, number of characters, number of data.</description>
+	<solution>Use prepared statements when you are creating application.</solution>
+</select>
+</data>
