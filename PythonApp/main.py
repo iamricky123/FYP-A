@@ -27,7 +27,7 @@ def auth_scan_parameters(URL, user, _pass):
     json.dump(data, file1, indent=4)
     file1.close()
 
-
+#Get current selected profile from json file
 def get_Profile():
     file = open('./input/input.json', 'r')#open input json file 
     data = json.load(file)
@@ -35,7 +35,7 @@ def get_Profile():
     file.close()
     return profile_Data
   
-
+#Function to return the name of the profile 
 def print_profile():
     prof = get_Profile()
     if(prof == "webapp"):
@@ -47,6 +47,7 @@ def print_profile():
     else:
         return "SQL injection scan"
 
+#Record which profile is in use
 def edit_profile(insert_prof):
     file = open('./input/input.json', 'r')#open input json file 
     data = json.load(file)
@@ -57,14 +58,16 @@ def edit_profile(insert_prof):
     json.dump(data,file, indent = 4)#write into json file
     file.close()
 
+#Displays the profiles available
 def profile():
-    print("----------Scan Profiles-----------")
-    print("[1] Web Application Scan")
-    print("[2] Full Audit Scan")
-    print("[3] Server Scan")
-    print("[4] SQL Injection scan")
+     while(1):
+        print("----------Scan Profiles-----------")
+        print("[1] Web Application Scan")
+        print("[2] Full Audit Scan")
+        print("[3] Server Scan")
+        print("[4] SQL Injection scan")
+        print("[5] Profile Descriptions")
     
-    while(1):
         selection = input("Select one scan profile :")
         if(selection == '1'):
             profile_name = 'webapp'
@@ -86,11 +89,32 @@ def profile():
             edit_profile(profile_name)
             clear()
             return profile_name
+        elif(selection == '5'):
+            profile_descriptions()
         else :
             print("Incorrect input try again !")
             input('Press any key to continue....')
 
+#Explanation on the profiles
+def profile_descriptions():
+    print("Web Application Scan")
+    print("-----------------------")
+    print("The web application scan focuses on the vulnerabilities of the web application such as XSS attacks, brute force and CSRF")
+    print("\n")
+    print("Server Scan")
+    print("-----------------------")
+    print("The server scan does checks such as backdoors, directories, files and mixed resources")
+    print("\n")
+    print("SQL Injection scan")
+    print("-----------------------")
+    print("SQL Injection sql is a injection attack which control database server behind the web application")
+    print("\n")
+    print("Full Audit scan")
+    print("-----------------------")
+    print("Performs a full scan on the web application including server side and databases")
 
+
+#Prompts user for URL and saved in the json file for other functions to reference
 def userInput():
     URL = input('Please insert the URL of the Web Application :')
     #open json file to get data
@@ -106,6 +130,7 @@ def userInput():
     return URL
 
 
+#Gets the current scan ID from the json file
 def get_ID():
     jsonOpen = open('./input/input.json', 'r')
     data = json.load(jsonOpen)
@@ -144,7 +169,7 @@ def start_scan(in_client,auth):
         jsonOpen2.close()
 
 
-
+#Prints the menu for the user to select
 def print_menu():
         print("****************************************************")
         print("Vulnerability Scanner")
@@ -153,7 +178,7 @@ def print_menu():
         print("2.Change Scanning Settings")
         print("Current selected profile : ", print_profile())
 
-
+#Function incharge of prompting and process the user input
 def menu():
     while(1):
         choice = input("Please input your choice :")
@@ -204,7 +229,7 @@ def authenticate():
             clear()
     return True
 
-#Generate report
+#Generate final report with auto-open browser
 def generateReport():
     report_tree = ET.parse('reporthtml.xml')
     report_root = report_tree.getroot()
