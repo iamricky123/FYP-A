@@ -1,20 +1,12 @@
 from arachni import *
+from profilefunctions import * #module containing functions that selects the profile and display the profile for the user to select
+from portScanFunction import *
 import time
 import json
 import os
 import xml.etree.ElementTree as ET
 import webbrowser
 
-
-
-def clear(): 
-    # for windows 
-    if os.name == 'nt': 
-        os.system('cls') 
-  
-    # for mac and linux(here, os.name is 'posix') 
-    else: 
-        os.system('clear') 
 
 #For authenticated scan
 def auth_scan_parameters(URL, user, _pass):
@@ -26,93 +18,6 @@ def auth_scan_parameters(URL, user, _pass):
     file1 = open('./profiles/Authenticated/' + get_Profile() + '.json', 'w') #open file to update the values
     json.dump(data, file1, indent=4)
     file1.close()
-
-#Get current selected profile from json file
-def get_Profile():
-    file = open('./input/input.json', 'r')#open input json file 
-    data = json.load(file)
-    profile_Data = data["profile"]  #input selected profile
-    file.close()
-    return profile_Data
-  
-#Function to return the name of the profile 
-def print_profile():
-    prof = get_Profile()
-    if(prof == "webapp"):
-        return "Web Application Scan"
-    elif(prof== "full_audit"):
-        return "Full Audit Scan"
-    elif(prof== "server"):
-        return "Server Scan"
-    else:
-        return "SQL injection scan"
-
-#Record which profile is in use
-def edit_profile(insert_prof):
-    file = open('./input/input.json', 'r')#open input json file 
-    data = json.load(file)
-    data["profile"] = insert_prof #input selected profile
-    file.close()
-
-    file = open('./input/input.json', 'w')
-    json.dump(data,file, indent = 4)#write into json file
-    file.close()
-
-#Displays the profiles available
-def profile():
-     while(1):
-        print("----------Scan Profiles-----------")
-        print("[1] Web Application Scan")
-        print("[2] Full Audit Scan")
-        print("[3] Server Scan")
-        print("[4] SQL Injection scan")
-        print("[5] Profile Descriptions")
-    
-        selection = input("Select one scan profile :")
-        if(selection == '1'):
-            profile_name = 'webapp'
-            edit_profile(profile_name)
-            clear()
-            return profile_name
-        elif(selection == '2'):
-            profile_name = 'full_audit'
-            edit_profile(profile_name)
-            clear()
-            return profile_name
-        elif(selection == '3'):
-            profile_name = 'server'
-            edit_profile(profile_name)
-            clear()
-            return profile_name
-        elif(selection == '4'):
-            profile_name = 'sql_injection'
-            edit_profile(profile_name)
-            clear()
-            return profile_name
-        elif(selection == '5'):
-            profile_descriptions()
-        else :
-            print("Incorrect input try again !")
-            input('Press any key to continue....')
-
-#Explanation on the profiles
-def profile_descriptions():
-    print("Web Application Scan")
-    print("-----------------------")
-    print("The web application scan focuses on the vulnerabilities of the web application such as XSS attacks, brute force and CSRF")
-    print("\n")
-    print("Server Scan")
-    print("-----------------------")
-    print("The server scan does checks such as backdoors, directories, files and mixed resources")
-    print("\n")
-    print("SQL Injection scan")
-    print("-----------------------")
-    print("SQL Injection sql is a injection attack which control database server behind the web application")
-    print("\n")
-    print("Full Audit scan")
-    print("-----------------------")
-    print("Performs a full scan on the web application including server side and databases")
-
 
 #Prompts user for URL and saved in the json file for other functions to reference
 def userInput():
@@ -175,20 +80,26 @@ def print_menu():
         print("Vulnerability Scanner")
         print("****************************************************")
         print("1.Start Scanning")
-        print("2.Change Scanning Settings")
+        print("2.Port Scanning")
+        print("3.Change Scanning Settings")
         print("Current selected profile : ", print_profile())
 
 #Function incharge of prompting and process the user input
 def menu():
     while(1):
-        choice = input("Please input your choice :")
+        print_menu()
+        choice = input("Please input your choice : ")
         clear()
+        #User selects start scan option
         if(choice == '1'):
             while(1):
+                #Prompts user to confirm his/her scanning profile if she has not selected it
                 select = input('Do you want to customize your scannning profile ? [Y/N] : ')
+                #If Yes
                 if(select == 'Y' or select =='y' or select =='Yes' or select =='YES'):
                     clear()
                     return 2
+                #If No
                 elif(select == 'N' or select =='n' or select =='No' or select =='NO'):
                     clear()
                     return 1
@@ -196,24 +107,66 @@ def menu():
                     print("Invalid input... Try again")
                     input("Press any key to continue...")
                     clear()
+        #If user selects change profile option
         elif(choice == '2'):
+            portScanning()
+            continue
+        #if user selects Port scanning option
+        elif(choice == '3'):
             clear()
             return 2
+
         else:
             print("Invalid input... Try again")
             input("Press any key to continue...")
             clear()
+
+def portScanning():
+    while(1):
+        print("[1]Start Port Scan")
+        print("[2]What is port scanning ?")
+        print("[3]Go back to menu")
+        select = input("Please input your choice : ")
+        if(select == '1'):
+            clear()
+            start_port_scan()
+            input("Press enter to continue....")
+            clear()
+            break
+        elif(select == '2'):
+            clear()
+            print("------------------------------------")
+            print("Port Scanning")
+            print("------------------------------------")
+            print("Port scanning is a method of determining which ports on a network/server is open and could be receiving or sending data. With the information form port scanning we can analyze the responses and identify potential vulnerabilities")
+            print("\nCommon Ports")
+            print("------------------------------------")
+            print("Port 20 : File Transfer Protocol Data Transfer")
+            print("Port 21 : File Transfer Protocol Command Control")
+            print("Port 22 : Secure Shell (SSH)")
+            print("Port 23 : Telnet - Remote login service, unencrypted text messages")
+            print("Port 25 : Simple Mail Transger Protocol (SMTP) E-mail Routing")
+            print("Port 53 : Domain Name System (DNS) service")
+            print("Port 80 : Hypertext Transfer Protocol (HTTP)")
+
+            print("\n**RECOMMENDED TO CLOSE UNUSED PORTS ON THE SERVER TO AVOID UNECESSARY CONNECTIONS**")
+            input("Press enter to continue.....")
+        elif(select == '3'):
+            clear()
+            break
+        else:
+            print("Invalid input... Try again")
+            input("Press any key to continue...")
+        clear()
  
 #Process the input from the user
 def process(client, choice):
-    if(choice == '1'):
-        start(client)
-        return
-    elif(choice == '2'):
-        return
-    else:
+    if(choice == 1):
+        return True
+    if(choice == 2):
         profile_select = profile()
-        return profile_select
+        return False
+        
 
 #Ask user if they want to do authenticated scanning
 def authenticate():
@@ -298,12 +251,10 @@ def generateReport():
 
     filename = "ScanningReport.html"
     webbrowser.open_new_tab(filename)
-    
-
+   
 def main():
     client = ArachniClient()
     while(1):
-        print_menu()
         start = menu()
         if(start != 1):
             profile = process(client, start)
