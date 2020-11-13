@@ -1,0 +1,40 @@
+C:/builds/arachni/system/ruby/bin/ruby.exe -r ./siteconf20170329-1396-dr5zhw.rb extconf.rb
+>>>>> Creating Makefile for ruby version 2.2.1 on x64-mingw32 <<<<<
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+generating ox-x64-mingw32.def
+compiling base64.c
+compiling builder.c
+compiling cache.c
+compiling cache8.c
+compiling dump.c
+compiling err.c
+compiling gen_load.c
+compiling obj_load.c
+compiling ox.c
+ox.c: In function 'set_def_opts':
+ox.c:520:8: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c:541:8: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c:555:8: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c: In function 'load':
+ox.c:746:5: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c:766:5: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c:779:5: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c: In function 'sax_parse':
+ox.c:1020:9: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c: In function 'parse_dump_options':
+ox.c:1171:5: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+ox.c:1186:5: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long unsigned int' [-Wformat]
+compiling parse.c
+compiling sax.c
+compiling sax_as.c
+compiling sax_buf.c
+compiling sax_hint.c
+compiling special.c
+linking shared-object ox.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ox.so ./.gem.20170329-1396-3ezya8

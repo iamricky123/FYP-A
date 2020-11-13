@@ -1,0 +1,131 @@
+have_library: checking for BIO_read() in -lcrypto... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/x64-mingw32 -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/ruby/backward -IC:/builds/arachni/system/ruby/include/ruby-2.2.0 -I. -IC:\\openssl/include -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -LC:\\openssl/lib -L. -LC:/builds/arachni/system/ruby/lib -L.      -lx64-msvcrt-ruby220  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return 0;
+8: }
+/* end */
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/x64-mingw32 -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/ruby/backward -IC:/builds/arachni/system/ruby/include/ruby-2.2.0 -I. -IC:\\openssl/include -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -LC:\\openssl/lib -L. -LC:/builds/arachni/system/ruby/lib -L.      -lx64-msvcrt-ruby220 -lcrypto  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+conftest.c: In function 't':
+conftest.c:16:57: error: 'BIO_read' undeclared (first use in this function)
+conftest.c:16:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:16:32: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return 0; }
+/* end */
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/x64-mingw32 -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/ruby/backward -IC:/builds/arachni/system/ruby/include/ruby-2.2.0 -I. -IC:\\openssl/include -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -LC:\\openssl/lib -L. -LC:/builds/arachni/system/ruby/lib -L.      -lx64-msvcrt-ruby220 -lcrypto  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+conftest.c: In function 't':
+conftest.c:16:1: warning: implicit declaration of function 'BIO_read' [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+16: int t(void) { BIO_read(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for SSL_CTX_new() in -lssl... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/x64-mingw32 -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/ruby/backward -IC:/builds/arachni/system/ruby/include/ruby-2.2.0 -I. -IC:\\openssl/include -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -LC:\\openssl/lib -L. -LC:/builds/arachni/system/ruby/lib -L.     -lcrypto  -lx64-msvcrt-ruby220 -lssl -lcrypto  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+conftest.c: In function 't':
+conftest.c:16:57: error: 'SSL_CTX_new' undeclared (first use in this function)
+conftest.c:16:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:16:32: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))SSL_CTX_new; return 0; }
+/* end */
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/x64-mingw32 -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/ruby/backward -IC:/builds/arachni/system/ruby/include/ruby-2.2.0 -I. -IC:\\openssl/include -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -LC:\\openssl/lib -L. -LC:/builds/arachni/system/ruby/lib -L.     -lcrypto  -lx64-msvcrt-ruby220 -lssl -lcrypto  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+conftest.c: In function 't':
+conftest.c:16:1: warning: implicit declaration of function 'SSL_CTX_new' [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+16: int t(void) { SSL_CTX_new(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for openssl/bio.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/x64-mingw32 -IC:/builds/arachni/system/ruby/include/ruby-2.2.0/ruby/backward -IC:/builds/arachni/system/ruby/include/ruby-2.2.0 -I. -IC:\\openssl/include -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0501 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64   -O3 -fno-omit-frame-pointer -fno-fast-math -g -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <openssl/bio.h>
+/* end */
+
+--------------------
+

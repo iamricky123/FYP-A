@@ -1,0 +1,9 @@
+C:/builds/arachni/system/ruby/bin/ruby.exe -r ./siteconf20170329-1396-qvedgs.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
