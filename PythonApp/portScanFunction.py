@@ -17,9 +17,9 @@ def start_port_scan():
     try: 
       
         # will scan ports between 1 to 65,535 
-        for port in tqdm.tqdm(range(1,500)): 
+        for port in tqdm.tqdm(range(1,65535)): 
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-            socket.setdefaulttimeout(1) 
+            socket.setdefaulttimeout(0.5) 
           
             # returns an error indicator 
             result = s.connect_ex((target,port)) 
