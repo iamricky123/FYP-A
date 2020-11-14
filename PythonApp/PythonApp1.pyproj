@@ -29,7 +29,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="profilefunctions.py" />
-    <Compile Include="PythonApp.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>

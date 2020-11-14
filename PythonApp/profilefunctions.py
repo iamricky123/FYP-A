@@ -142,3 +142,5 @@ def profile_descriptions():
     print("Full Audit scan")
     print("-----------------------")
     print("Performs a full scan on the web application including server side and databases")
+    print("\n")
+    input("Press enter to continue.......")
