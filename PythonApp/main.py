@@ -90,7 +90,7 @@ def print_menu():
 def menu():
     while(1):
         print_menu()
-        choice = input("Please input your choice : ")
+        choice = input("Please input your choice ['Q' to quit]: ")
         clear()
         #User selects start scan option
         if(choice == '1'):
@@ -117,7 +117,8 @@ def menu():
         elif(choice == '3'):
             clear()
             return 2
-
+        elif(choice == 'Q' or choice == 'q' or choice == 'Quit' or choice == 'quit'):
+            os._exit(0)
         else:
             print("Invalid input... Try again")
             input("Press any key to continue...")
