@@ -1,4 +1,5 @@
-<xml version="1.0">
+<?xml version="1.0"?>
+<data>
 <select>
 	<name>Backdoors</name>
 	<description>Common Backdoors on server</description>
@@ -335,3 +336,4 @@
 	<description>Injects a custom External Entity into XML documents prior to submitting them and determines the existence of a vulnerability by checking whether that entity was processed based on the resulting HTTP response.</description>
 	<solution>Disable External entities. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html</solution>
 </select>
+</data>
