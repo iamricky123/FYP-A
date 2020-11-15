@@ -1,198 +1,337 @@
-<?xml version="1.0"?>
-<data>
+<xml version="1.0">
 <select>
 	<name>Backdoors</name>
 	<description>Common Backdoors on server</description>
-	<solution>Implement firewalls in place that can block entry points from all but authorized users</solution>
+	<solution>Implement firewalls in place that can block entry points from all but authorized users. More information can be found at https://www.malwarebytes.com/backdoor/ and https://www.safetydetectives.com/blog/what-is-a-backdoor-and-how-to-protect-against-it/</solution>
 </select>
 
 <select>
 	<name>Backup Directories</name>
 	<description>Backup Directories is the directories which saved all the backups
 </description>
-	<solution>Isolate the backups by implementing authentication on the backups</solution>
+	<solution>Isolate the backups by implementing authentication on the backups. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html and https://owasp.org/www-community/attacks/Forced_browsing</solution>
 </select>
 
 <select>
 	<name>CAPTCHA</name>
 	<description>There is CAPTCHA test implemented </description>
-	<solution>Ensure wide range of type of CAPTCHA is implemented to avoid CAPTCHA bypass
-</solution>
+	<solution>Ensure wide range of type of CAPTCHA is implemented to avoid CAPTCHA bypass. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html and https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks</solution>
 </select>
 
 <select>
 	<name>Common Directories</name>
 	<description>Common Directories are the directories which contained files shared by the server and client parts of the application</description>
-	<solution>Ensure users’ access rights are restricted to the correct privilege level</solution>
+	<solution>Ensure users’ access rights are restricted to the correct privilege level. More information can be found at https://portswigger.net/web-security/file-path-traversal</solution>
 </select>
 
 <select>
 	<name>Cookie Set for Parent Domain</name>
 	<description>When the cookie is set for the parent domain, rather than the host, this could indicate that the same cookie could be used to access other hosts within that domain.</description>
-	<solution>Remove the explicit domain attribute from the Set-cookie directive, then the cookie will have default scope which is safe and appropriate in most situations
-</solution>
+	<solution>Remove the explicit domain attribute from the Set-cookie directive, then the cookie will have default scope which is safe and appropriate in most situations. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>Credit Card Number Disclosure</name>
 	<description>Application sometimes disclose sensitive financial information such as credit card numbers</description>
-	<solution>Application sometimes disclose sensitive financial information such as credit card numbers</solution>
+	<solution>Application sometimes disclose sensitive financial information such as credit card numbers. More information can be found at https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure and https://www.acunetix.com/vulnerabilities/web/credit-card-number-disclosed/</solution>
 </select>
 
 <select>
 	<name>CVS/SVN Users</name>
 	<description>Concurrent Version System (CVS) and Subversion (SVN) provide a method for application developers to control different versions of their code.</description>
-	<solution>Do not display the CVS and SVN information to end user by putting this information into a server-side code comment block.</solution>
+	<solution>Do not display the CVS and SVN information to end user by putting this information into a server-side code comment block. More information can be found at https://www.perforce.com/blog/vcs/what-is-version-control</solution>
 </select>
 
 <select>
 	<name>Directory Listing</name>
 	<description>An automated listing that list the contents of directories that do not have an index page present</description>
-	<solution>Configure the web server to prevent directory listings for all paths beneath the web root</solution>
+	<solution>Configure the web server to prevent directory listings for all paths beneath the web root. More information can be found at https://portswigger.net/kb/issues/00600100_directory-listing</solution>
 </select>
 
 <select>
 	<name>E-mail Address</name>
 	<description>Email addresses disclosed in the application which might be used at the application’s login or social engineering attacks</description>
-	<solution>Remove email addresses that are unnecessary or replacing personal addresses with anonymous mailbox addresses</solution>
+	<solution>Remove email addresses that are unnecessary or replacing personal addresses with anonymous mailbox addresses. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>Form-based File Upload</name>
 	<description>A form in an HTMl document can contain an input element ‘type=”file”’ which enable user include one or more files into the form submission</description>
-	<solution>Perform scanning and filtering on the uploaded files before being made available to other users. Discard the file once it's in doubt</solution>
+	<solution>Perform scanning and filtering on the uploaded files before being made available to other users. Discard the file once it's in doubt. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html and https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload</solution>
 </select>
 
 <select>
 	<name>HTTP Strict Transport Security</name>
 	<description>The application fails to prevent users from connecting to it over unencrypted connections</description>
-	<solution>Restrict the instruct web browsers to only access the application using HTTPS</solution>
+	<solution>Restrict the instruct web browsers to only access the application using HTTPS. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>.htaccess LIMIT Misconfiguration</name>
 	<description>A blacklisting approach which server administrator may accidentally miss adding certain HTTp methods to be blocked</description>
-	<solution>Preferred configuration is to prevent the use of unauthorised HTTP methods by utilising the ‘(LimitExcept)’ directive.</solution>
+	<solution>Preferred configuration is to prevent the use of unauthorised HTTP methods by utilising the ‘(LimitExcept)’ directive. More information can be found at https://www.tenable.com/plugins/was/98095 and https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration</solution>
 </select>
 
 <select>
 	<name>HTML Objects</name>
 	<description>The ‘(object)’ tag defines a container for an external resource</description>
-	<solution>Avoid exposing object references in URLs and verify authorization to all reference objects.</solution>
+	<solution>Avoid exposing object references in URLs and verify authorization to all reference objects. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>HttpOnly Cookies</name>
 	<description>An additional flag included in a Set-Cookie HTTp response header</description>
-	<solution>Implement HttpOnly Cookies in the application to prevent the session cookie being theft or modified by malicious script</solution>
+	<solution>Implement HttpOnly Cookies in the application to prevent the session cookie being theft or modified by malicious script. More information can be found at https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes and https://owasp.org/www-community/HttpOnly</solution>
 </select>
 
 <select>
 	<name>HTTP PUT</name>
 	<description>The HTTP PUT method is normally used to upload data that is saved on the server at a user-supplied URL</description>
-	<solution>Disable HTTP PUT method on the server</solution>
+	<solution>Disable HTTP PUT method on the server. Disable HTTP PUT method on the server. More information can be found at https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods</solution>
 </select>
 
 <select>
 	<name>Insecure Client-access Policy</name>
 	<description>When a domain is specified in ClientAcessPolicy.xml file, the site declares that it is willing to allow the operators of any servers in that domain to obtain any document on the server where the policy file resides.</description>
-	<solution>Carefully evaluate which sites will be allowed to make cross-domain calls</solution>
+	<solution>Carefully evaluate which sites will be allowed to make cross-domain calls. More information can be found at https://owasp.org/www-project-mobile-top-10/2016-risks/m4-insecure-authentication</solution>
 </select>
 
 <select>
 	<name>Insecure Cookies</name>
 	<description>Cookies that are served over an encrypted channel but without having the ‘secure’ flag set</description>
-	<solution>Cookies must be marked as secure and only be transmitted if the communications channel with the host is a secure one</solution>
+	<solution>Cookies must be marked as secure and only be transmitted if the communications channel with the host is a secure one. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>Insecure CORS Policy</name>
 	<description>An insecure CORS configuration allows any website to trigger request with user credentials to the target application and read the responses</description>
-	<solution>The application should be configured with an allowlist including only specific and trusted domains to perform CORS requests</solution>
+	<solution>The application should be configured with an allowlist including only specific and trusted domains to perform CORS requests. More information can be found at https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny and https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>Insecure Cross-domain Policy</name>
 	<description>When a domain is specified in crossdomain.xml file, the site declares that it is willing to allow the operators of any servers in that domain to obtain any document on the server where the policy file resides.</description>
-	<solution>Carefully evaluate which sites will be allowed to make cross-domain calls</solution>
+	<solution>Carefully evaluate which sites will be allowed to make cross-domain calls. More information can be found at https://www.acunetix.com/vulnerabilities/web/insecure-crossdomain-xml-file/</solution>
 </select>
 
 <select>
 	<name>Interesting Responses</name>
 	<description>Non 200 (OK) server responses</description>
-	<solution>Select the most recent system restore point and run System Restore
-</solution>
+	<solution>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>Localstart.asp</name>
 	<description>Checks for localstart.asp to prevent brute force attack</description>
-	<solution>If the pages being protected are not required for the functionality of the web application they should be removed, otherwise, it is recommended that basis and basic realm authentication are not used to protect against pages requiring authentication</solution>
+	<solution>If the pages being protected are not required for the functionality of the web application they should be removed, otherwise, it is recommended that basis and basic realm authentication are not used to protect against pages requiring authentication. More information can be found at https://beaglesecurity.com/blog/vulnerability/brute-force-in-internet-information-services.html and https://www.tenable.com/plugins/was/98088</solution>
 </select>
 
 <select>
 	<name>Mixed Resource</name>
 	<description>Looks for resources served over HTTP when the HTML code is server over HTTPS  as the server might serve resources over an unencrypted channel as well, which can lead to compromise of data</description>
-	<solution>All pages and/or resources on the affected side should be secured equally, utilising the latest and most secure encryption protocols</solution>
+	<solution>All pages and/or resources on the affected side should be secured equally, utilising the latest and most secure encryption protocols. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html and https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>Origin Spoof Access Restriction Bypass</name>
 	<description>Retries denied requests with a spoofed origin header to trick the web application into thinking that the request originated from localhost and checks whether the restrictions was bypassed</description>
-	<solution>The origin header should never be used to validate a client’s access as it is trivial to change</solution>
+	<solution>The origin header should never be used to validate a client’s access as it is trivial to change. More information can be found at https://beaglesecurity.com/blog/vulnerability/origin-spoof-access-restriction-bypass.html and https://www.tenable.com/plugins/was/98096</solution>
 </select>
 
 <select>
 	<name>Password field with auto-complete</name>
 	<description>Greps pages for forms which have password fields without explicitly disabling auto-complete as the attacker can captured the passwords stored to gain control over.</description>
-	<solution>Include the attribute ‘autocomplete=”off”’ within the FORM tag of within the relevant INPUT tags to prevent browsers or applications from storing credentials entered into HTML forms</solution>
+	<solution>Include the attribute ‘autocomplete=”off”’ within the FORM tag of within the relevant INPUT tags to prevent browsers or applications from storing credentials entered into HTML forms. More information can be found at https://portswigger.net/kb/issues/00500800_password-field-with-autocomplete-enabled</solution>
 </select>
 
 <select>
 	<name>Private IP address finder</name>
 	<description>Scans pages for private IP addresses to prevent attacker carries out network-layer attacks</description>
-	<solution>Configure services to mask the private address</solution>
+	<solution>Configure services to mask the private address. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</solution>
 </select>
 
 <select>
 	<name>SSN</name>
 	<description>Greps pages for disclosed US Social Security Numbers</description>
-	<solution>Prevent from exposing Social Security Numbers on the website or application</solution>
+	<solution>Prevent from exposing Social Security Numbers on the website or application. More information can be found at https://us.norton.com/internetsecurity-id-theft-10-tips-to-help-protect-your-social-security-number.html</solution>
 </select>
 
 <select>
 	<name>Unencrypted password forms</name>
 	<description>Looks for password inputs that don’t submit data over a encrypted channel which the attacker might attempt to compromise credentials passed</description>
-	<solution>The site should be secured utilising the latest and most secure encryption protocols</solution>
+	<solution>The site should be secured utilising the latest and most secure encryption protocols. More information can be found at https://www.tenable.com/plugins/was/98082 and http://kb.entersoft.co.in/vulnerabilities/unencrypted-password-forms.html</solution>
 </select>
 
 <select>
 	<name>WebDAV</name>
 	<description>Checks for WebDAV enabled directories which might allow authorised users to remotely add and change content on your web server</description>
-	<solution>It is recommended to disable this extension if its not been used</solution>
+	<solution>It is recommended to disable this extension if its not been used. More information can be found at https://www.networkworld.com/article/2202909/-webdav-is-bad---says-security-researcher.html</solution>
 </select>
 
 <select>
 	<name>Missing X-Frame-Options header</name>
 	<description>Checks the host for a missing “X-Frame-Options” header</description>
-	<solution>Employing defensive code in the UI to ensure that the current frame is the most top level window</solution>
+	<solution>Employing defensive code in the UI to ensure that the current frame is the most top level window. More information can be found at https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-x-frame-options-header/</solution>
 </select>
 
 <select>
 	<name>XST</name>
 	<description>Sends an HTTP TRACE request and checks if it succeeded as XST could be used as a method user’s cookies</description>
-	<solution>Set the TraceEnable “off” in the main configuration file</solution>
+	<solution>Set the TraceEnable “off” in the main configuration file. More information can be found at https://www.computerweekly.com/tip/How-to-prevent-a-cross-site-tracing-vulnerability-exploit and https://owasp.org/www-community/attacks/Cross_Site_Tracing</solution>
 </select>
 
 <select>
 	<name>Code injection</name>
 	<description>Code injection is defined as injecting codes that executed by the application, these types of attack is made possible because of the lack of proper input or output data validation such as data format, number of characters, number of data.</description>
-	<solution>Use prepared statements when you are creating application.</solution>
+	<solution>Use prepared statements when you are creating application. More solution can be found at https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html</solution>
 </select>
 
 <select>
-	<name>Code injection</name>
-	<description>Code injection is defined as injecting codes that executed by the application, these types of attack is made possible because of the lack of proper input or output data validation such as data format, number of characters, number of data.</description>
-	<solution>Use prepared statements when you are creating application.</solution>
+	<name>CSRF</name>
+	<description>It uses differential analysis to determine which forms affect business logic and checks them for lack of anti-CSRF tokens.</description>
+	<solution>Use POST method, Token based mitigation. More solution can be found at https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</solution>
 </select>
-</data>
+
+<select>
+	<name>File Inclusion</name>
+	<description>File inclusion is a vulnerability that allows the attacker to include a file which usually contains “dynamic file inclusion” mechanism, this vulnerability is cause by the lack of proper validation.</description>
+	<solution>Avoid passing user-submitted input to any framework API or filesystem More solution can be found at https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion</solution>
+</select>
+
+<select>
+	<name>LDAPInjection</name>
+	<description>LDAP injection is an attack that is used to exploit LDAP statements that is construct by the user from a web-based application, it allows the attacker to modify the LDAP statements.</description>
+	<solution>Escape all variable using LDAP encoding function More solution can be found at https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>NoSQL Injection</name>
+	<description>NoSQL Injection is an attack on the query languages for unstructured data, diverse system landscapes with multiple databases, and direct client-side databases access via RESTful interfaces.</description>
+	<solution>Avoid using unsanitised user inputs in application code, Use the most updated version of NoSQL product More solution can be found at https://www.acunetix.com/blog/web-security-zone/nosql-injections/</solution>
+</select>
+
+<select>
+	<name>Blind NoSQL Injection</name>
+	<description>It uses differential analysis to determine how different inputs affect the behaviour of the web application and checks if the displayed behaviour is consistent with that of a vulnerable application.</description>
+	<solution>Avoid using unsanitised user inputs in application code, Use the most updated version of NoSQL product. More solution can be found at https://www.netsparker.com/blog/web-security/what-is-nosql-injection/ and https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>OS command Injection</name>
+	<description>OS command injection is an attack which the attacker attacks on the operation system with arbitrary commands via vulnerable application, the attack will pass through when an application allows unsafe user supplied data goes through the system shell.</description>
+	<solution>Avoid calling OS commands directly to prevent attacker from exploiting it. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html and https://portswigger.net/web-security/os-command-injection</solution>
+</select>
+
+<select>
+	<name>Path Traversal</name>
+	<description>Path traversal aims to access files and directories that are stored outside the web root folder. The attack also known as dot-dot-slash, directory traversal.</description>
+	<solution>Work without user input when using file system calls. Use indexes rather than actual portions of file names when templating or using language files. More information can be found at https://owasp.org/www-community/attacks/Path_Traversal and https://portswigger.net/web-security/file-path-traversal</solution>
+</select>
+
+<select>
+	<name>Response Splitting</name>
+	<description>Data enters a web application through untrusted source, injects arbitrary and checks if any of them end up in the response header.</description>
+	<solution>Prevent user from accessing response header. More information can be found at https://blog.detectify.com/2019/06/14/http-response-splitting-exploitations-and-mitigations/ and https://owasp.org/www-community/attacks/HTTP_Response_Splitting</solution>
+</select>
+
+<select>
+	<name>Remote File Inclusion</name>
+	<description>Injects a remote URL in all available inputs and checks for relevant content in the HTTP response body.</description>
+	<solution>Avoid user from submitting input to any filesystem or framework API. Set a list of files that the user can allow to access. More information can be found at https://www.esecurityplanet.com/browser-security/how-to-prevent-remote-file-inclusion-rfi-attacks.html#:~:text=Three%20key%20ways%20to%20prevent,Build%20a%20dynamic%20whitelist</solution>
+</select>
+
+<select>
+	<name>Session fixation</name>
+	<description>Session fixation allows the attacker to hijack a valid user ID. Session token and session ID are often use by the attack to attack.</description>
+	<solution>Implement transport layer security to protect the session ID exchange from eavesdropping and disclosure in network traffic. More information can be found at https://owasp.org/www-community/controls/Session_Fixation_Protection</solution>
+</select>
+
+<select>
+	<name>Source code disclosure</name>
+	<description>It tries to identify whether the web application can be forced to reveal source code.</description>
+	<solution>Review the cause of the code disclosure and prevent it from happening. More information can be found at https://portswigger.net/kb/issues/006000b0_source-code-disclosure</solution>
+</select>
+
+<select>
+	<name>SQL Injection</name>
+	<description>SQL injection check uses known SQL DB errors to identify vulnerabilities.</description>
+	<solution>Use prepared statements, stop writing dynamic queries, prevent user input which contains malicious SQL. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>Blind SQL Injection</name>
+	<description>It uses differential analysis to determine how different inputs affect behavior of the web application and checks if the displayed behavior is consistent with that of a vulnerable application.</description>
+	<solution>Use prepared statements, stop writing dynamic queries, prevent user input which contains malicious SQL. More information can be found at https://www.acunetix.com/blog/articles/blind-sql-injection/ and https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>Trainer</name>
+	<description>Pokes and probes all inputs of a given page in order to uncover new input vectors. It also forces Arachni to train itself by analyzing the server responses.</description>
+	<solution>Different input such as syntactic or sematic requires enforce syntax of structured fields or business context. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>Unvalidated redirect</name>
+	<description>Injects URLs and checks the Location HTTP response header field and/or browser URL to determine whether the attack was successful.</description>
+	<solution>Prevent URL as user input for destination, allow the user to provide ID, token, name which is mapped server-side to a full target URL. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>Unvalidated Dom redirect</name>
+	<description>Injects URLs and checks the browser URL to determine whether the attack was successful.</description>
+	<solution>Prevent URL as user input for destination, allow the user to provide ID, token, name which is mapped server-side to a full target URL. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html and https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>XPath Injection</name>
+	<description>XPath injection check</description>
+	<solution>Use prepared statements, stop writing dynamic queries, prevent user input which contains malicious SQL. More information can be found at https://owasp.org/www-community/attacks/XPATH_Injection</solution>
+</select>
+
+<select>
+	<name>XSS</name>
+	<description>Injects an HTML element into page inputs and then parses the HTML markup of tainted responses to look for proof of vulnerability.</description>
+	<solution>Use Security encoding library. Never insert untrusted data into your HTML document. If it is necessary to insert untrusted data, make sure to use HTML entity encoding to prevent switching into any execution context. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>DOM XSS</name>
+	<description>Injects an HTML element into page DOM inputs and then parses the HTML markup of tainted responses to look for proof of vulnerability.</description>
+	<solution>Implement HTML encoding and JavaScript encoding to all untrusted input. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>DOM XSS in script context</name>
+	<description>Injects JS taint code and checks to see if it gets executed as proof of vulnerability.</description>
+	<solution>Implement HTML encoding and JavaScript encoding to all untrusted input. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>XSS in HTML element event attribute</name>
+	<description>Cross-Site Scripting in event tag of HTML element.</description>
+	<solution>Implement HTML encoding and attribute encoding before insert data into HTML common attributes. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>XSS in path</name>
+	<description>Cross-Site Scripting check for path injection</description>
+	<solution>Implement HTML encoding and JavaScript encoding to all untrusted input. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>XSS in script context</name>
+	<description>Injects JS taint code and check to see if it gets executed as proof of vulnerability.</description>
+	<solution>Implement HTML encoding and JavaScript encoding to all untrusted input. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>XSS in HTML tag</name>
+	<description>Cross-Site Scripting in HTML tag.</description>
+	<solution>Implement HTML encoding and attribute encoding before insert data into HTML common attributes. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html</solution>
+</select>
+
+<select>
+	<name>XML External Entity</name>
+	<description>Injects a custom External Entity into XML documents prior to submitting them and determines the existence of a vulnerability by checking whether that entity was processed based on the resulting HTTP response.</description>
+	<solution>Disable External entities. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html</solution>
+</select>
