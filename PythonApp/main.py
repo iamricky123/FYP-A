@@ -1,7 +1,7 @@
 from arachni import *
 from profilefunctions import * #module containing functions that selects the profile and display the profile for the user to select
 from portScanFunction import *
-from subprocess import Popen
+#from subprocess import Popen
 import subprocess
 import time
 import json
@@ -253,15 +253,17 @@ def generateReport():
         f.close()
 
     filename = "ScanningReport.html"
+
     webbrowser.open_new_tab(filename)
 
-def start_arachni_server():
-    currentDirectory = os.getcwd() + "\\arachniclient\\bin\\arachni_rest_server.bat"
-    p = Popen(currentDirectory, creationflags=subprocess.CREATE_NEW_CONSOLE)
+#Function under development
+#def start_arachni_server():
+#    currentDirectory = os.getcwd() + "\\arachniclient\\bin\\arachni_rest_server.bat"
+#    p = Popen(currentDirectory, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
    
 def main():
-    start_arachni_server()
+    #start_arachni_server()
     print("Starting Arachni API Server.....")
     for i in tqdm.tqdm(range(15)):
         time.sleep(1)
