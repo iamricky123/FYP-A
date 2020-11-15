@@ -1,5 +1,5 @@
 {
-    "url": "https://188fb8863716.ngrok.io",
-    "profile": "full_audit",
-    "scan_id": "782cce27e7abd67c4e4c87405030e846"
+    "url": "http://175.142.181.194/login",
+    "profile": "sql_injection",
+    "scan_id": "35c480cb67b986e49ddcb4cf14067c03"
 }

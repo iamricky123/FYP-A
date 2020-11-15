@@ -67,7 +67,7 @@
 		"sql_injection_differential",
 		"sql_injection_timing",
 		"no_sql_injection", 
-		"no_sql_injection_differential", 
+		"no_sql_injection_differential"
   ],
   "platforms" : [],
   "plugins" : {
