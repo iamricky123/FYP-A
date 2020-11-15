@@ -1,6 +1,8 @@
 from arachni import *
 from profilefunctions import * #module containing functions that selects the profile and display the profile for the user to select
 from portScanFunction import *
+#from subprocess import Popen
+import subprocess
 import time
 import json
 import os
@@ -88,7 +90,7 @@ def print_menu():
 def menu():
     while(1):
         print_menu()
-        choice = input("Please input your choice : ")
+        choice = input("Please input your choice ['Q' to quit]: ")
         clear()
         #User selects start scan option
         if(choice == '1'):
@@ -115,7 +117,8 @@ def menu():
         elif(choice == '3'):
             clear()
             return 2
-
+        elif(choice == 'Q' or choice == 'q' or choice == 'Quit' or choice == 'quit'):
+            os._exit(0)
         else:
             print("Invalid input... Try again")
             input("Press any key to continue...")
@@ -250,9 +253,21 @@ def generateReport():
         f.close()
 
     filename = "ScanningReport.html"
+
     webbrowser.open_new_tab(filename)
+
+#Function under development
+#def start_arachni_server():
+#    currentDirectory = os.getcwd() + "\\arachniclient\\bin\\arachni_rest_server.bat"
+#    p = Popen(currentDirectory, creationflags=subprocess.CREATE_NEW_CONSOLE)
+
    
 def main():
+    #start_arachni_server()
+    print("Starting Arachni API Server.....")
+    for i in tqdm.tqdm(range(15)):
+        time.sleep(1)
+    clear()
     client = ArachniClient()
     while(1):
         start = menu()
