@@ -8,6 +8,7 @@ import json
 import os
 import xml.etree.ElementTree as ET
 import webbrowser
+from datetime import date
 
 
 #For authenticated scan
@@ -191,9 +192,11 @@ def generateReport():
     report_root = report_tree.getroot()
     solution_tree = ET.parse('solution.xml')
     solution_root = solution_tree.getroot()
+    today = date.today()
+    reportName = str(today)+"_ScanningReport.html"
     
     if (report_root.text == 'None'):
-        f = open("ScanningReport.html","w")
+        f = open(reportName,"w")
         f.write("<html lang='en'>")
         f.write("<head>")
         f.write("<link rel='stylesheet' href='mystyle1.css'>")
@@ -207,7 +210,7 @@ def generateReport():
         f.write("</html>")
         f.close()
     else:
-        f = open("ScanningReport.html","w")
+        f = open(reportName,"w")
         f.write("<html lang='en'>")
         f.write("<head>")
         f.write("<link rel='stylesheet' href='mystyle1.css'>")
