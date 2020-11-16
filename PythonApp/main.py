@@ -218,10 +218,10 @@ def generateReport():
         f.write("<body>")
         f.write("<div class='report'>")
         f.write("<h1>Scanning Report</h1>")
-        f.write("<p class='name'>Issue(s)</p>")
-        f.write("<p class='description'>Description</p>")
-        f.write("<p class='solution'>Solution</p>")
-        f.write("<p class='url'>URL</p>")
+        f.write("<p class='name'>Issue(s) Found</p>")
+        f.write("<p class='description'>Issue(s) Description</p>")
+        f.write("<p class='solution'>Remedy Guidance</p>")
+        f.write("<p class='url'>Issue(s) Site</p>")
 
         for report1 in report_root:
             for report2 in report1:
