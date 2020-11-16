@@ -9,9 +9,12 @@ import requests
 def start_port_scan():
     url = input("Input URL of the web application : ")
     listofopenports = []
-    target = socket.gethostbyname(filterinput(url))
+    if(filterinput(url) == None):
+        target = socket.gethostbyname(url)
+    else:
+        target = socket.gethostbyname(filterinput(url))
     print("-" * 50) 
-    print("Scanning Target: " + filterinput(url)) 
+    print("Scanning Target: " + url) 
     print("Scanning started at:" + str(datetime.now())) 
     print("-" * 50)
     try: 
