@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Arachni/arachni/v2.0dev/components/reporters/xml/schema.xsd">
   <version>2.0dev</version>
-  <seed>103bd8fc206ccc0d3840d7b40af738ca</seed>
+  <seed>ba857bfa69b9e64a27b2171adf949ce2</seed>
   <options>---
 audit:
   parameter_values: true
@@ -27,7 +27,7 @@ browser_cluster:
   screen_height: 1200
 datastore:
   report_path: 
-  token: 843d4c9aad4b17a2197a765af83bf6d1
+  token: 58fd232884ccab85387271d0d45ba694
 http:
   user_agent: Arachni/v1.4
   request_timeout: 10000
@@ -86,22 +86,22 @@ no_fingerprinting: false
 authorized_by: 
 url: http://175.142.181.194/login
 </options>
-  <start_datetime>2020-11-16T01:12:59+08:00</start_datetime>
-  <finish_datetime>2020-11-16T01:25:13+08:00</finish_datetime>
+  <start_datetime>2020-11-16T09:53:10+08:00</start_datetime>
+  <finish_datetime>2020-11-16T10:05:35+08:00</finish_datetime>
   <sitemap>
     <entry url="http://175.142.181.194/login" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?UjN6eAWG" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?DeRQlGiS" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?02pF1g9h" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?smtyilL0" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?L0eOSysJ" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?pF5djNkb" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?vMGlH9xW=" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?Dg11Tvjh=" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?EERmgW9r" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?gAkQLGpO" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?vw3u8hxK" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?UfVr7ixT" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?A8Uz6qPi" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?gtsfwwNi" code="200"/>
     <entry url="http://175.142.181.194/css/custom.css" code="404"/>
-    <entry url="http://175.142.181.194/captcha/default?epU50pLK=" code="200"/>
     <entry url="http://175.142.181.194/password/reset" code="200"/>
-    <entry url="http://175.142.181.194/captcha/default?UjN6eAWG=" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?XZBFWFib=" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?zygyxFLH=" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?tO1q9ui2=" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?EERmgW9r=" code="200"/>
     <entry url="http://175.142.181.194/password/email" code="405"/>
   </sitemap>
   <issues/>
