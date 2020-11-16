@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Arachni/arachni/v2.0dev/components/reporters/xml/schema.xsd">
+  <version>2.0dev</version>
+  <seed>103bd8fc206ccc0d3840d7b40af738ca</seed>
+  <options>---
+audit:
+  parameter_values: true
+  exclude_vector_patterns: []
+  include_vector_patterns: []
+  link_templates: []
+  links: true
+  forms: true
+  cookies: true
+  jsons: true
+  xmls: true
+  ui_forms: true
+  ui_inputs: true
+browser_cluster:
+  local_storage: {}
+  session_storage: {}
+  wait_for_elements: {}
+  pool_size: 6
+  job_timeout: 25
+  worker_time_to_live: 100
+  ignore_images: false
+  screen_width: 1600
+  screen_height: 1200
+datastore:
+  report_path: 
+  token: 843d4c9aad4b17a2197a765af83bf6d1
+http:
+  user_agent: Arachni/v1.4
+  request_timeout: 10000
+  request_redirect_limit: 5
+  request_concurrency: 20
+  request_queue_size: 100
+  request_headers: {}
+  response_max_size: 500000
+  cookies: {}
+  authentication_type: auto
+input:
+  values:
+    name: arachni_name
+    user: arachni_user
+    usr: arachni_user
+    pass: 5543!%arachni_secret
+    txt: arachni_text
+    num: '132'
+    amount: '100'
+    mail: arachni@email.gr
+    account: '12'
+    id: '1'
+  default_values:
+    name: arachni_name
+    user: arachni_user
+    usr: arachni_user
+    pass: 5543!%arachni_secret
+    txt: arachni_text
+    num: '132'
+    amount: '100'
+    mail: arachni@email.gr
+    account: '12'
+    id: '1'
+  without_defaults: true
+  force: false
+scope:
+  redundant_path_patterns: {}
+  dom_depth_limit: 5
+  exclude_file_extensions: []
+  exclude_path_patterns: []
+  exclude_content_patterns: []
+  include_path_patterns: []
+  restrict_paths: []
+  extend_paths: []
+  url_rewrites: {}
+session: {}
+checks:
+- sql_injection
+- sql_injection_differential
+- sql_injection_timing
+- no_sql_injection
+- no_sql_injection_differential
+platforms: []
+plugins: {}
+no_fingerprinting: false
+authorized_by: 
+url: http://175.142.181.194/login
+</options>
+  <start_datetime>2020-11-16T01:12:59+08:00</start_datetime>
+  <finish_datetime>2020-11-16T01:25:13+08:00</finish_datetime>
+  <sitemap>
+    <entry url="http://175.142.181.194/login" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?UjN6eAWG" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?DeRQlGiS" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?02pF1g9h" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?smtyilL0" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?L0eOSysJ" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?pF5djNkb" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?vMGlH9xW=" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?Dg11Tvjh=" code="200"/>
+    <entry url="http://175.142.181.194/css/custom.css" code="404"/>
+    <entry url="http://175.142.181.194/captcha/default?epU50pLK=" code="200"/>
+    <entry url="http://175.142.181.194/password/reset" code="200"/>
+    <entry url="http://175.142.181.194/captcha/default?UjN6eAWG=" code="200"/>
+    <entry url="http://175.142.181.194/password/email" code="405"/>
+  </sitemap>
+  <issues/>
+  <plugins/>
+</report>
