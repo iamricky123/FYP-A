@@ -255,9 +255,7 @@ def generateReport():
         f.write("</html>")  
         f.close()
 
-    filename = "ScanningReport.html"
-
-    webbrowser.open_new_tab(filename)
+    webbrowser.open_new_tab(reportName)
 
 #Function under development
 #def start_arachni_server():
