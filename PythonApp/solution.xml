@@ -80,7 +80,7 @@
 </select>
 
 <select>
-	<name>HttpOnly Cookies</name>
+	<name>HttpOnly cookies</name>
 	<description>An additional flag included in a Set-Cookie HTTp response header</description>
 	<solution>Implement HttpOnly Cookies in the application to prevent the session cookie being theft or modified by malicious script. More information can be found at https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes and https://owasp.org/www-community/HttpOnly</solution>
 </select>
@@ -98,7 +98,7 @@
 </select>
 
 <select>
-	<name>Insecure Cookies</name>
+	<name>Insecure cookies</name>
 	<description>Cookies that are served over an encrypted channel but without having the ‘secure’ flag set</description>
 	<solution>Cookies must be marked as secure and only be transmitted if the communications channel with the host is a secure one. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</solution>
 </select>
@@ -116,7 +116,7 @@
 </select>
 
 <select>
-	<name>Interesting Responses</name>
+	<name>Interesting responses</name>
 	<description>Non 200 (OK) server responses</description>
 	<solution>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</solution>
 </select>
