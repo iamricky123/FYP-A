@@ -11,6 +11,7 @@ import webbrowser
 from datetime import date
 
 
+
 #For authenticated scan
 def auth_scan_parameters(URL, user, _pass):
     file1 = open('./profiles/Authenticated/' + get_Profile() + '.json', 'r') #open to get data from the json file
@@ -265,10 +266,6 @@ def generateReport():
    
 def main():
     #start_arachni_server()
-    print("Starting Arachni API Server.....")
-    for i in tqdm.tqdm(range(15)):
-        time.sleep(1)
-    clear()
     client = ArachniClient()
     while(1):
         start = menu()

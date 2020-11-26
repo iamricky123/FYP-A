@@ -63,10 +63,7 @@
     "force" : false
   },
   "checks" : [
-    "allowed_methods", 
-        "backdoors", 
-        "backup_directories", 
-        "backup_files", 
+    "allowed_methods",  
         "captcha", 
         "code_injection", 
         "code_injection_php_input_wrapper", 
