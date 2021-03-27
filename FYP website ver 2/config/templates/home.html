@@ -2,6 +2,7 @@
 {% if user.is_authenticated %}
     {% if user.is_superuser %}
     {% load static %}
+    {% load account %}
     <!DOCTYPE html>
     <html lang="en">
 
@@ -36,7 +37,7 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-laugh-wink"></i>
                     </div>
@@ -47,8 +48,8 @@
                 <hr class="sidebar-divider my-0">
 
                 <!-- Nav Item - Dashboard -->
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -65,7 +66,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Login Screens:</h6>
                             <a class="collapse-item" href="login.html">Login</a>
-                            <a class="collapse-item" href="register.html">Register</a>
+                            <a class="collapse-item" href="register/">Register</a>
                             <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                             
                         </div>
@@ -73,12 +74,7 @@
                 </li>
 
 
-                <!-- Nav Item - Tables -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="tables.html">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>User Tables</span></a>
-                </li>
+                
 
                 <!-- Divider -->
                 <hr class="sidebar-divider d-none d-md-block">
@@ -108,7 +104,6 @@
                         </form>
 
                         
-
                         <!-- Topbar Navbar -->
                         <ul class="navbar-nav ml-auto">
 
@@ -194,10 +189,11 @@
                                             <tr>
                                             <th>User ID</th>
                                             <th>Email</th>
-                                            <th>Username</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
                                             <th>Date Joined</th>
                                             <th>Last Login</th>
-                                            <th>Password</th>
+                                            
                                             <th>Active</th>
                                             <th>Superuser</th>
                                             <th>Staff</th>
@@ -206,15 +202,16 @@
                                         <tbody>
                                             {% for m in message %}
                                             <tr>
-                                            <td>{{m.id}}</td>
+                                            <th>{{m.id}}</th>
                                             <td>{{m.email}}</td>
-                                            <td>{{m.username}}</td>
+                                            <td>{{m.first_name}}</td>
+                                            <td>{{m.last_name}}</td>
                                             <td>{{m.date_joined}}</td>
                                             <td>{{m.last_login}}</td>
-                                            <td>{{m.password}}</td>
+                                            
                                             <td>{{m.is_active}}</td>
-                                            <th>{{m.is_superuser}}</th>
-                                            <th>{{m.is_staff}}</th>
+                                            <td>{{m.is_superuser}}</td>
+                                            <td>{{m.is_staff}}</td>
                                             </tr>
                                             {% endfor %} 
                                         </tbody>
@@ -341,6 +338,7 @@
     </nav>
 
     <h2>Hi {{ user.email }}!</h2>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
