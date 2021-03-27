@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'accounts', # new
     'pages', # new
     'django_otp',
-    'django_otp.plugins.otp_totp'
+    'django_otp.plugins.otp_totp',
 
     'crispy_forms',
 
