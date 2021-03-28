@@ -7,4 +7,16 @@ class CustomUser(AbstractUser):
     # add additional fields in here
     
     def __str__(self):
-        return self.email
+        return self.
+        
+class UserReport (models.Model):
+    
+    scan_data = models.CharField (max_length=100)
+    scan_website = models.TextField()
+    vulnerabilities = models.TextField()
+    solutions = models.TextField()
+    email = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+
+    
+        
+        
