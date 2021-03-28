@@ -27,4 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
      path('accounts/', include('allauth.urls')), # new
      path('', include('pages.urls')), # new
+     path('external', views.external),# portscanner
 ]

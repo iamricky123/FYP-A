@@ -8,5 +8,6 @@ def external(request):
     uinput = request.POST.get('param')
     out = run([sys.executable,'C:\\Users\\timch_lrogukl\\OneDrive\\Desktop\\FYP-A-master\\FYP-A-master\\FYP website ver 2\\nmap.py',uinput],shell=False,stdout=PIPE)
     print(out)
-
+    messages.success(request, "Port Scanning is completed.")
+    
     return render(request,'home.html',{'data1':out.stdout})
