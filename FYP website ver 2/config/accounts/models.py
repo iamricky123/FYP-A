@@ -7,7 +7,7 @@ class CustomUser(AbstractUser):
     # add additional fields in here
     
     def __str__(self):
-        return self.
+        return self.email
         
 class UserReport (models.Model):
     

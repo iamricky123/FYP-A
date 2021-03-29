@@ -65,9 +65,9 @@
                     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Login Screens:</h6>
-                            <a class="collapse-item" href="login.html">Login</a>
-                            <a class="collapse-item" href="register/">Register</a>
-                            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                            
+                            <a class="collapse-item" href="register/">Register Account</a>
+                            
                             
                         </div>
                     </div>
@@ -372,7 +372,118 @@
 
 <!--<p><a href="{% url 'account_logout' %}">Log Out</a></p>-->
 {% else %}
-<p>You are not logged in</p>
-<a href="{% url 'account_login' %}">Log In</a> |
-<a href="{% url 'account_signup' %}">Sign Up</a>
+
+<!--<a href="{% url 'account_signup' %}">Sign Up</a>--> 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>Jumbotron example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="{% static 'css/bootstrap.min.css ' %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        
+        <span class="fs-4">Terms and Conditions</span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid">
+        
+        <p>PLEASE READ THESE TERMS AND CONDITIONS OF USE CAREFULLY BEFORE USING THIS WEBSITE.</p>
+        <p>Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our 
+            privacy policy and website disclaimer, govern HackerTarget.com’s relationship with you in relation to your use of this website.</p>
+        <p>By using this website, you signify your acceptance of these terms and conditions of use. For the purposes of these terms and conditions, “Us”, “Our” and “We” refers to HackerTarget.com and “You” and “Your” refers to you, the client, visitor, website user or person using our website.</p>
+        <p>SECURITY SCANNING SERVICES ARE PROVIDED FOR OWNERS AND OPERATORS OF INTERNET FACING SYSTEMS AND WEBSITES. SECURITY SCANNING IS ONLY TO BE PERFORMED AGAINST SYSTEMS AND WEBSITES THAT YOU OWN OR HAVE EXPLICIT PERMISSION TO TEST FROM THE SYSTEMS OWNER.
+        </p>
+        <p>IF YOU HAVE A WEBSITE HOSTED ON A SHARED HOSTING ENVIRONMENT YOU MUST OBTAIN PERMISSION FROM THE WEBHOSTING PROVIDER BEFORE TESTING YOUR WEBSITE.</p>
+        <hr>
+        <p>ACKNOWLEDGEMENT AND CONSENT TO INTRUSION
+
+            Client understands and acknowledges that the Scanning Services (i) will be inherently invasive and intrusive, and include attempts by HackerTarget.com or its Agents, as applicable, to gain unauthorized access to Client’s Systems in an effort to make Client aware of those areas in which Client’s System is vulnerable to intrusion, damage, and/or unauthorized use, (ii) may result in inadvertent damage to Client’s System as a result of dissimilarities among network systems, (iii) may cause excessive amounts of log messages resulting in excessive disk space consumption, (iv) may cause degradation of Client’s System as a result of attempts to penetrate it including, but not limited to possible “slowdowns”, “hanging” or “crashing” of Client’s System, possible failure of Client’s System as a result of attempts to invade it, or any other damage resulting from intrusive and/or invasive techniques used to gain access to Client’s System. Client hereby gives its informed consent to intrusion into Client’s Systems by HackerTarget.com and its Agents for the sole purpose of performing the Evaluation Services provided herein.</p>
+        <p>AMENDMENT OF TERMS
+
+            We reserve the right to change, modify, add or remove portions of these terms at any time. Please check these terms regularly prior to using our website to ensure you are aware of any changes. We will endeavour to highlight any significant or substantive changes to you where possible. If you choose to use our website then we will regard that use as conclusive evidence of your agreement and acceptance that these terms govern your and Hacker Target Pty Ltd's rights and obligations to each other.</p>
+        <p>LIMITATION OF LIABILITY
+
+            It is an essential pre-condition to you using our website that you agree and accept that Hacker Target Pty Ltd is not legally responsible for any loss or damage you might suffer related to your use of the website, whether from errors or from omissions in our documents or information, or any services we may offer or from any other use of the website. Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable.
+            
+            It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific, personal requirements. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
+            
+            </p>
+        <p>COMPETITION AND CONSUMER ACT
+
+            For the purposes of Schedule 2 of the Australian Consumer Law, in particular Sections 51 to 53, 64 and 64A of Part 3-2, Division 1, Subdivision A of the Competition and Consumer Act 2010 (Cth), Hacker Target Pty Ltd liability for any breach of a term of this agreement is limited to: the supplying of the services to you again; or the payment of the cost of having the services supplied to you again.
+            
+            You must be over 18 years of age to use this website and to purchase any services.</p>
+        <p>DISCLAIMER
+
+            To the fullest extent permitted by law, Hacker Target Pty Ltd absolutely disclaims all warranties, expressed or implied, including, but not limited to, implied warranties of merchantability and fitness for any particular purpose. Hacker Target Pty Ltd gives no warranty that the documents or services will be free of errors, or that defects will be corrected, or that our website or its server is free of viruses or any other harmful components.
+            
+            Whilst we, at all times endeavour to have the most accurate, reliable and up-to-date information on our website, we do not warrant or make any representations regarding the use or the result of the use of any document, product, service, link or information in its website or as to their correctness, suitability, accuracy, reliability, or otherwise.
+            
+            It is your sole responsibility and not the responsibility of Hacker Target Pty Ltd to bear any entire costs of servicing, repairs, or correction. The applicable law in your state or territory may not permit these exclusions, particularly the exclusions of some implied warranties. Some of the above may not apply to you but you must ensure you are aware of any risk you may be taking by using this website or any products or services that may be offered through it. It is your responsibility to do so.</p>
+        <p>YOUR PRIVACY
+
+            At HackerTarget.com, we are committed to protecting your privacy. We use the information we collect about you to maximize the services that we provide to you. HackerTarget.com respects the privacy and confidentiality of the information provided by you and adheres to the Australian Privacy Principles. Please read our separate Privacy Policy carefully.
+            
+            You may change your details at any time by advising us in writing via email. All information we receive from our customers, is protected by our secure servers. HackerTarget.com’s secure server software encrypts all customer information before it is sent to us. Furthermore, all of the customer data HackerTarget.com collects is secured against unauthorized use or access. Credit card information is not stored by us on our servers.</p>
+        <p>COPYRIGHT, TRADEMARK AND RESTRICTIONS OF USE</p>
+        <p>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance, trademarks and graphics. You are not permitted to reproduce the documents, information or materials on the website for the purposes of sale or the use by any third party. In particular you are not permitted to republish, upload, transmit electronically or otherwise or distribute any of the materials, documents or products that may be available for download from time to time on this website.
+            
+                HackerTarget.com expressly reserves all copyright and trademark in its website and in all documents and information on its website and reserves the right to take action against you if you breach any of these terms.
+                
+                Any redistribution or reproduction of part or all of the contents in any form is prohibited other than the following: you may print or download to a local hard disk extracts for your personal and non-commercial use only; and you may copy the content to individual third parties for their personal use, but only if you acknowledge the website as the source of the material.
+                
+                You may not, except with our express written permission, distribute or commercially exploit the content. Nor may you transmit it or store it in any other website or other form of electronic retrieval system.</p>
+        
+        <br>
+        <p style="text-align: center; font-size: large;">You are not logged in</p>
+        <p style="text-align: center;"><a href="{% url 'account_login' %}">Log In</a> </p>
+      </div>
+    </div>
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2021
+    </footer>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>
 {% endif %}

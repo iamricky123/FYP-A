@@ -2,6 +2,7 @@ from django.shortcuts import render
 import requests
 import sys
 from subprocess import run,PIPE
+from django.contrib import messages
 
 # Create your views here.
 def external(request):
