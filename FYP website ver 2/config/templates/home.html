@@ -68,7 +68,6 @@
                             
                             <a class="collapse-item" href="register/">Register Account</a>
                             
-                            
                         </div>
                     </div>
                 </li>
@@ -370,6 +369,7 @@
 </html>
 {% endif %}
 
+
 <!--<p><a href="{% url 'account_logout' %}">Log Out</a></p>-->
 {% else %}
 
@@ -415,7 +415,7 @@
 <main>
   <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <a class="d-flex align-items-center text-dark text-decoration-none">
         
         <span class="fs-4">Terms and Conditions</span>
       </a>
@@ -472,8 +472,8 @@
                 You may not, except with our express written permission, distribute or commercially exploit the content. Nor may you transmit it or store it in any other website or other form of electronic retrieval system.</p>
         
         <br>
-        <p style="text-align: center; font-size: large;">You are not logged in</p>
-        <p style="text-align: center;"><a href="{% url 'account_login' %}">Log In</a> </p>
+        <p style="text-align: center; font-size: 24px; font-weight: bold;">You are not logged in</p>
+        <p style="text-align: center;"><a href="{% url 'account_login' %}">Log In Here</a> </p>
       </div>
     </div>
     <footer class="pt-3 mt-4 text-muted border-top">
