@@ -17,13 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from .import views
 
-from django_otp.admin import OTPAdminSite
-admin.site.__class__=OTPAdminSite
-
-class OTPAdmin(OTPAdminSite):
-    pass
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')), # new

@@ -47,8 +47,6 @@ INSTALLED_APPS = [
     # Local
     'accounts', # new
     'pages', # new
-    'django_otp',
-    'django_otp.plugins.otp_totp',
 
     'crispy_forms',
 
@@ -64,7 +62,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_otp.middleware.OTPMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -172,16 +169,10 @@ ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
 
-#login attempts timeout (60seconds)
-ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 60
-ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 3
-
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
-ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.SignupForm'
-ACCOUNT_SIGNUP_REDIRECT_URL = 'accounts/signup.html'
-ACCOUNT_LOGOUT_ON_GET = True
-
 # config/settings.py
 LOGIN_REDIRECT_URL = 'home'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
+
+#CELERY
+
 
