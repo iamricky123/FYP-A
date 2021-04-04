@@ -7,10 +7,12 @@ from .arachni import *
 import xml.etree.ElementTree as ET
 import webbrowser
 from datetime import date as date
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 # Create your views here.
 def external(request):
-    
 
     uinput = request.POST.get('param')
     #if(uinput==request.POST.get('param')):
@@ -30,26 +32,26 @@ def external(request):
 
 
 def start_scan(in_client,auth):
-    jsonOpen = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
     data = json.load(jsonOpen)
     url = data["url"]
     profile = data["profile"]
     jsonOpen.close()
 
     if(auth):
-        in_client.profile('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\profiles\\Authenticated/'+ get_Profile() + '.json')
+        in_client.profile('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/'+ get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
-        jsonOpen2 = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+        jsonOpen2 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
         _id = container.get("id")
         data["scan_id"] = _id
         json.dump(data, jsonOpen2, indent=4)
         jsonOpen2.close()
     else:
-        in_client.profile('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\profiles\\Non-authenticated\\'+ get_Profile() + '.json')
+        in_client.profile('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Non-authenticated\\'+ get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
-        jsonOpen2 = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+        jsonOpen2 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
         _id = container.get("id")
         data["scan_id"] = _id
         json.dump(data, jsonOpen2, indent=4)
@@ -57,29 +59,29 @@ def start_scan(in_client,auth):
 
 
 def auth_scan_parameters(URL, user, _pass):
-    file1 = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'r') #open to get data from the json file
+    file1 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'r') #open to get data from the json file
     data = json.load(file1)
     file1.close()
     data["plugins"]["autologin"]["url"] = URL
     data["plugins"]["autologin"]["parameters"] = 'email='+user+'&password='+_pass
-    file1 = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'w') #open file to update the values
+    file1 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'w') #open file to update the values
     json.dump(data, file1, indent=4)
     file1.close()
 
 def userInput(URL):
-    jsonOpen = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
 
     #userinput inserted into the json file
     data["url"] = URL
-    jsonOpen = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
 
 def get_ID():
-    jsonOpen = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
     if(data["scan_id"] != None):
@@ -89,19 +91,19 @@ def get_ID():
         print('No Scan ID found !')
 
 def get_Profile():
-    file = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
+    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
     data = json.load(file)
     profile_Data = data["profile"]  #input selected profile
     file.close()
     return profile_Data
 
 def edit_profile(insert_prof):
-    file = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
+    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
     data = json.load(file)
     data["profile"] = insert_prof #input selected profile
     file.close()
 
-    file = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
     json.dump(data,file, indent = 4)#write into json file
     file.close()
 
@@ -124,13 +126,13 @@ def edit_profile(insert_prof):
 def url_in(insert_url):
     URL = insert_url
     #open json file to get data
-    jsonOpen = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
 
     #userinput inserted into the json file
     data["url"] = URL
-    jsonOpen = open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
@@ -138,7 +140,7 @@ def url_in(insert_url):
 def generateReport():
     report_tree = ET.parse('reporthtml.xml')
     report_root = report_tree.getroot()
-    solution_tree = ET.parse('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\solution.xml')
+    solution_tree = ET.parse('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\solution.xml')
     solution_root = solution_tree.getroot()
     today = date.today()
     reportName = str(today)+"_ScanningReport.html"
@@ -253,13 +255,41 @@ def main():
                 generateReport()
                 break
         
+def SendEmail():
+    mail_content = """Hello,
+    This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
+    Thank You"""
+
+    #The mail addresses and password
+    sender_address = "fypb4343@gmail.com"
+    sender_pass = "@bcde_12345"
+    receiver_address = str(request.user)
+    #Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = receiver_address
+    message['Subject'] = 'A test mail sent by Python. It has an attachment.'   #The subject line
+    #The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'plain'))
+    #Create SMTP session for sending the mail
+    session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
+    session.starttls() #enable security
+    session.login(sender_address, sender_pass) #login with mail_id and password
+    text = message.as_string()
+    session.sendmail(sender_address, receiver_address, text)
+    session.quit()
+    print('Mail Sent')
+
+
 
 def ArachniScan(request):
+
     scan_type = "non_authenticated_scan"
     target_website = request.POST.get('target_website')
     scan_select = request.POST.get('scan_select')
     target_username = request.POST.get('target_username')
     target_password = request.POST.get('target_password')
+
 
     client = ArachniClient()
     URL = url_in(target_website)
@@ -281,8 +311,8 @@ def ArachniScan(request):
             else: 
                 scan_id = get_ID()
                 print(client.get_status(scan_id))
-                print(client.get_report(get_ID(), 'xml'))
-                b = client.get_report(get_ID(), 'xml')
+                print(client.get_report(scan_id, 'xml'))
+                b = client.get_report(scan_id, 'xml')
                 if (type(b) == bytes):
                     b = b.decode("utf-8")
                 elif (b == None):
@@ -291,7 +321,7 @@ def ArachniScan(request):
                 c.write(b)
                 c.close()
                 generateReport()
-                break
+                SendEmail()
 
         print(scan_type)
         return render(request,'arachni_redirect.html',{'data1':scan_type})
@@ -308,8 +338,8 @@ def ArachniScan(request):
             else: 
                 scan_id = get_ID()
                 print(client.get_status(scan_id))
-                print(client.get_report(get_ID(), 'xml'))
-                b = client.get_report(get_ID(), 'xml')
+                print(client.get_report(scan_id, 'xml'))
+                b = client.get_report(scan_id, 'xml')
                 if (type(b) == bytes):
                     b = b.decode("utf-8")
                 elif (b == None):
@@ -318,8 +348,8 @@ def ArachniScan(request):
                 c.write(b)
                 c.close()
                 generateReport()
-                break
-
+                SendEmail()
+                
 
         print(scan_type)
         return render(request,'arachni_redirect.html',{'data1':scan_type})
