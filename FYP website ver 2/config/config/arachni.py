@@ -52,11 +52,14 @@ DELETE /scans/:id
  
 import urllib.request
 import json
- 
+import os
+from os import path
+web = (os.path.dirname(__file__) + "\profiles\Non-authenticated\webapp.json")
+
 class ArachniClient(object):
 
  
-   with open('C:\\Users\\F5-573G\\Downloads\\FYP_website_ver_21\\FYP_website_ver_2(1)\\FYP website ver 2\\config\\config\\profiles\\Non-authenticated\\webapp.json') as f:
+   with open(web) as f:
       default_profile = json.load(f)
  
    def __init__(self, arachni_url = 'http://127.0.0.1:7331'):

@@ -10,20 +10,23 @@ from datetime import date as date
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
+from os import path
+json = (os.path.dirname(file) + "\input\input.json")
+auth = (os.path.dirname(__file__) + "\profiles\Authenticated/")
+nonauth = (os.path.dirname(__file__) + "\profiles\Non-authenticated/")
+sol = (os.path.dirname(__file__) + "\solution.xml")
 
 # Create your views here.
 def external(request):
+    basedir = os.path.dirname(__file__)
+    newdir = (os.path.dirname(os.path.dirname(basedir)))
+    portscan = (newdir+"\portscan.py")
 
     uinput = request.POST.get('param')
-    #if(uinput==request.POST.get('param')):
-    messages.info(request, "Port Scanning is running....")
-    out = run([sys.executable,'.//nmap.py',uinput],shell=False,stdout=PIPE)
+    out = run([sys.executable,portscan,uinput],shell=False,stdout=PIPE)
     
     print(out)
-    
-    if uinput:
-        messages.success(request, "Port Scanning is completed.")
-        #return redirect('aboutus')
         
     return render(request,'home.html',{'data1':out.stdout})
 
@@ -32,26 +35,26 @@ def external(request):
 
 
 def start_scan(in_client,auth):
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(json, 'r')
     data = json.load(jsonOpen)
     url = data["url"]
     profile = data["profile"]
     jsonOpen.close()
 
     if(auth):
-        in_client.profile('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/'+ get_Profile() + '.json')
+        in_client.profile(auth + get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
-        jsonOpen2 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+        jsonOpen2 = open(json, 'w')
         _id = container.get("id")
         data["scan_id"] = _id
         json.dump(data, jsonOpen2, indent=4)
         jsonOpen2.close()
     else:
-        in_client.profile('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Non-authenticated\\'+ get_Profile() + '.json')
+        in_client.profile(nonauth + get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
-        jsonOpen2 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+        jsonOpen2 = open(json, 'w')
         _id = container.get("id")
         data["scan_id"] = _id
         json.dump(data, jsonOpen2, indent=4)
@@ -59,29 +62,29 @@ def start_scan(in_client,auth):
 
 
 def auth_scan_parameters(URL, user, _pass):
-    file1 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'r') #open to get data from the json file
+    file1 = open(auth + get_Profile() + '.json', 'r') #open to get data from the json file
     data = json.load(file1)
     file1.close()
     data["plugins"]["autologin"]["url"] = URL
     data["plugins"]["autologin"]["parameters"] = 'email='+user+'&password='+_pass
-    file1 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'w') #open file to update the values
+    file1 = open(auth + get_Profile() + '.json', 'w') #open file to update the values
     json.dump(data, file1, indent=4)
     file1.close()
 
 def userInput(URL):
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(json, 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
 
     #userinput inserted into the json file
     data["url"] = URL
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    jsonOpen = open(json, 'w')
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
 
 def get_ID():
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(json, 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
     if(data["scan_id"] != None):
@@ -91,19 +94,19 @@ def get_ID():
         print('No Scan ID found !')
 
 def get_Profile():
-    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
+    file = open(json, 'r')#open input json file 
     data = json.load(file)
     profile_Data = data["profile"]  #input selected profile
     file.close()
     return profile_Data
 
 def edit_profile(insert_prof):
-    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
+    file = open(json, 'r')#open input json file 
     data = json.load(file)
     data["profile"] = insert_prof #input selected profile
     file.close()
 
-    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    file = open(json, 'w')
     json.dump(data,file, indent = 4)#write into json file
     file.close()
 
@@ -126,13 +129,13 @@ def edit_profile(insert_prof):
 def url_in(insert_url):
     URL = insert_url
     #open json file to get data
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(json, 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
 
     #userinput inserted into the json file
     data["url"] = URL
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    jsonOpen = open(json, 'w')
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
@@ -140,7 +143,7 @@ def url_in(insert_url):
 def generateReport():
     report_tree = ET.parse('reporthtml.xml')
     report_root = report_tree.getroot()
-    solution_tree = ET.parse('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\solution.xml')
+    solution_tree = ET.parse(sol)
     solution_root = solution_tree.getroot()
     today = date.today()
     reportName = str(today)+"_ScanningReport.html"
