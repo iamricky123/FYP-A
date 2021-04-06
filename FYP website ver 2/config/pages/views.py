@@ -19,3 +19,9 @@ class ContactUsView (TemplateView):
 
 class RegisterView (TemplateView):
     template_name = 'registration.html'
+
+class ArachniFormView (TemplateView):
+    template_name = 'arachni_form.html'
+
+class ArachniRedirectView (TemplateView):
+    template_name = 'arachni_redirect.html'

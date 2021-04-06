@@ -54,12 +54,12 @@ import urllib.request
 import json
 import os
 from os import path
-web = (os.path.dirname(__file__) + "\profiles\Non-authenticated\webapp.json")
+webscan = (os.path.dirname(__file__) + "\profiles\ScanNon-authenticated\webapp.json")
 
 class ArachniClient(object):
 
  
-   with open(web) as f:
+   with open(webscan) as f:
       default_profile = json.load(f)
  
    def __init__(self, arachni_url = 'http://127.0.0.1:7331'):
