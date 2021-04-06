@@ -17,6 +17,8 @@ class UserReport (models.Model):
     solutions = models.TextField()
     email = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
+    class Meta:
+        db_table:"accounts_userreport"
     
         
         

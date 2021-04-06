@@ -160,8 +160,6 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-# Configure your default site. See
-# https://docs.djangoproject.com/en/dev/ref/settings/#sites.
 SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
@@ -170,18 +168,10 @@ ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
-#login attempts timeout (60seconds)
-ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 60
-ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 3
-
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
-ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.SignupForm'
-ACCOUNT_SIGNUP_REDIRECT_URL = 'accounts/signup.html'
-ACCOUNT_LOGOUT_ON_GET = True
 
 # config/settings.py
 LOGIN_REDIRECT_URL = 'home'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 
 #CELERY
 

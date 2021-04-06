@@ -12,6 +12,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 from os import path
+from accounts.models import UserReport
 
 jsonscan = (os.path.dirname(__file__) + "\input\input.json")
 authscan = (os.path.dirname(__file__) + "\profiles\Authenticated/")
@@ -141,7 +142,7 @@ def url_in(insert_url):
     jsonOpen.close
     return URL
 
-def generateReport():
+def generateReport(request, website, scan_id):
     report_tree = ET.parse('reporthtml.xml')
     report_root = report_tree.getroot()
     solution_tree = ET.parse(solreport)
@@ -200,6 +201,14 @@ def generateReport():
                                                         f.write("<p class='description'>"+report_description+"</p>")
                                                         f.write("<p class='solution'>"+solution_solution+"</p>")
                                                         f.write("<p class='url'>"+report_url+"</p>")
+
+                                                        saverecord = UserReport()
+                                                        saverecord.email=request
+                                                        saverecord.scan_data=scan_id
+                                                        saverecord.scan_website=website
+                                                        saverecord.vulnerabilities=solution_description
+                                                        saverecord.solutions=solution_solution
+                                                        saverecord.save()
                                                         
                                                 
 
@@ -211,55 +220,55 @@ def generateReport():
 
     webbrowser.open_new_tab(reportName)
 
-def main():
-    client = ArachniClient()
-    URL = url_in("http://testphp.vulnweb.com/")
-    auth = 0
-    username = ""
-    password = ""
-    profile = edit_profile("sql_injection")
+# def main():
+#     client = ArachniClient()
+#     URL = url_in("http://testphp.vulnweb.com/")
+#     auth = 0
+#     username = ""
+#     password = ""
+#     profile = edit_profile("sql_injection")
 
-    if(auth):
-        auth_scan_parameters(URL, username, password)
-        start_scan(client, auth)
-        while(1):
-            if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-                 continue
-            else: 
-                scan_id = get_ID() 
-                print(client.get_status(scan_id))
-                print(client.get_report(get_ID(), 'xml'))
-                b = client.get_report(get_ID(), 'xml')
-                if (type(b) == bytes):
-                    b = b.decode("utf-8")
-                elif (b == None):
-                    b = "<?xml version='1.0'?><report>None</report>"
-                c = open("reporthtml.xml","w")
-                c.write(b)
-                c.close()
-                generateReport()
-                break
-    else:
-        start_scan(client, auth)
-        while(1):
-            if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-                continue
-            else: 
-                scan_id = get_ID() 
-                print(client.get_status(scan_id))
-                print(client.get_report(get_ID(), 'xml'))
-                b = client.get_report(get_ID(), 'xml')
-                if (type(b) == bytes):
-                    b = b.decode("utf-8")
-                elif (b == None):
-                    b = "<?xml version='1.0'?><report>None</report>"
-                c = open("reporthtml.xml","w")
-                c.write(b)
-                c.close()
-                generateReport()
-                break
+#     if(auth):
+#         auth_scan_parameters(URL, username, password)
+#         start_scan(client, auth)
+#         while(1):
+#             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
+#                  continue
+#             else: 
+#                 scan_id = get_ID() 
+#                 print(client.get_status(scan_id))
+#                 print(client.get_report(get_ID(), 'xml'))
+#                 b = client.get_report(get_ID(), 'xml')
+#                 if (type(b) == bytes):
+#                     b = b.decode("utf-8")
+#                 elif (b == None):
+#                     b = "<?xml version='1.0'?><report>None</report>"
+#                 c = open("reporthtml.xml","w")
+#                 c.write(b)
+#                 c.close()
+#                 generateReport()
+#                 break
+#     else:
+#         start_scan(client, auth)
+#         while(1):
+#             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
+#                 continue
+#             else: 
+#                 scan_id = get_ID() 
+#                 print(client.get_status(scan_id))
+#                 print(client.get_report(get_ID(), 'xml'))
+#                 b = client.get_report(get_ID(), 'xml')
+#                 if (type(b) == bytes):
+#                     b = b.decode("utf-8")
+#                 elif (b == None):
+#                     b = "<?xml version='1.0'?><report>None</report>"
+#                 c = open("reporthtml.xml","w")
+#                 c.write(b)
+#                 c.close()
+#                 generateReport()
+#                 break
         
-def SendEmail():
+def SendEmail(request):
     mail_content = """Hello,
     This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
     Thank You"""
@@ -267,7 +276,7 @@ def SendEmail():
     #The mail addresses and password
     sender_address = "fypb4343@gmail.com"
     sender_pass = "@bcde_12345"
-    receiver_address = str(request.user)
+    receiver_address = str(request)
     #Setup the MIME
     message = MIMEMultipart()
     message['From'] = sender_address
@@ -283,6 +292,7 @@ def SendEmail():
     session.sendmail(sender_address, receiver_address, text)
     session.quit()
     print('Mail Sent')
+    
 
 
 
@@ -324,8 +334,9 @@ def ArachniScan(request):
                 c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                generateReport()
-                SendEmail()
+                generateReport(request.user, target_website, scan_id)
+                SendEmail(request.user)
+                break
 
         print(scan_type)
         return render(request,'arachni_redirect.html',{'data1':scan_type})
@@ -351,9 +362,9 @@ def ArachniScan(request):
                 c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                generateReport()
-                SendEmail()
-                
+                generateReport(request.user, target_website, scan_id)
+                SendEmail(request.user)
+                break
 
         print(scan_type)
         return render(request,'arachni_redirect.html',{'data1':scan_type})
