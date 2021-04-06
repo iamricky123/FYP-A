@@ -12,6 +12,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 from os import path
+
 jsonscan = (os.path.dirname(__file__) + "\input\input.json")
 authscan = (os.path.dirname(__file__) + "\profiles\Authenticated/")
 nonauthscan = (os.path.dirname(__file__) + "\profiles\ScanNon-authenticated/")
