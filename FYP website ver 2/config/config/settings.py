@@ -179,7 +179,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 # config/settings.py
 LOGIN_REDIRECT_URL = 'home'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 #CELERY
 
