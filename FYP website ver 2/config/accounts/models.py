@@ -8,6 +8,8 @@ class CustomUser(AbstractUser):
     
     def __str__(self):
         return self.email
+
+    class Meta:"accounts_customuser"
         
 class UserReport (models.Model):
     
@@ -20,5 +22,4 @@ class UserReport (models.Model):
     class Meta:
         db_table:"accounts_userreport"
     
-        
         
