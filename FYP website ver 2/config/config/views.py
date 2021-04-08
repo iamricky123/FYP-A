@@ -210,9 +210,7 @@ def generateReport(request, website, scan_id):
                                                         saverecord.solutions=solution_solution
                                                         saverecord.save()
                                                         
-                                                
-
-
+                                            
         f.write("</div>")
         f.write("</body>")
         f.write("</html>")  
