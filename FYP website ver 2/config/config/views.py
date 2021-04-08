@@ -44,7 +44,7 @@ def start_scan(in_client,auth):
     jsonOpen.close()
 
     if(auth):
-        in_client.profile(auth + get_Profile() + '.json')
+        in_client.profile(authscan + get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
         jsonOpen2 = open(jsonscan, 'w')
