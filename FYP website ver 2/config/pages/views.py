@@ -1,6 +1,7 @@
 # pages/views.py
 from django.views.generic import TemplateView
 from accounts .models import CustomUser
+from accounts.models import UserReport
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
@@ -25,3 +26,8 @@ class ArachniFormView (TemplateView):
 
 class ArachniRedirectView (TemplateView):
     template_name = 'arachni_redirect.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['history'] = UserReport.objects.all()
+        return context
