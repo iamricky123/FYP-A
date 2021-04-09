@@ -216,7 +216,7 @@ def generateReport(request, website, scan_id):
         f.write("</html>")  
         f.close()
 
-    webbrowser.open_new_tab(reportName)
+    
 
 # def main():
 #     client = ArachniClient()
@@ -337,7 +337,7 @@ def ArachniScan(request):
                 break
 
         print(scan_type)
-        return render(request,'arachni_redirect.html',{'data1':scan_type})
+        return redirect('arachni_redirect/')
     else:
         scan_type= "authenticated_scan"
 
@@ -365,4 +365,4 @@ def ArachniScan(request):
                 break
 
         print(scan_type)
-        return render(request,'arachni_redirect.html',{'data1':scan_type})
+        return redirect('arachni_redirect/')
