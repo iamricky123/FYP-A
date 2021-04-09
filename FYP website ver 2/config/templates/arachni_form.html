@@ -14,10 +14,10 @@
 
         <title>Home</title>
         <link href="{% static 'assets/dist/css/bootstrap.min.css '%}" rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
         <link href="{% static 'css/headers.css ' %}" rel="stylesheet">
         <link href="{% static 'css/cover.css ' %}" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+        
         <style>
             .bd-placeholder-img {
                 font-size: 1.125rem;
@@ -77,7 +77,8 @@
                         <!-- templates/account/login.html -->
                         <div class="card fat">
                           <div class="card-body">
-                            <h4 class="card-title">Website Penetration</h4>
+                            <h1 style="color:black; font-weight: bold;" class="card-title">Website Penetration Scanning</h1>
+                            <br>
                             <form action="/arachniscan" method="POST" class="my-login-validation">
                               {% csrf_token %}
                               <label for="target_website">Target Website:</label>
@@ -88,7 +89,7 @@
                                   <option value="server">Web Scan</option>
                                   <option value="sql_injection">SQL Injection</option>
                               </select><br><br>
-                              <p>Authenticated Scanning Details:<a style="opacity:0.7"> (optional)</a></p>
+                              <h5 style="color:black">Authenticated Scanning Details:<a> (optional)</a></h5>
                               <label for="target_username">Target Username/E-mail</label>
                               <input type="text" name="target_username">
                               <br>
