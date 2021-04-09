@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Arachni/arachni/v1.5.1/components/reporters/xml/schema.xsd">
   <version>1.5.1</version>
-  <seed>72a0c84d4854ab769caea7c12be4124b</seed>
+  <seed>b7ac39f91cbc81b47d98c57583cf2810</seed>
   <options>---
 audit:
   parameter_values: true
@@ -19,7 +19,7 @@ browser_cluster:
   screen_height: 1200
 datastore:
   report_path: 
-  token: 66c6d4e0f5b2f9f7f9968f6c9e037a4a
+  token: 465a235a5cca641a4d2d1578509561b8
 http:
   user_agent: Arachni/v2.0dev
   request_timeout: 10000
@@ -70,91 +70,86 @@ no_fingerprinting: false
 authorized_by: 
 url: http://testphp.vulnweb.com/
 </options>
-  <start_datetime>2021-04-06T14:36:06+08:00</start_datetime>
-  <finish_datetime>2021-04-06T14:39:27+08:00</finish_datetime>
+  <start_datetime>2021-04-09T12:48:03+08:00</start_datetime>
+  <finish_datetime>2021-04-09T12:50:46+08:00</finish_datetime>
   <sitemap>
     <entry url="http://testphp.vulnweb.com/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/index.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/login.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/categories.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/artists.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/disclaimer.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/cart.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/guestbook.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/AJAX/index.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?aid=1" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?aid=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?aid=1" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?aid=3" code="200"/>
     <entry url="http://testphp.vulnweb.com/AJAX/index.php#" code="200"/>
-    <entry url="http://testphp.vulnweb.com/categories.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/disclaimer.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/guestbook.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/login.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/showxml.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/index.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/userinfo.php" code="302"/>
     <entry url="http://testphp.vulnweb.com/privacy.php" code="404"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/showxml.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php?artist=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/styles.css" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/" code="200"/>
     <entry url="http://testphp.vulnweb.com/hpp/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=4" code="200"/>
     <entry url="http://testphp.vulnweb.com/AJAX/infotitle.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/style.css" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php?artist=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/search.php?test=query" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php?artist=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=2" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?artist=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/web-camera-a4tech/2/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/search.php?test=query" code="200"/>
+    <entry url="http://testphp.vulnweb.com/style.css" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/signup.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=4" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php?artist=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php?artist=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php?artist=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/styles.css" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php" code="302"/>
+    <entry url="http://testphp.vulnweb.com/hpp/?pp=12" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/network-attached-storage-dlink/1/" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg&amp;size=160" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg&amp;size=160" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg&amp;size=160" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg&amp;size=160" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=6" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?pid=1" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?pid=2" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?pid=3" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?pid=4" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=5" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?pid=7" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=6" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=5" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/web-camera-a4tech/2/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg" code="200"/>
     <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/color-printer/3/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/hpp/?pp=12" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?artist=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=4" code="200"/>
-    <entry url="http://testphp.vulnweb.com/signup.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php" code="302"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/network-attached-storage-dlink/1/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=4" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?artist=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=5" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/secured/newuser.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=4" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=5" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=7" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=6" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-2/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-2.html" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-3/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-3.html" code="200"/>
-    <entry url="http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12" code="200"/>
-    <entry url="http://testphp.vulnweb.com/secured/newuser.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-1/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?artist=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?artist=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?artist=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-2/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg" code="200"/>
     <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-1.html" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-3/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-2.html" code="200"/>
     <entry url="http://testphp.vulnweb.com/secured/style.css" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-3.html" code="200"/>
   </sitemap>
   <issues>
     <issue>
@@ -219,7 +214,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>HEAD /secured/ HTTP/1.1&#xD;
@@ -228,7 +223,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -241,7 +236,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:28 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:36 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Connection" value="keep-alive"/>
             <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
@@ -250,7 +245,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <body/>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:28 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:36 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Connection: keep-alive&#xD;
 X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
@@ -384,7 +379,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -393,7 +388,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -401,12 +396,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -525,7 +520,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -607,7 +602,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /CVS/Root HTTP/1.1&#xD;
@@ -616,7 +611,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -624,12 +619,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/CVS/Root</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.25</time>
+          <time>0.203</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:35 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
             <header name="Content-Type" value="application/octet-stream"/>
             <header name="Content-Length" value="1"/>
             <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
@@ -640,7 +635,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <body> </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:35 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
 Content-Type: application/octet-stream&#xD;
 Content-Length: 1&#xD;
 Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
@@ -776,7 +771,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -785,7 +780,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -793,12 +788,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -917,7 +912,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -980,7 +975,7 @@ Access to administration interfaces should be restricted to trusted IP addresses
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /admin/ HTTP/1.1&#xD;
@@ -989,7 +984,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -997,12 +992,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/admin/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.5</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:26 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:26 GMT"/>
             <header name="Content-Type" value="text/html"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -1018,7 +1013,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
 </body>
           <raw_headers>HTTP/1.1 301 Moved Permanently&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:26 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:26 GMT&#xD;
 Content-Type: text/html&#xD;
 Content-Length: 169&#xD;
 Location: http://testphp.vulnweb.com/admin/&#xD;
@@ -1026,7 +1021,7 @@ Connection: keep-alive&#xD;
 &#xD;
 HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:26 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:26 GMT&#xD;
 Content-Type: text/html&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -1160,7 +1155,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -1169,7 +1164,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -1177,12 +1172,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -1301,7 +1296,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -1384,7 +1379,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /CVS/Repository HTTP/1.1&#xD;
@@ -1393,7 +1388,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -1401,12 +1396,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/CVS/Repository</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.25</time>
+          <time>0.203</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:35 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
             <header name="Content-Type" value="application/octet-stream"/>
             <header name="Content-Length" value="8"/>
             <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
@@ -1418,7 +1413,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:35 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
 Content-Type: application/octet-stream&#xD;
 Content-Length: 8&#xD;
 Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
@@ -1554,7 +1549,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -1563,7 +1558,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -1571,12 +1566,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -1695,7 +1690,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -2455,7 +2450,7 @@ This program is free software; you can redistribute it and/or modify it under th
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /secured/phpinfo.php HTTP/1.1&#xD;
@@ -2464,7 +2459,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -2472,12 +2467,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/secured/phpinfo.php</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.234</time>
+          <time>0.203</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:39:06 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:50:00 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3165,7 +3160,7 @@ This program is free software; you can redistribute it and/or modify it under th
 &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:39:06 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:50:00 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3206,7 +3201,7 @@ Content-Encoding: gzip&#xD;
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /secured/newuser.php HTTP/1.1&#xD;
@@ -3215,7 +3210,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -3223,12 +3218,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/secured/newuser.php</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.25</time>
+          <time>0.437</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:38:56 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:49:09 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3253,7 +3248,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:38:56 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:49:09 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3335,7 +3330,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /_mmServerScripts/MMHTTPDB.php HTTP/1.1&#xD;
@@ -3344,7 +3339,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -3352,12 +3347,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/_mmServerScripts/MMHTTPDB.php</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.281</time>
+          <time>0.219</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:35 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3368,7 +3363,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <body>&lt;html&gt;&lt;head&gt;&lt;meta http-equiv='Content-Type' content='text/html; charset=UTF-8'&gt;&lt;/head&gt;&lt;/html&gt;</body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:35 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3504,7 +3499,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -3513,7 +3508,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -3521,12 +3516,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3645,7 +3640,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3727,7 +3722,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /CVS/Entries HTTP/1.1&#xD;
@@ -3736,7 +3731,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -3744,12 +3739,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/CVS/Entries</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.25</time>
+          <time>0.219</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:35 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
             <header name="Content-Type" value="application/octet-stream"/>
             <header name="Content-Length" value="1"/>
             <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
@@ -3760,7 +3755,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <body> </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:35 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
 Content-Type: application/octet-stream&#xD;
 Content-Length: 1&#xD;
 Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
@@ -3896,7 +3891,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -3905,7 +3900,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -3913,12 +3908,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4037,7 +4032,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4135,7 +4130,7 @@ body {&#xD;
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /comment.php HTTP/1.1&#xD;
@@ -4144,7 +4139,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -4152,12 +4147,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/comment.php</url>
           <code>302</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.343</time>
+          <time>0.234</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:37:15 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:49:09 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4205,7 +4200,7 @@ body {&#xD;
 </body>
           <raw_headers>HTTP/1.1 302 Object moved&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:37:15 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:49:09 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4340,7 +4335,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -4349,7 +4344,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -4357,12 +4352,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4481,7 +4476,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4541,7 +4536,7 @@ insights into the behavior of the web application and assist with the penetratio
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET /userinfo.php HTTP/1.1&#xD;
@@ -4550,7 +4545,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -4558,12 +4553,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/userinfo.php</url>
           <code>302</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.219</time>
+          <time>0.406</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:37 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:43 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4573,7 +4568,7 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <body>you must login</body>
           <raw_headers>HTTP/1.1 302 Found&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:37 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:43 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4708,7 +4703,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="72a0c84d4854ab769caea7c12be4124b"/>
+            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -4717,7 +4712,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
+X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 &#xD;
 </raw>
         </request>
@@ -4725,12 +4720,12 @@ X-Arachni-Scan-Seed: 72a0c84d4854ab769caea7c12be4124b&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.453</time>
+          <time>0.422</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Tue, 06 Apr 2021 06:36:24 GMT"/>
+            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4849,7 +4844,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Tue, 06 Apr 2021 06:36:24 GMT&#xD;
+Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;

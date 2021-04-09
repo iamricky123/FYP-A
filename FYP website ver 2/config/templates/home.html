@@ -338,7 +338,8 @@
                       <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
                       <li><a href="aboutus/" class="nav-link px-2 text-white">About Us</a></li>
                       <li><a href="contactus/" class="nav-link px-2 text-white">Contact Us</a></li>
-                      
+                      <li><a href="arachni_form/" class="nav-link px-2 text-white">Arachni Scan</a></li>
+                      <li><a href="arachni_redirect/" class="nav-link px-2 text-white">Arachni Scan History</a></li>
                     </ul>
               
                     <div class="flex-shrink-0 dropdown">
@@ -360,10 +361,12 @@
                 
                 <form action="/external" method="post"> <!--Portscanner-->
                     {%csrf_token%}
+                    <h1 style="color: white; margin-bottom: 20%;">Port Scanning</h1>
+                    <br>
                     <p class="text-white">Input Text:</p>
                     <input type="text" name="param" required><br><br>
                     {{data_external}}<br>
-                    {{data1}}
+                    <p style="color:white">{{data1}}</p>
                     <br><br>
                     <input type="submit" value="Execute External Python Script">
                 </form>
