@@ -29,9 +29,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://placekitten.com/1200/800');
-  background-size: cover;
-  opacity: 0.75;
+  background-image: url('../img/hacker.png');
+  background-size: 50% 100%;
+  opacity: 0.55;
   
   &::before {  
       content: "";

@@ -1,88 +1,104 @@
 <!-- templates/home.html -->
 {% if user.is_authenticated %}
-  <!doctype html>
-  <html lang="en">
+{% load static %}
+    <!doctype html>
+    <html lang="en" class="h-100">
 
-  <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-      <title>Contact Us</title>
-  </head>
+        <title>Home</title>
+        <link href="{% static 'assets/dist/css/bootstrap.min.css '%}" rel="stylesheet">
 
-  <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="/">Ricky's Team</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" aria-current="page" href="/">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="aboutus/">About</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link active" href="contactus/">Contact</a>
-                      </li>
-                  </ul>
+        <link href="{% static 'css/headers.css ' %}" rel="stylesheet">
+        <link href="{% static 'css/cover.css ' %}" rel="stylesheet">
+        
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
 
-                  <ul class="navbar-nav navbar-right">
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
-                      </li>
-                  </ul>
-                  
-              </div>
-          </div>
-      </nav>
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+    </head>
 
-      <!-- Container (About Section) -->
-        <div id="about" class="container-fluid">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h2>Contact Us</h2><br>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat.</h4><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.</p>
+    <body class="d-flex h-100 text-center text-dark">
+        
+        <div class=" d-flex w-100 h-100 mx-auto flex-column">
+            <header class="p-3 mb-auto border-bottom bg-dark">
+                <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    Ricky's Team
+                    </a>
+            
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="aboutus/" class="nav-link px-2 text-white">About Us</a></li>
+                    <li><a href="contactus/" class="nav-link px-2 link-secondary">Contact Us</a></li>
+                    
+                    </ul>
+            
+                    <div class="flex-shrink-0 dropdown">
+                        <a href="#" class="d-block text-white text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ user.email }}</span>
+                        <img class="img-profile rounded-circle" alt="mdo" width="32" height="32" src="{% static 'img/undraw_profile.svg' %}">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        
+                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-signal logo"></span>
+                </div>
+            </header>
+            
+            <div class="hero">
+                
+                <!-- Container (About Section) -->
+                <div style="color: white"; id="about" class="container-fluid">
+                    <div class="row">
+                        <div class="contactus">
+                            <h1>Contact Us</h1>
+                            <br>
+                            <h3>Our fantastic support teams are on hand to get your queries answered as fast as possible - and help you to see see maximum value from our products.</h3>
+                            <br>
+                        </div>
+                        
+                        
+                        <div style="font-size: large" class="email">
+                            <p></span> Email our team at <a href = "mailto: 100083700@students.swinburne.edu.my"> 100083700@students.swinburne.edu.my</a> for further enquiries or feedback</p>
+                            <p>Contact phone: Not available - please use email to contact</p>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <footer class="mt-auto text-dark-50">
+                
+                <span>Copyright &copy; Ricky's Team 2021</span>
+            </footer>
         </div>
-      
-      <!-- Optional JavaScript; choose one of the two! -->
+        <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    </body>
 
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-          crossorigin="anonymous"></script>
-
-      <!-- Option 2: Separate Popper and Bootstrap JS -->
-      <!--
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-      -->
-  </body>
-
-  </html>
+    </html>
   
   <!--<p><a href="{% url 'account_logout' %}">Log Out</a></p>-->
 {% else %}

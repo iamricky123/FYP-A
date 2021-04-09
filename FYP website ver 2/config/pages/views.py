@@ -1,7 +1,7 @@
 # pages/views.py
 from django.views.generic import TemplateView
 from accounts .models import CustomUser
-from accounts.models import UserReport
+from accounts .models import UserReport
 from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
