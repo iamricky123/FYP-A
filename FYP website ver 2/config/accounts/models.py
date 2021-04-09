@@ -21,5 +21,12 @@ class UserReport (models.Model):
 
     class Meta:
         db_table:"accounts_userreport"
-    
+
+
+class UserPortReport (models.Model):
+
+    host_data = models.CharField (max_length=100)
+    state = models.TextField()
+    protocol = models.TextField()
+    email = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
         
