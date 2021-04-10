@@ -17,6 +17,8 @@ class UserReport (models.Model):
     scan_website = models.TextField()
     vulnerabilities = models.TextField()
     solutions = models.TextField()
+    date = models.DateTimeField()
+    scan_type = models.TextField()
     email = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     class Meta:

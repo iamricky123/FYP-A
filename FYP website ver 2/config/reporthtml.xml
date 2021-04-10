@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Arachni/arachni/v1.5.1/components/reporters/xml/schema.xsd">
   <version>1.5.1</version>
-  <seed>b7ac39f91cbc81b47d98c57583cf2810</seed>
+  <seed>884deceb487e42aa367dda0dbd0cfbd7</seed>
   <options>---
 audit:
   parameter_values: true
@@ -19,7 +19,7 @@ browser_cluster:
   screen_height: 1200
 datastore:
   report_path: 
-  token: 465a235a5cca641a4d2d1578509561b8
+  token: b44c0af64cdf6a626921da2d063d26af
 http:
   user_agent: Arachni/v2.0dev
   request_timeout: 10000
@@ -70,86 +70,91 @@ no_fingerprinting: false
 authorized_by: 
 url: http://testphp.vulnweb.com/
 </options>
-  <start_datetime>2021-04-09T12:48:03+08:00</start_datetime>
-  <finish_datetime>2021-04-09T12:50:46+08:00</finish_datetime>
+  <start_datetime>2021-04-10T09:07:58+08:00</start_datetime>
+  <finish_datetime>2021-04-10T09:10:23+08:00</finish_datetime>
   <sitemap>
     <entry url="http://testphp.vulnweb.com/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/index.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/showxml.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/index.php#" code="200"/>
     <entry url="http://testphp.vulnweb.com/login.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/categories.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/disclaimer.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/index.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/cart.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/guestbook.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/index.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?aid=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?aid=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?aid=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/index.php#" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/showxml.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/index.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/userinfo.php" code="302"/>
+    <entry url="http://testphp.vulnweb.com/categories.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/privacy.php" code="404"/>
+    <entry url="http://testphp.vulnweb.com/userinfo.php" code="302"/>
     <entry url="http://testphp.vulnweb.com/hpp/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infotitle.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/search.php?test=query" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?aid=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?aid=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?aid=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=4" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infocateg.php?id=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=2" code="200"/>
     <entry url="http://testphp.vulnweb.com/style.css" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/styles.css" code="200"/>
     <entry url="http://testphp.vulnweb.com/signup.php" code="200"/>
     <entry url="http://testphp.vulnweb.com/listproducts.php?cat=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=4" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php?artist=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php?artist=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/artists.php?artist=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/styles.css" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php" code="302"/>
-    <entry url="http://testphp.vulnweb.com/hpp/?pp=12" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/network-attached-storage-dlink/1/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg&amp;size=160" code="200"/>
+    <entry url="http://testphp.vulnweb.com/search.php?test=query" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infotitle.php" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg&amp;size=160" code="200"/>
+    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg&amp;size=160" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg&amp;size=160" code="200"/>
     <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=4" code="200"/>
+    <entry url="http://testphp.vulnweb.com/listproducts.php?cat=3" code="200"/>
     <entry url="http://testphp.vulnweb.com/comment.php?pid=6" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=1" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=2" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=4" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=7" code="200"/>
-    <entry url="http://testphp.vulnweb.com/comment.php?pid=5" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/web-camera-a4tech/2/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/color-printer/3/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/AJAX/infoartist.php?id=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=6" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php?artist=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php?artist=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/artists.php?artist=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/hpp/?pp=12" code="200"/>
     <entry url="http://testphp.vulnweb.com/secured/newuser.php" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=3" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=2" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=1" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=4" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=5" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php?pid=7" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=1" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=2" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=4" code="200"/>
+    <entry url="http://testphp.vulnweb.com/product.php?pic=3" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=5" code="200"/>
     <entry url="http://testphp.vulnweb.com/product.php?pic=7" code="200"/>
-    <entry url="http://testphp.vulnweb.com/product.php?pic=6" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-1/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/network-attached-storage-dlink/1/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/color-printer/3/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/secured/style.css" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/web-camera-a4tech/2/" code="200"/>
+    <entry url="http://testphp.vulnweb.com/comment.php" code="302"/>
     <entry url="http://testphp.vulnweb.com/listproducts.php?artist=1" code="200"/>
     <entry url="http://testphp.vulnweb.com/listproducts.php?artist=2" code="200"/>
     <entry url="http://testphp.vulnweb.com/listproducts.php?artist=3" code="200"/>
-    <entry url="http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-2/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-1/" code="200"/>
     <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-1.html" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-3/" code="200"/>
-    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-2.html" code="200"/>
-    <entry url="http://testphp.vulnweb.com/secured/style.css" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-2/" code="200"/>
     <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-3.html" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/RateProduct-2.html" code="200"/>
+    <entry url="http://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-3/" code="200"/>
   </sitemap>
   <issues>
     <issue>
@@ -214,7 +219,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>HEAD /secured/ HTTP/1.1&#xD;
@@ -223,400 +228,12 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
         <response>
           <url>http://testphp.vulnweb.com/secured/</url>
-          <code>200</code>
-          <ip_address>18.192.172.30</ip_address>
-          <time>0.218</time>
-          <return_code>ok</return_code>
-          <return_message>No error</return_message>
-          <headers>
-            <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:36 GMT"/>
-            <header name="Content-Type" value="text/html; charset=UTF-8"/>
-            <header name="Connection" value="keep-alive"/>
-            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
-            <header name="Content-Encoding" value="gzip"/>
-          </headers>
-          <body/>
-          <raw_headers>HTTP/1.1 200 OK&#xD;
-Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:36 GMT&#xD;
-Content-Type: text/html; charset=UTF-8&#xD;
-Connection: keep-alive&#xD;
-X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
-Content-Encoding: gzip&#xD;
-&#xD;
-</raw_headers>
-        </response>
-        <dom>
-          <url>http://testphp.vulnweb.com/secured/</url>
-          <transitions/>
-          <data_flow_sinks/>
-          <execution_flow_sinks/>
-        </dom>
-      </page>
-      <referring_page>
-        <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
-
-&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
-&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
-&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
-&lt;!-- here goes headers headers --&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;script language="JavaScript" type="text/JavaScript"&gt;
-&lt;!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-//--&gt;
-&lt;/script&gt;
-
-&lt;/head&gt;
-&lt;body&gt; 
-&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
-&lt;div id="masthead"&gt; 
-  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
-  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
-  &lt;div id="globalNav"&gt; 
-      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
-	&lt;td align="left"&gt;
-		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
-		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
-		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
-		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
-	&lt;/td&gt;
-	&lt;td align="right"&gt;
-		&lt;/td&gt;
-	&lt;/tr&gt;&lt;/table&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-&lt;!-- end masthead --&gt; 
-
-&lt;!-- begin content --&gt;
-&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
-&lt;div id="content"&gt;
-	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
-	  &lt;div class="story"&gt;
-		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
-	  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;!--end content --&gt;
-
-&lt;div id="navBar"&gt; 
-  &lt;div id="search"&gt; 
-    &lt;form action="search.php?test=query" method="post"&gt; 
-      &lt;label&gt;search art&lt;/label&gt; 
-      &lt;input name="searchFor" type="text" size="10"&gt; 
-      &lt;input name="goButton" type="submit" value="go"&gt; 
-    &lt;/form&gt; 
-  &lt;/div&gt; 
-  &lt;div id="sectionLinks"&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
-	  &lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div class="relatedLinks"&gt; 
-    &lt;h3&gt;Links&lt;/h3&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div id="advert"&gt; 
-    &lt;p&gt;
-      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
-        &lt;param name="movie" value="Flash/add.swf"&gt;
-        &lt;param name=quality value=high&gt;
-        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
-      &lt;/object&gt;
-    &lt;/p&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-
-&lt;!--end navbar --&gt; 
-&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
-  Acunetix Ltd 
-&lt;/div&gt; 
-    
-    
-&lt;br&gt; 
-&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
-&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
-</body>
-        <request>
-          <url>http://testphp.vulnweb.com/</url>
-          <method>get</method>
-          <parameters/>
-          <headers>
-            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
-            <header name="User-Agent" value="Arachni/v2.0dev"/>
-            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
-          </headers>
-          <body/>
-          <raw>GET / HTTP/1.1&#xD;
-Host: testphp.vulnweb.com&#xD;
-Accept-Encoding: gzip, deflate&#xD;
-User-Agent: Arachni/v2.0dev&#xD;
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
-Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
-&#xD;
-</raw>
-        </request>
-        <response>
-          <url>http://testphp.vulnweb.com/</url>
-          <code>200</code>
-          <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
-          <return_code>ok</return_code>
-          <return_message>No error</return_message>
-          <headers>
-            <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
-            <header name="Content-Type" value="text/html; charset=UTF-8"/>
-            <header name="Transfer-Encoding" value="chunked"/>
-            <header name="Connection" value="keep-alive"/>
-            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
-            <header name="Content-Encoding" value="gzip"/>
-          </headers>
-          <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
-
-&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
-&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
-&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
-&lt;!-- here goes headers headers --&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;script language="JavaScript" type="text/JavaScript"&gt;
-&lt;!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-//--&gt;
-&lt;/script&gt;
-
-&lt;/head&gt;
-&lt;body&gt; 
-&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
-&lt;div id="masthead"&gt; 
-  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
-  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
-  &lt;div id="globalNav"&gt; 
-      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
-	&lt;td align="left"&gt;
-		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
-		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
-		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
-		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
-	&lt;/td&gt;
-	&lt;td align="right"&gt;
-		&lt;/td&gt;
-	&lt;/tr&gt;&lt;/table&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-&lt;!-- end masthead --&gt; 
-
-&lt;!-- begin content --&gt;
-&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
-&lt;div id="content"&gt;
-	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
-	  &lt;div class="story"&gt;
-		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
-	  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;!--end content --&gt;
-
-&lt;div id="navBar"&gt; 
-  &lt;div id="search"&gt; 
-    &lt;form action="search.php?test=query" method="post"&gt; 
-      &lt;label&gt;search art&lt;/label&gt; 
-      &lt;input name="searchFor" type="text" size="10"&gt; 
-      &lt;input name="goButton" type="submit" value="go"&gt; 
-    &lt;/form&gt; 
-  &lt;/div&gt; 
-  &lt;div id="sectionLinks"&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
-	  &lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div class="relatedLinks"&gt; 
-    &lt;h3&gt;Links&lt;/h3&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div id="advert"&gt; 
-    &lt;p&gt;
-      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
-        &lt;param name="movie" value="Flash/add.swf"&gt;
-        &lt;param name=quality value=high&gt;
-        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
-      &lt;/object&gt;
-    &lt;/p&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-
-&lt;!--end navbar --&gt; 
-&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
-  Acunetix Ltd 
-&lt;/div&gt; 
-    
-    
-&lt;br&gt; 
-&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
-&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
-</body>
-          <raw_headers>HTTP/1.1 200 OK&#xD;
-Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
-Content-Type: text/html; charset=UTF-8&#xD;
-Transfer-Encoding: chunked&#xD;
-Connection: keep-alive&#xD;
-X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
-Content-Encoding: gzip&#xD;
-&#xD;
-</raw_headers>
-        </response>
-        <dom>
-          <url>http://testphp.vulnweb.com/</url>
-          <transitions/>
-          <data_flow_sinks/>
-          <execution_flow_sinks/>
-        </dom>
-      </referring_page>
-      <signature/>
-      <proof>HTTP/1.1 200 OK</proof>
-      <trusted>true</trusted>
-      <platform_type/>
-      <platform_name/>
-    </issue>
-    <issue>
-      <name>Common sensitive file</name>
-      <description>
-Web applications are often made up of multiple files and directories.
-
-It is possible that over time some files may become unreferenced (unused)
-by the web application and forgotten about by the administrator/developer.
-Because web applications are built using common frameworks, they contain common
-files that can be discovered (independent of server).
-
-During the initial recon stages of an attack, cyber-criminals will attempt to
-locate unreferenced files in the hope that the file will assist in further
-compromise of the web application.
-To achieve this they will make thousands of requests using word lists containing
-common filenames.
-The response headers from the server will then indicate if the file exists.
-
-Arachni also contains a list of common file names which it will attempt to access.
-</description>
-      <remedy_guidance>
-If files are unreferenced then they should be removed from the web root
-and/or the application directory.
-
-Preventing access without authentication may also be an option and can stop a
-client from being able to view the contents of a file, however it is still likely
-that the directory structure will be able to be discovered.
-
-Using obscure file names is implementing security through obscurity and is
-not a recommended option.
-</remedy_guidance>
-      <remedy_code/>
-      <severity>low</severity>
-      <check>
-        <name>Common files</name>
-        <description>Tries to find common sensitive files on the server.</description>
-        <author>Tasos "Zapotek" Laskos &lt;tasos.laskos@arachni-scanner.com&gt; </author>
-        <version>0.2.4</version>
-        <shortname>common_files</shortname>
-      </check>
-      <digest>1427770775</digest>
-      <references>
-        <reference title="Apache.org" url="http://httpd.apache.org/docs/2.0/mod/mod_access.html"/>
-      </references>
-      <vector>
-        <class>Arachni::Element::Server</class>
-        <type>server</type>
-        <url>http://testphp.vulnweb.com/CVS/Root</url>
-        <action>http://testphp.vulnweb.com/CVS/Root</action>
-      </vector>
-      <remarks/>
-      <page>
-        <body> </body>
-        <request>
-          <url>http://testphp.vulnweb.com/CVS/Root</url>
-          <method>get</method>
-          <parameters/>
-          <headers>
-            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
-            <header name="User-Agent" value="Arachni/v2.0dev"/>
-            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
-          </headers>
-          <body/>
-          <raw>GET /CVS/Root HTTP/1.1&#xD;
-Host: testphp.vulnweb.com&#xD;
-Accept-Encoding: gzip, deflate&#xD;
-User-Agent: Arachni/v2.0dev&#xD;
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
-Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
-&#xD;
-</raw>
-        </request>
-        <response>
-          <url>http://testphp.vulnweb.com/CVS/Root</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
           <time>0.203</time>
@@ -624,29 +241,25 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
-            <header name="Content-Type" value="application/octet-stream"/>
-            <header name="Content-Length" value="1"/>
-            <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:17 GMT"/>
+            <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Connection" value="keep-alive"/>
-            <header name="Etag" value="&quot;4dca64a4-1&quot;"/>
-            <header name="Accept-Ranges" value="bytes"/>
+            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
+            <header name="Content-Encoding" value="gzip"/>
           </headers>
-          <body> </body>
+          <body/>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
-Content-Type: application/octet-stream&#xD;
-Content-Length: 1&#xD;
-Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:17 GMT&#xD;
+Content-Type: text/html; charset=UTF-8&#xD;
 Connection: keep-alive&#xD;
-ETag: "4dca64a4-1"&#xD;
-Accept-Ranges: bytes&#xD;
+X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
+Content-Encoding: gzip&#xD;
 &#xD;
 </raw_headers>
         </response>
         <dom>
-          <url>http://testphp.vulnweb.com/CVS/Root</url>
+          <url>http://testphp.vulnweb.com/secured/</url>
           <transitions/>
           <data_flow_sinks/>
           <execution_flow_sinks/>
@@ -771,7 +384,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -780,7 +393,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -788,12 +401,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.421</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -912,7 +525,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -975,7 +588,7 @@ Access to administration interfaces should be restricted to trusted IP addresses
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET /admin/ HTTP/1.1&#xD;
@@ -984,7 +597,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -992,12 +605,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/admin/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.437</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:26 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:15 GMT"/>
             <header name="Content-Type" value="text/html"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -1013,7 +626,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 </body>
           <raw_headers>HTTP/1.1 301 Moved Permanently&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:26 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:15 GMT&#xD;
 Content-Type: text/html&#xD;
 Content-Length: 169&#xD;
 Location: http://testphp.vulnweb.com/admin/&#xD;
@@ -1021,7 +634,7 @@ Connection: keep-alive&#xD;
 &#xD;
 HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:26 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:15 GMT&#xD;
 Content-Type: text/html&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -1155,7 +768,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -1164,7 +777,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -1172,12 +785,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.421</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -1296,7 +909,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -1314,400 +927,6 @@ Content-Encoding: gzip&#xD;
       </referring_page>
       <signature/>
       <proof>HTTP/1.1 301 Moved Permanently</proof>
-      <trusted>true</trusted>
-      <platform_type/>
-      <platform_name/>
-    </issue>
-    <issue>
-      <name>Common sensitive file</name>
-      <description>
-Web applications are often made up of multiple files and directories.
-
-It is possible that over time some files may become unreferenced (unused)
-by the web application and forgotten about by the administrator/developer.
-Because web applications are built using common frameworks, they contain common
-files that can be discovered (independent of server).
-
-During the initial recon stages of an attack, cyber-criminals will attempt to
-locate unreferenced files in the hope that the file will assist in further
-compromise of the web application.
-To achieve this they will make thousands of requests using word lists containing
-common filenames.
-The response headers from the server will then indicate if the file exists.
-
-Arachni also contains a list of common file names which it will attempt to access.
-</description>
-      <remedy_guidance>
-If files are unreferenced then they should be removed from the web root
-and/or the application directory.
-
-Preventing access without authentication may also be an option and can stop a
-client from being able to view the contents of a file, however it is still likely
-that the directory structure will be able to be discovered.
-
-Using obscure file names is implementing security through obscurity and is
-not a recommended option.
-</remedy_guidance>
-      <remedy_code/>
-      <severity>low</severity>
-      <check>
-        <name>Common files</name>
-        <description>Tries to find common sensitive files on the server.</description>
-        <author>Tasos "Zapotek" Laskos &lt;tasos.laskos@arachni-scanner.com&gt; </author>
-        <version>0.2.4</version>
-        <shortname>common_files</shortname>
-      </check>
-      <digest>3273423373</digest>
-      <references>
-        <reference title="Apache.org" url="http://httpd.apache.org/docs/2.0/mod/mod_access.html"/>
-      </references>
-      <vector>
-        <class>Arachni::Element::Server</class>
-        <type>server</type>
-        <url>http://testphp.vulnweb.com/CVS/Repository</url>
-        <action>http://testphp.vulnweb.com/CVS/Repository</action>
-      </vector>
-      <remarks/>
-      <page>
-        <body>acupart
-</body>
-        <request>
-          <url>http://testphp.vulnweb.com/CVS/Repository</url>
-          <method>get</method>
-          <parameters/>
-          <headers>
-            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
-            <header name="User-Agent" value="Arachni/v2.0dev"/>
-            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
-          </headers>
-          <body/>
-          <raw>GET /CVS/Repository HTTP/1.1&#xD;
-Host: testphp.vulnweb.com&#xD;
-Accept-Encoding: gzip, deflate&#xD;
-User-Agent: Arachni/v2.0dev&#xD;
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
-Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
-&#xD;
-</raw>
-        </request>
-        <response>
-          <url>http://testphp.vulnweb.com/CVS/Repository</url>
-          <code>200</code>
-          <ip_address>18.192.172.30</ip_address>
-          <time>0.203</time>
-          <return_code>ok</return_code>
-          <return_message>No error</return_message>
-          <headers>
-            <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
-            <header name="Content-Type" value="application/octet-stream"/>
-            <header name="Content-Length" value="8"/>
-            <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
-            <header name="Connection" value="keep-alive"/>
-            <header name="Etag" value="&quot;4dca64a4-8&quot;"/>
-            <header name="Accept-Ranges" value="bytes"/>
-          </headers>
-          <body>acupart
-</body>
-          <raw_headers>HTTP/1.1 200 OK&#xD;
-Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
-Content-Type: application/octet-stream&#xD;
-Content-Length: 8&#xD;
-Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
-Connection: keep-alive&#xD;
-ETag: "4dca64a4-8"&#xD;
-Accept-Ranges: bytes&#xD;
-&#xD;
-</raw_headers>
-        </response>
-        <dom>
-          <url>http://testphp.vulnweb.com/CVS/Repository</url>
-          <transitions/>
-          <data_flow_sinks/>
-          <execution_flow_sinks/>
-        </dom>
-      </page>
-      <referring_page>
-        <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
-
-&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
-&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
-&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
-&lt;!-- here goes headers headers --&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;script language="JavaScript" type="text/JavaScript"&gt;
-&lt;!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-//--&gt;
-&lt;/script&gt;
-
-&lt;/head&gt;
-&lt;body&gt; 
-&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
-&lt;div id="masthead"&gt; 
-  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
-  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
-  &lt;div id="globalNav"&gt; 
-      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
-	&lt;td align="left"&gt;
-		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
-		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
-		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
-		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
-	&lt;/td&gt;
-	&lt;td align="right"&gt;
-		&lt;/td&gt;
-	&lt;/tr&gt;&lt;/table&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-&lt;!-- end masthead --&gt; 
-
-&lt;!-- begin content --&gt;
-&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
-&lt;div id="content"&gt;
-	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
-	  &lt;div class="story"&gt;
-		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
-	  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;!--end content --&gt;
-
-&lt;div id="navBar"&gt; 
-  &lt;div id="search"&gt; 
-    &lt;form action="search.php?test=query" method="post"&gt; 
-      &lt;label&gt;search art&lt;/label&gt; 
-      &lt;input name="searchFor" type="text" size="10"&gt; 
-      &lt;input name="goButton" type="submit" value="go"&gt; 
-    &lt;/form&gt; 
-  &lt;/div&gt; 
-  &lt;div id="sectionLinks"&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
-	  &lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div class="relatedLinks"&gt; 
-    &lt;h3&gt;Links&lt;/h3&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div id="advert"&gt; 
-    &lt;p&gt;
-      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
-        &lt;param name="movie" value="Flash/add.swf"&gt;
-        &lt;param name=quality value=high&gt;
-        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
-      &lt;/object&gt;
-    &lt;/p&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-
-&lt;!--end navbar --&gt; 
-&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
-  Acunetix Ltd 
-&lt;/div&gt; 
-    
-    
-&lt;br&gt; 
-&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
-&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
-</body>
-        <request>
-          <url>http://testphp.vulnweb.com/</url>
-          <method>get</method>
-          <parameters/>
-          <headers>
-            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
-            <header name="User-Agent" value="Arachni/v2.0dev"/>
-            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
-          </headers>
-          <body/>
-          <raw>GET / HTTP/1.1&#xD;
-Host: testphp.vulnweb.com&#xD;
-Accept-Encoding: gzip, deflate&#xD;
-User-Agent: Arachni/v2.0dev&#xD;
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
-Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
-&#xD;
-</raw>
-        </request>
-        <response>
-          <url>http://testphp.vulnweb.com/</url>
-          <code>200</code>
-          <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
-          <return_code>ok</return_code>
-          <return_message>No error</return_message>
-          <headers>
-            <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
-            <header name="Content-Type" value="text/html; charset=UTF-8"/>
-            <header name="Transfer-Encoding" value="chunked"/>
-            <header name="Connection" value="keep-alive"/>
-            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
-            <header name="Content-Encoding" value="gzip"/>
-          </headers>
-          <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
-
-&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
-&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
-&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
-&lt;!-- here goes headers headers --&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;script language="JavaScript" type="text/JavaScript"&gt;
-&lt;!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-//--&gt;
-&lt;/script&gt;
-
-&lt;/head&gt;
-&lt;body&gt; 
-&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
-&lt;div id="masthead"&gt; 
-  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
-  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
-  &lt;div id="globalNav"&gt; 
-      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
-	&lt;td align="left"&gt;
-		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
-		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
-		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
-		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
-	&lt;/td&gt;
-	&lt;td align="right"&gt;
-		&lt;/td&gt;
-	&lt;/tr&gt;&lt;/table&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-&lt;!-- end masthead --&gt; 
-
-&lt;!-- begin content --&gt;
-&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
-&lt;div id="content"&gt;
-	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
-	  &lt;div class="story"&gt;
-		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
-	  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- InstanceEndEditable --&gt;
-&lt;!--end content --&gt;
-
-&lt;div id="navBar"&gt; 
-  &lt;div id="search"&gt; 
-    &lt;form action="search.php?test=query" method="post"&gt; 
-      &lt;label&gt;search art&lt;/label&gt; 
-      &lt;input name="searchFor" type="text" size="10"&gt; 
-      &lt;input name="goButton" type="submit" value="go"&gt; 
-    &lt;/form&gt; 
-  &lt;/div&gt; 
-  &lt;div id="sectionLinks"&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
-      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
-	  &lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div class="relatedLinks"&gt; 
-    &lt;h3&gt;Links&lt;/h3&gt; 
-    &lt;ul&gt; 
-      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
-    &lt;/ul&gt; 
-  &lt;/div&gt; 
-  &lt;div id="advert"&gt; 
-    &lt;p&gt;
-      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
-        &lt;param name="movie" value="Flash/add.swf"&gt;
-        &lt;param name=quality value=high&gt;
-        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
-      &lt;/object&gt;
-    &lt;/p&gt;
-  &lt;/div&gt; 
-&lt;/div&gt; 
-
-&lt;!--end navbar --&gt; 
-&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
-  Acunetix Ltd 
-&lt;/div&gt; 
-    
-    
-&lt;br&gt; 
-&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
-&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
-</body>
-          <raw_headers>HTTP/1.1 200 OK&#xD;
-Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
-Content-Type: text/html; charset=UTF-8&#xD;
-Transfer-Encoding: chunked&#xD;
-Connection: keep-alive&#xD;
-X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
-Content-Encoding: gzip&#xD;
-&#xD;
-</raw_headers>
-        </response>
-        <dom>
-          <url>http://testphp.vulnweb.com/</url>
-          <transitions/>
-          <data_flow_sinks/>
-          <execution_flow_sinks/>
-        </dom>
-      </referring_page>
-      <signature/>
-      <proof>HTTP/1.1 200 OK</proof>
       <trusted>true</trusted>
       <platform_type/>
       <platform_name/>
@@ -2450,7 +1669,7 @@ This program is free software; you can redistribute it and/or modify it under th
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET /secured/phpinfo.php HTTP/1.1&#xD;
@@ -2459,7 +1678,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -2467,12 +1686,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/secured/phpinfo.php</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.203</time>
+          <time>0.219</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:50:00 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:58 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3160,7 +2379,7 @@ This program is free software; you can redistribute it and/or modify it under th
 &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:50:00 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:58 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3201,7 +2420,7 @@ Content-Encoding: gzip&#xD;
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET /secured/newuser.php HTTP/1.1&#xD;
@@ -3210,7 +2429,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -3218,12 +2437,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/secured/newuser.php</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.437</time>
+          <time>0.218</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:49:09 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:50 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3248,7 +2467,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:49:09 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:50 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3259,6 +2478,400 @@ Content-Encoding: gzip&#xD;
         </response>
         <dom>
           <url>http://testphp.vulnweb.com/secured/newuser.php</url>
+          <transitions/>
+          <data_flow_sinks/>
+          <execution_flow_sinks/>
+        </dom>
+      </referring_page>
+      <signature/>
+      <proof>HTTP/1.1 200 OK</proof>
+      <trusted>true</trusted>
+      <platform_type/>
+      <platform_name/>
+    </issue>
+    <issue>
+      <name>Common sensitive file</name>
+      <description>
+Web applications are often made up of multiple files and directories.
+
+It is possible that over time some files may become unreferenced (unused)
+by the web application and forgotten about by the administrator/developer.
+Because web applications are built using common frameworks, they contain common
+files that can be discovered (independent of server).
+
+During the initial recon stages of an attack, cyber-criminals will attempt to
+locate unreferenced files in the hope that the file will assist in further
+compromise of the web application.
+To achieve this they will make thousands of requests using word lists containing
+common filenames.
+The response headers from the server will then indicate if the file exists.
+
+Arachni also contains a list of common file names which it will attempt to access.
+</description>
+      <remedy_guidance>
+If files are unreferenced then they should be removed from the web root
+and/or the application directory.
+
+Preventing access without authentication may also be an option and can stop a
+client from being able to view the contents of a file, however it is still likely
+that the directory structure will be able to be discovered.
+
+Using obscure file names is implementing security through obscurity and is
+not a recommended option.
+</remedy_guidance>
+      <remedy_code/>
+      <severity>low</severity>
+      <check>
+        <name>Common files</name>
+        <description>Tries to find common sensitive files on the server.</description>
+        <author>Tasos "Zapotek" Laskos &lt;tasos.laskos@arachni-scanner.com&gt; </author>
+        <version>0.2.4</version>
+        <shortname>common_files</shortname>
+      </check>
+      <digest>3273423373</digest>
+      <references>
+        <reference title="Apache.org" url="http://httpd.apache.org/docs/2.0/mod/mod_access.html"/>
+      </references>
+      <vector>
+        <class>Arachni::Element::Server</class>
+        <type>server</type>
+        <url>http://testphp.vulnweb.com/CVS/Repository</url>
+        <action>http://testphp.vulnweb.com/CVS/Repository</action>
+      </vector>
+      <remarks/>
+      <page>
+        <body>acupart
+</body>
+        <request>
+          <url>http://testphp.vulnweb.com/CVS/Repository</url>
+          <method>get</method>
+          <parameters/>
+          <headers>
+            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
+            <header name="User-Agent" value="Arachni/v2.0dev"/>
+            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
+          </headers>
+          <body/>
+          <raw>GET /CVS/Repository HTTP/1.1&#xD;
+Host: testphp.vulnweb.com&#xD;
+Accept-Encoding: gzip, deflate&#xD;
+User-Agent: Arachni/v2.0dev&#xD;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
+Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
+&#xD;
+</raw>
+        </request>
+        <response>
+          <url>http://testphp.vulnweb.com/CVS/Repository</url>
+          <code>200</code>
+          <ip_address>18.192.172.30</ip_address>
+          <time>0.203</time>
+          <return_code>ok</return_code>
+          <return_message>No error</return_message>
+          <headers>
+            <header name="Server" value="nginx/1.19.0"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:22 GMT"/>
+            <header name="Content-Type" value="application/octet-stream"/>
+            <header name="Content-Length" value="8"/>
+            <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
+            <header name="Connection" value="keep-alive"/>
+            <header name="Etag" value="&quot;4dca64a4-8&quot;"/>
+            <header name="Accept-Ranges" value="bytes"/>
+          </headers>
+          <body>acupart
+</body>
+          <raw_headers>HTTP/1.1 200 OK&#xD;
+Server: nginx/1.19.0&#xD;
+Date: Sat, 10 Apr 2021 01:08:22 GMT&#xD;
+Content-Type: application/octet-stream&#xD;
+Content-Length: 8&#xD;
+Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
+Connection: keep-alive&#xD;
+ETag: "4dca64a4-8"&#xD;
+Accept-Ranges: bytes&#xD;
+&#xD;
+</raw_headers>
+        </response>
+        <dom>
+          <url>http://testphp.vulnweb.com/CVS/Repository</url>
+          <transitions/>
+          <data_flow_sinks/>
+          <execution_flow_sinks/>
+        </dom>
+      </page>
+      <referring_page>
+        <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
+
+&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
+&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
+&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
+&lt;!-- here goes headers headers --&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;script language="JavaScript" type="text/JavaScript"&gt;
+&lt;!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//--&gt;
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt; 
+&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
+&lt;div id="masthead"&gt; 
+  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
+  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
+  &lt;div id="globalNav"&gt; 
+      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
+	&lt;td align="left"&gt;
+		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
+		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
+		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
+		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
+	&lt;/td&gt;
+	&lt;td align="right"&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;&lt;/table&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;!-- end masthead --&gt; 
+
+&lt;!-- begin content --&gt;
+&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
+&lt;div id="content"&gt;
+	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
+	  &lt;div class="story"&gt;
+		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
+	  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;!--end content --&gt;
+
+&lt;div id="navBar"&gt; 
+  &lt;div id="search"&gt; 
+    &lt;form action="search.php?test=query" method="post"&gt; 
+      &lt;label&gt;search art&lt;/label&gt; 
+      &lt;input name="searchFor" type="text" size="10"&gt; 
+      &lt;input name="goButton" type="submit" value="go"&gt; 
+    &lt;/form&gt; 
+  &lt;/div&gt; 
+  &lt;div id="sectionLinks"&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
+	  &lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div class="relatedLinks"&gt; 
+    &lt;h3&gt;Links&lt;/h3&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div id="advert"&gt; 
+    &lt;p&gt;
+      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
+        &lt;param name="movie" value="Flash/add.swf"&gt;
+        &lt;param name=quality value=high&gt;
+        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
+      &lt;/object&gt;
+    &lt;/p&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+
+&lt;!--end navbar --&gt; 
+&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
+  Acunetix Ltd 
+&lt;/div&gt; 
+    
+    
+&lt;br&gt; 
+&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
+&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
+</body>
+        <request>
+          <url>http://testphp.vulnweb.com/</url>
+          <method>get</method>
+          <parameters/>
+          <headers>
+            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
+            <header name="User-Agent" value="Arachni/v2.0dev"/>
+            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
+          </headers>
+          <body/>
+          <raw>GET / HTTP/1.1&#xD;
+Host: testphp.vulnweb.com&#xD;
+Accept-Encoding: gzip, deflate&#xD;
+User-Agent: Arachni/v2.0dev&#xD;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
+Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
+&#xD;
+</raw>
+        </request>
+        <response>
+          <url>http://testphp.vulnweb.com/</url>
+          <code>200</code>
+          <ip_address>18.192.172.30</ip_address>
+          <time>0.421</time>
+          <return_code>ok</return_code>
+          <return_message>No error</return_message>
+          <headers>
+            <header name="Server" value="nginx/1.19.0"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
+            <header name="Content-Type" value="text/html; charset=UTF-8"/>
+            <header name="Transfer-Encoding" value="chunked"/>
+            <header name="Connection" value="keep-alive"/>
+            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
+            <header name="Content-Encoding" value="gzip"/>
+          </headers>
+          <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
+
+&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
+&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
+&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
+&lt;!-- here goes headers headers --&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;script language="JavaScript" type="text/JavaScript"&gt;
+&lt;!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//--&gt;
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt; 
+&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
+&lt;div id="masthead"&gt; 
+  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
+  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
+  &lt;div id="globalNav"&gt; 
+      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
+	&lt;td align="left"&gt;
+		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
+		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
+		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
+		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
+	&lt;/td&gt;
+	&lt;td align="right"&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;&lt;/table&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;!-- end masthead --&gt; 
+
+&lt;!-- begin content --&gt;
+&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
+&lt;div id="content"&gt;
+	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
+	  &lt;div class="story"&gt;
+		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
+	  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;!--end content --&gt;
+
+&lt;div id="navBar"&gt; 
+  &lt;div id="search"&gt; 
+    &lt;form action="search.php?test=query" method="post"&gt; 
+      &lt;label&gt;search art&lt;/label&gt; 
+      &lt;input name="searchFor" type="text" size="10"&gt; 
+      &lt;input name="goButton" type="submit" value="go"&gt; 
+    &lt;/form&gt; 
+  &lt;/div&gt; 
+  &lt;div id="sectionLinks"&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
+	  &lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div class="relatedLinks"&gt; 
+    &lt;h3&gt;Links&lt;/h3&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div id="advert"&gt; 
+    &lt;p&gt;
+      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
+        &lt;param name="movie" value="Flash/add.swf"&gt;
+        &lt;param name=quality value=high&gt;
+        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
+      &lt;/object&gt;
+    &lt;/p&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+
+&lt;!--end navbar --&gt; 
+&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
+  Acunetix Ltd 
+&lt;/div&gt; 
+    
+    
+&lt;br&gt; 
+&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
+&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
+</body>
+          <raw_headers>HTTP/1.1 200 OK&#xD;
+Server: nginx/1.19.0&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
+Content-Type: text/html; charset=UTF-8&#xD;
+Transfer-Encoding: chunked&#xD;
+Connection: keep-alive&#xD;
+X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
+Content-Encoding: gzip&#xD;
+&#xD;
+</raw_headers>
+        </response>
+        <dom>
+          <url>http://testphp.vulnweb.com/</url>
           <transitions/>
           <data_flow_sinks/>
           <execution_flow_sinks/>
@@ -3330,7 +2943,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET /_mmServerScripts/MMHTTPDB.php HTTP/1.1&#xD;
@@ -3339,7 +2952,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -3352,7 +2965,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:22 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3363,7 +2976,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <body>&lt;html&gt;&lt;head&gt;&lt;meta http-equiv='Content-Type' content='text/html; charset=UTF-8'&gt;&lt;/head&gt;&lt;/html&gt;</body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:22 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3499,7 +3112,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -3508,7 +3121,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -3516,12 +3129,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.421</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -3640,7 +3253,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -3722,7 +3335,7 @@ not a recommended option.
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET /CVS/Entries HTTP/1.1&#xD;
@@ -3731,7 +3344,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -3744,7 +3357,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:41 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:22 GMT"/>
             <header name="Content-Type" value="application/octet-stream"/>
             <header name="Content-Length" value="1"/>
             <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
@@ -3755,7 +3368,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <body> </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:41 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:22 GMT&#xD;
 Content-Type: application/octet-stream&#xD;
 Content-Length: 1&#xD;
 Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
@@ -3891,7 +3504,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -3900,7 +3513,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -3908,12 +3521,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.421</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4032,7 +3645,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4055,162 +3668,110 @@ Content-Encoding: gzip&#xD;
       <platform_name/>
     </issue>
     <issue>
-      <name>Interesting response</name>
+      <name>Common sensitive file</name>
       <description>
-The server responded with a non 200 (OK) nor 404 (Not Found) status code.
-This is a non-issue, however exotic HTTP response status codes can provide useful
-insights into the behavior of the web application and assist with the penetration test.
+Web applications are often made up of multiple files and directories.
+
+It is possible that over time some files may become unreferenced (unused)
+by the web application and forgotten about by the administrator/developer.
+Because web applications are built using common frameworks, they contain common
+files that can be discovered (independent of server).
+
+During the initial recon stages of an attack, cyber-criminals will attempt to
+locate unreferenced files in the hope that the file will assist in further
+compromise of the web application.
+To achieve this they will make thousands of requests using word lists containing
+common filenames.
+The response headers from the server will then indicate if the file exists.
+
+Arachni also contains a list of common file names which it will attempt to access.
 </description>
-      <remedy_guidance/>
+      <remedy_guidance>
+If files are unreferenced then they should be removed from the web root
+and/or the application directory.
+
+Preventing access without authentication may also be an option and can stop a
+client from being able to view the contents of a file, however it is still likely
+that the directory structure will be able to be discovered.
+
+Using obscure file names is implementing security through obscurity and is
+not a recommended option.
+</remedy_guidance>
       <remedy_code/>
-      <severity>informational</severity>
+      <severity>low</severity>
       <check>
-        <name>Interesting responses</name>
-        <description>Logs all non 200 (OK) server responses.</description>
-        <author>Tasos "Zapotek" Laskos &lt;tasos.laskos@arachni-scanner.com&gt;</author>
-        <version>0.2.1</version>
-        <shortname>interesting_responses</shortname>
+        <name>Common files</name>
+        <description>Tries to find common sensitive files on the server.</description>
+        <author>Tasos "Zapotek" Laskos &lt;tasos.laskos@arachni-scanner.com&gt; </author>
+        <version>0.2.4</version>
+        <shortname>common_files</shortname>
       </check>
-      <digest>1173614427</digest>
+      <digest>1427770775</digest>
       <references>
-        <reference title="w3.org" url="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"/>
+        <reference title="Apache.org" url="http://httpd.apache.org/docs/2.0/mod/mod_access.html"/>
       </references>
       <vector>
         <class>Arachni::Element::Server</class>
         <type>server</type>
-        <url>http://testphp.vulnweb.com/comment.php</url>
-        <action>http://testphp.vulnweb.com/comment.php</action>
+        <url>http://testphp.vulnweb.com/CVS/Root</url>
+        <action>http://testphp.vulnweb.com/CVS/Root</action>
       </vector>
       <remarks/>
       <page>
-        <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
-&lt;html&gt;&#xD;
-&lt;head&gt;&#xD;
-&lt;title&gt;&#xD;
-comment on &lt;/title&gt;&#xD;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;&#xD;
-&lt;style type="text/css"&gt;&#xD;
-&lt;!--&#xD;
-body {&#xD;
-	margin-left: 0px;&#xD;
-	margin-top: 0px;&#xD;
-	margin-right: 0px;&#xD;
-	margin-bottom: 0px;&#xD;
-}&#xD;
---&gt;&#xD;
-&lt;/style&gt;&#xD;
-&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;&#xD;
-&lt;/head&gt;&#xD;
-&lt;body&gt;&#xD;
-&lt;form action="comment.php" method="post" enctype="application/x-www-form-urlencoded" name="fComment" id="fComment"&gt;&#xD;
-  &lt;br&gt;&#xD;
-  &lt;table border="0" width="320" height="200"&gt;&#xD;
-    &lt;tr&gt;&#xD;
-      &lt;td valign="top" class="story" align="left"&gt;Name&lt;/td&gt;&#xD;
-      &lt;td valign="top"&gt;&lt;input name="name" type="text" id="name" value="&amp;lt;your name here&amp;gt;" size="25"&gt;&lt;/td&gt;&#xD;
-    &lt;/tr&gt;&#xD;
-    &lt;tr&gt;&#xD;
-      &lt;td valign="top" class="story" align="left"&gt;Comment&lt;/td&gt;&#xD;
-      &lt;td valign="top"&gt;&lt;textarea name="comment" cols="35" rows="8" wrap="VIRTUAL" id="comment"&gt;&lt;/textarea&gt;&lt;/td&gt;&#xD;
-    &lt;/tr&gt;&#xD;
-    &lt;tr&gt;&#xD;
-      &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xD;
-      &lt;td align="left" valign="top"&gt;&lt;input type="submit" name="Submit" value="Submit"&gt;&lt;input type="hidden" name="phpaction" value="echo $_POST[comment];"&gt;&lt;/td&gt;&#xD;
-    &lt;/tr&gt;&#xD;
-  &lt;/table&gt;&#xD;
-&lt;/form&gt;&#xD;
-&lt;/body&gt;&#xD;
-&lt;/html&gt;&#xD;
-</body>
+        <body> </body>
         <request>
-          <url>http://testphp.vulnweb.com/comment.php</url>
+          <url>http://testphp.vulnweb.com/CVS/Root</url>
           <method>get</method>
           <parameters/>
           <headers>
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
-          <raw>GET /comment.php HTTP/1.1&#xD;
+          <raw>GET /CVS/Root HTTP/1.1&#xD;
 Host: testphp.vulnweb.com&#xD;
 Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
         <response>
-          <url>http://testphp.vulnweb.com/comment.php</url>
-          <code>302</code>
+          <url>http://testphp.vulnweb.com/CVS/Root</url>
+          <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.234</time>
+          <time>0.219</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:49:09 GMT"/>
-            <header name="Content-Type" value="text/html; charset=UTF-8"/>
-            <header name="Transfer-Encoding" value="chunked"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:22 GMT"/>
+            <header name="Content-Type" value="application/octet-stream"/>
+            <header name="Content-Length" value="1"/>
+            <header name="Last-Modified" value="Wed, 11 May 2011 10:27:48 GMT"/>
             <header name="Connection" value="keep-alive"/>
-            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
-            <header name="Location" value="./index.php"/>
+            <header name="Etag" value="&quot;4dca64a4-1&quot;"/>
+            <header name="Accept-Ranges" value="bytes"/>
           </headers>
-          <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
-&lt;html&gt;&#xD;
-&lt;head&gt;&#xD;
-&lt;title&gt;&#xD;
-comment on &lt;/title&gt;&#xD;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;&#xD;
-&lt;style type="text/css"&gt;&#xD;
-&lt;!--&#xD;
-body {&#xD;
-	margin-left: 0px;&#xD;
-	margin-top: 0px;&#xD;
-	margin-right: 0px;&#xD;
-	margin-bottom: 0px;&#xD;
-}&#xD;
---&gt;&#xD;
-&lt;/style&gt;&#xD;
-&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;&#xD;
-&lt;/head&gt;&#xD;
-&lt;body&gt;&#xD;
-&lt;form action="comment.php" method="post" enctype="application/x-www-form-urlencoded" name="fComment" id="fComment"&gt;&#xD;
-  &lt;br&gt;&#xD;
-  &lt;table border="0" width="320" height="200"&gt;&#xD;
-    &lt;tr&gt;&#xD;
-      &lt;td valign="top" class="story" align="left"&gt;Name&lt;/td&gt;&#xD;
-      &lt;td valign="top"&gt;&lt;input name="name" type="text" id="name" value="&amp;lt;your name here&amp;gt;" size="25"&gt;&lt;/td&gt;&#xD;
-    &lt;/tr&gt;&#xD;
-    &lt;tr&gt;&#xD;
-      &lt;td valign="top" class="story" align="left"&gt;Comment&lt;/td&gt;&#xD;
-      &lt;td valign="top"&gt;&lt;textarea name="comment" cols="35" rows="8" wrap="VIRTUAL" id="comment"&gt;&lt;/textarea&gt;&lt;/td&gt;&#xD;
-    &lt;/tr&gt;&#xD;
-    &lt;tr&gt;&#xD;
-      &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xD;
-      &lt;td align="left" valign="top"&gt;&lt;input type="submit" name="Submit" value="Submit"&gt;&lt;input type="hidden" name="phpaction" value="echo $_POST[comment];"&gt;&lt;/td&gt;&#xD;
-    &lt;/tr&gt;&#xD;
-  &lt;/table&gt;&#xD;
-&lt;/form&gt;&#xD;
-&lt;/body&gt;&#xD;
-&lt;/html&gt;&#xD;
-</body>
-          <raw_headers>HTTP/1.1 302 Object moved&#xD;
+          <body> </body>
+          <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:49:09 GMT&#xD;
-Content-Type: text/html; charset=UTF-8&#xD;
-Transfer-Encoding: chunked&#xD;
+Date: Sat, 10 Apr 2021 01:08:22 GMT&#xD;
+Content-Type: application/octet-stream&#xD;
+Content-Length: 1&#xD;
+Last-Modified: Wed, 11 May 2011 10:27:48 GMT&#xD;
 Connection: keep-alive&#xD;
-X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
-Location: ./index.php&#xD;
+ETag: "4dca64a4-1"&#xD;
+Accept-Ranges: bytes&#xD;
 &#xD;
 </raw_headers>
         </response>
         <dom>
-          <url>http://testphp.vulnweb.com/comment.php</url>
+          <url>http://testphp.vulnweb.com/CVS/Root</url>
           <transitions/>
           <data_flow_sinks/>
           <execution_flow_sinks/>
@@ -4335,7 +3896,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -4344,7 +3905,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -4352,12 +3913,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.421</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4476,7 +4037,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4493,7 +4054,7 @@ Content-Encoding: gzip&#xD;
         </dom>
       </referring_page>
       <signature/>
-      <proof>HTTP/1.1 302 Object moved</proof>
+      <proof>HTTP/1.1 200 OK</proof>
       <trusted>true</trusted>
       <platform_type/>
       <platform_name/>
@@ -4536,7 +4097,7 @@ insights into the behavior of the web application and assist with the penetratio
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET /userinfo.php HTTP/1.1&#xD;
@@ -4545,7 +4106,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -4553,12 +4114,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/userinfo.php</url>
           <code>302</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.406</time>
+          <time>0.438</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:43 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:24 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4568,7 +4129,7 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <body>you must login</body>
           <raw_headers>HTTP/1.1 302 Found&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:43 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:24 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4703,7 +4264,7 @@ MM_reloadPage(true);
             <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
             <header name="User-Agent" value="Arachni/v2.0dev"/>
             <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
-            <header name="X-Arachni-Scan-Seed" value="b7ac39f91cbc81b47d98c57583cf2810"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
           </headers>
           <body/>
           <raw>GET / HTTP/1.1&#xD;
@@ -4712,7 +4273,7 @@ Accept-Encoding: gzip, deflate&#xD;
 User-Agent: Arachni/v2.0dev&#xD;
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
 Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
-X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
 &#xD;
 </raw>
         </request>
@@ -4720,12 +4281,12 @@ X-Arachni-Scan-Seed: b7ac39f91cbc81b47d98c57583cf2810&#xD;
           <url>http://testphp.vulnweb.com/</url>
           <code>200</code>
           <ip_address>18.192.172.30</ip_address>
-          <time>0.422</time>
+          <time>0.421</time>
           <return_code>ok</return_code>
           <return_message>No error</return_message>
           <headers>
             <header name="Server" value="nginx/1.19.0"/>
-            <header name="Date" value="Fri, 09 Apr 2021 04:48:25 GMT"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
             <header name="Content-Type" value="text/html; charset=UTF-8"/>
             <header name="Transfer-Encoding" value="chunked"/>
             <header name="Connection" value="keep-alive"/>
@@ -4844,7 +4405,7 @@ MM_reloadPage(true);
 </body>
           <raw_headers>HTTP/1.1 200 OK&#xD;
 Server: nginx/1.19.0&#xD;
-Date: Fri, 09 Apr 2021 04:48:25 GMT&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
 Content-Type: text/html; charset=UTF-8&#xD;
 Transfer-Encoding: chunked&#xD;
 Connection: keep-alive&#xD;
@@ -4862,6 +4423,450 @@ Content-Encoding: gzip&#xD;
       </referring_page>
       <signature/>
       <proof>HTTP/1.1 302 Found</proof>
+      <trusted>true</trusted>
+      <platform_type/>
+      <platform_name/>
+    </issue>
+    <issue>
+      <name>Interesting response</name>
+      <description>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</description>
+      <remedy_guidance/>
+      <remedy_code/>
+      <severity>informational</severity>
+      <check>
+        <name>Interesting responses</name>
+        <description>Logs all non 200 (OK) server responses.</description>
+        <author>Tasos "Zapotek" Laskos &lt;tasos.laskos@arachni-scanner.com&gt;</author>
+        <version>0.2.1</version>
+        <shortname>interesting_responses</shortname>
+      </check>
+      <digest>1173614427</digest>
+      <references>
+        <reference title="w3.org" url="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"/>
+      </references>
+      <vector>
+        <class>Arachni::Element::Server</class>
+        <type>server</type>
+        <url>http://testphp.vulnweb.com/comment.php</url>
+        <action>http://testphp.vulnweb.com/comment.php</action>
+      </vector>
+      <remarks/>
+      <page>
+        <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
+&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;title&gt;&#xD;
+comment on &lt;/title&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;&#xD;
+&lt;style type="text/css"&gt;&#xD;
+&lt;!--&#xD;
+body {&#xD;
+	margin-left: 0px;&#xD;
+	margin-top: 0px;&#xD;
+	margin-right: 0px;&#xD;
+	margin-bottom: 0px;&#xD;
+}&#xD;
+--&gt;&#xD;
+&lt;/style&gt;&#xD;
+&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&lt;form action="comment.php" method="post" enctype="application/x-www-form-urlencoded" name="fComment" id="fComment"&gt;&#xD;
+  &lt;br&gt;&#xD;
+  &lt;table border="0" width="320" height="200"&gt;&#xD;
+    &lt;tr&gt;&#xD;
+      &lt;td valign="top" class="story" align="left"&gt;Name&lt;/td&gt;&#xD;
+      &lt;td valign="top"&gt;&lt;input name="name" type="text" id="name" value="&amp;lt;your name here&amp;gt;" size="25"&gt;&lt;/td&gt;&#xD;
+    &lt;/tr&gt;&#xD;
+    &lt;tr&gt;&#xD;
+      &lt;td valign="top" class="story" align="left"&gt;Comment&lt;/td&gt;&#xD;
+      &lt;td valign="top"&gt;&lt;textarea name="comment" cols="35" rows="8" wrap="VIRTUAL" id="comment"&gt;&lt;/textarea&gt;&lt;/td&gt;&#xD;
+    &lt;/tr&gt;&#xD;
+    &lt;tr&gt;&#xD;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xD;
+      &lt;td align="left" valign="top"&gt;&lt;input type="submit" name="Submit" value="Submit"&gt;&lt;input type="hidden" name="phpaction" value="echo $_POST[comment];"&gt;&lt;/td&gt;&#xD;
+    &lt;/tr&gt;&#xD;
+  &lt;/table&gt;&#xD;
+&lt;/form&gt;&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;&#xD;
+</body>
+        <request>
+          <url>http://testphp.vulnweb.com/comment.php</url>
+          <method>get</method>
+          <parameters/>
+          <headers>
+            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
+            <header name="User-Agent" value="Arachni/v2.0dev"/>
+            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
+          </headers>
+          <body/>
+          <raw>GET /comment.php HTTP/1.1&#xD;
+Host: testphp.vulnweb.com&#xD;
+Accept-Encoding: gzip, deflate&#xD;
+User-Agent: Arachni/v2.0dev&#xD;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
+Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
+&#xD;
+</raw>
+        </request>
+        <response>
+          <url>http://testphp.vulnweb.com/comment.php</url>
+          <code>302</code>
+          <ip_address>18.192.172.30</ip_address>
+          <time>0.218</time>
+          <return_code>ok</return_code>
+          <return_message>No error</return_message>
+          <headers>
+            <header name="Server" value="nginx/1.19.0"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:09:15 GMT"/>
+            <header name="Content-Type" value="text/html; charset=UTF-8"/>
+            <header name="Transfer-Encoding" value="chunked"/>
+            <header name="Connection" value="keep-alive"/>
+            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
+            <header name="Location" value="./index.php"/>
+          </headers>
+          <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
+&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;title&gt;&#xD;
+comment on &lt;/title&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;&#xD;
+&lt;style type="text/css"&gt;&#xD;
+&lt;!--&#xD;
+body {&#xD;
+	margin-left: 0px;&#xD;
+	margin-top: 0px;&#xD;
+	margin-right: 0px;&#xD;
+	margin-bottom: 0px;&#xD;
+}&#xD;
+--&gt;&#xD;
+&lt;/style&gt;&#xD;
+&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&lt;form action="comment.php" method="post" enctype="application/x-www-form-urlencoded" name="fComment" id="fComment"&gt;&#xD;
+  &lt;br&gt;&#xD;
+  &lt;table border="0" width="320" height="200"&gt;&#xD;
+    &lt;tr&gt;&#xD;
+      &lt;td valign="top" class="story" align="left"&gt;Name&lt;/td&gt;&#xD;
+      &lt;td valign="top"&gt;&lt;input name="name" type="text" id="name" value="&amp;lt;your name here&amp;gt;" size="25"&gt;&lt;/td&gt;&#xD;
+    &lt;/tr&gt;&#xD;
+    &lt;tr&gt;&#xD;
+      &lt;td valign="top" class="story" align="left"&gt;Comment&lt;/td&gt;&#xD;
+      &lt;td valign="top"&gt;&lt;textarea name="comment" cols="35" rows="8" wrap="VIRTUAL" id="comment"&gt;&lt;/textarea&gt;&lt;/td&gt;&#xD;
+    &lt;/tr&gt;&#xD;
+    &lt;tr&gt;&#xD;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xD;
+      &lt;td align="left" valign="top"&gt;&lt;input type="submit" name="Submit" value="Submit"&gt;&lt;input type="hidden" name="phpaction" value="echo $_POST[comment];"&gt;&lt;/td&gt;&#xD;
+    &lt;/tr&gt;&#xD;
+  &lt;/table&gt;&#xD;
+&lt;/form&gt;&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;&#xD;
+</body>
+          <raw_headers>HTTP/1.1 302 Object moved&#xD;
+Server: nginx/1.19.0&#xD;
+Date: Sat, 10 Apr 2021 01:09:15 GMT&#xD;
+Content-Type: text/html; charset=UTF-8&#xD;
+Transfer-Encoding: chunked&#xD;
+Connection: keep-alive&#xD;
+X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
+Location: ./index.php&#xD;
+&#xD;
+</raw_headers>
+        </response>
+        <dom>
+          <url>http://testphp.vulnweb.com/comment.php</url>
+          <transitions/>
+          <data_flow_sinks/>
+          <execution_flow_sinks/>
+        </dom>
+      </page>
+      <referring_page>
+        <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
+
+&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
+&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
+&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
+&lt;!-- here goes headers headers --&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;script language="JavaScript" type="text/JavaScript"&gt;
+&lt;!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//--&gt;
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt; 
+&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
+&lt;div id="masthead"&gt; 
+  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
+  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
+  &lt;div id="globalNav"&gt; 
+      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
+	&lt;td align="left"&gt;
+		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
+		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
+		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
+		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
+	&lt;/td&gt;
+	&lt;td align="right"&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;&lt;/table&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;!-- end masthead --&gt; 
+
+&lt;!-- begin content --&gt;
+&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
+&lt;div id="content"&gt;
+	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
+	  &lt;div class="story"&gt;
+		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
+	  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;!--end content --&gt;
+
+&lt;div id="navBar"&gt; 
+  &lt;div id="search"&gt; 
+    &lt;form action="search.php?test=query" method="post"&gt; 
+      &lt;label&gt;search art&lt;/label&gt; 
+      &lt;input name="searchFor" type="text" size="10"&gt; 
+      &lt;input name="goButton" type="submit" value="go"&gt; 
+    &lt;/form&gt; 
+  &lt;/div&gt; 
+  &lt;div id="sectionLinks"&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
+	  &lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div class="relatedLinks"&gt; 
+    &lt;h3&gt;Links&lt;/h3&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div id="advert"&gt; 
+    &lt;p&gt;
+      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
+        &lt;param name="movie" value="Flash/add.swf"&gt;
+        &lt;param name=quality value=high&gt;
+        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
+      &lt;/object&gt;
+    &lt;/p&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+
+&lt;!--end navbar --&gt; 
+&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
+  Acunetix Ltd 
+&lt;/div&gt; 
+    
+    
+&lt;br&gt; 
+&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
+&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
+</body>
+        <request>
+          <url>http://testphp.vulnweb.com/</url>
+          <method>get</method>
+          <parameters/>
+          <headers>
+            <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"/>
+            <header name="User-Agent" value="Arachni/v2.0dev"/>
+            <header name="Accept-Language" value="en-US,en;q=0.8,he;q=0.6"/>
+            <header name="X-Arachni-Scan-Seed" value="884deceb487e42aa367dda0dbd0cfbd7"/>
+          </headers>
+          <body/>
+          <raw>GET / HTTP/1.1&#xD;
+Host: testphp.vulnweb.com&#xD;
+Accept-Encoding: gzip, deflate&#xD;
+User-Agent: Arachni/v2.0dev&#xD;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;
+Accept-Language: en-US,en;q=0.8,he;q=0.6&#xD;
+X-Arachni-Scan-Seed: 884deceb487e42aa367dda0dbd0cfbd7&#xD;
+&#xD;
+</raw>
+        </request>
+        <response>
+          <url>http://testphp.vulnweb.com/</url>
+          <code>200</code>
+          <ip_address>18.192.172.30</ip_address>
+          <time>0.421</time>
+          <return_code>ok</return_code>
+          <return_message>No error</return_message>
+          <headers>
+            <header name="Server" value="nginx/1.19.0"/>
+            <header name="Date" value="Sat, 10 Apr 2021 01:08:14 GMT"/>
+            <header name="Content-Type" value="text/html; charset=UTF-8"/>
+            <header name="Transfer-Encoding" value="chunked"/>
+            <header name="Connection" value="keep-alive"/>
+            <header name="X-Powered-By" value="PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"/>
+            <header name="Content-Encoding" value="gzip"/>
+          </headers>
+          <body>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;&lt;!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" --&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"&gt;
+
+&lt;!-- InstanceBeginEditable name="document_title_rgn" --&gt;
+&lt;title&gt;Home of Acunetix Art&lt;/title&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
+&lt;!-- InstanceBeginEditable name="headers_rgn" --&gt;
+&lt;!-- here goes headers headers --&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;script language="JavaScript" type="text/JavaScript"&gt;
+&lt;!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&amp;&amp;(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//--&gt;
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt; 
+&lt;div id="mainLayer" style="position:absolute; width:700px; z-index:1"&gt;
+&lt;div id="masthead"&gt; 
+  &lt;h1 id="siteName"&gt;&lt;a href="https://www.acunetix.com/"&gt;&lt;img src="images/logo.gif" width="306" height="38" border="0" alt="Acunetix website security"&gt;&lt;/a&gt;&lt;/h1&gt;   
+  &lt;h6 id="siteInfo"&gt;TEST and Demonstration site for &lt;a href="https://www.acunetix.com/vulnerability-scanner/"&gt;Acunetix Web Vulnerability Scanner&lt;/a&gt;&lt;/h6&gt;
+  &lt;div id="globalNav"&gt; 
+      	&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;&lt;tr&gt;
+	&lt;td align="left"&gt;
+		&lt;a href="index.php"&gt;home&lt;/a&gt; | &lt;a href="categories.php"&gt;categories&lt;/a&gt; | &lt;a href="artists.php"&gt;artists
+		&lt;/a&gt; | &lt;a href="disclaimer.php"&gt;disclaimer&lt;/a&gt; | &lt;a href="cart.php"&gt;your cart&lt;/a&gt; | 
+		&lt;a href="guestbook.php"&gt;guestbook&lt;/a&gt; | 
+		&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;
+	&lt;/td&gt;
+	&lt;td align="right"&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;&lt;/table&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;!-- end masthead --&gt; 
+
+&lt;!-- begin content --&gt;
+&lt;!-- InstanceBeginEditable name="content_rgn" --&gt;
+&lt;div id="content"&gt;
+	&lt;h2 id="pageName"&gt;welcome to our page&lt;/h2&gt;
+	  &lt;div class="story"&gt;
+		&lt;h3&gt;Test site for Acunetix WVS.&lt;/h3&gt;
+	  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- InstanceEndEditable --&gt;
+&lt;!--end content --&gt;
+
+&lt;div id="navBar"&gt; 
+  &lt;div id="search"&gt; 
+    &lt;form action="search.php?test=query" method="post"&gt; 
+      &lt;label&gt;search art&lt;/label&gt; 
+      &lt;input name="searchFor" type="text" size="10"&gt; 
+      &lt;input name="goButton" type="submit" value="go"&gt; 
+    &lt;/form&gt; 
+  &lt;/div&gt; 
+  &lt;div id="sectionLinks"&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="categories.php"&gt;Browse categories&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="artists.php"&gt;Browse artists&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="cart.php"&gt;Your cart&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="login.php"&gt;Signup&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="userinfo.php"&gt;Your profile&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="guestbook.php"&gt;Our guestbook&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="AJAX/index.php"&gt;AJAX Demo&lt;/a&gt;&lt;/li&gt;
+	  &lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div class="relatedLinks"&gt; 
+    &lt;h3&gt;Links&lt;/h3&gt; 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href="http://www.acunetix.com"&gt;Security art&lt;/a&gt;&lt;/li&gt; 
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/vulnerability-scanner/php-security-scanner/"&gt;PHP scanner&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/"&gt;PHP vuln help&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a href="http://www.eclectasy.com/Fractal-Explorer/index.html"&gt;Fractal Explorer&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+  &lt;/div&gt; 
+  &lt;div id="advert"&gt; 
+    &lt;p&gt;
+      &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="107" height="66"&gt;
+        &lt;param name="movie" value="Flash/add.swf"&gt;
+        &lt;param name=quality value=high&gt;
+        &lt;embed src="Flash/add.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="107" height="66"&gt;&lt;/embed&gt;
+      &lt;/object&gt;
+    &lt;/p&gt;
+  &lt;/div&gt; 
+&lt;/div&gt; 
+
+&lt;!--end navbar --&gt; 
+&lt;div id="siteInfo"&gt;  &lt;a href="http://www.acunetix.com"&gt;About Us&lt;/a&gt; | &lt;a href="privacy.php"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="mailto:wvs@acunetix.com"&gt;Contact Us&lt;/a&gt; | &lt;a href="/Mod_Rewrite_Shop/"&gt;Shop&lt;/a&gt; | &lt;a href="/hpp/"&gt;HTTP Parameter Pollution&lt;/a&gt; | &amp;copy;2019
+  Acunetix Ltd 
+&lt;/div&gt; 
+    
+    
+&lt;br&gt; 
+&lt;div style="background-color:lightgray;width:100%;text-align:center;font-size:12px;padding:1px"&gt;
+&lt;p style="padding-left:5%;padding-right:5%"&gt;&lt;b&gt;Warning&lt;/b&gt;: This is not a real shop. This is an example PHP application, which is intentionally vulnerable to web attacks. It is intended to help you test Acunetix. It also helps you understand how developer errors and bad configuration may let someone break into your website. You can use it to test other tools and your manual hacking skills as well. Tip: Look for potential SQL Injections, Cross-site Scripting (XSS), and Cross-site Request Forgery (CSRF), and more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;!-- InstanceEnd --&gt;&lt;/html&gt;
+</body>
+          <raw_headers>HTTP/1.1 200 OK&#xD;
+Server: nginx/1.19.0&#xD;
+Date: Sat, 10 Apr 2021 01:08:14 GMT&#xD;
+Content-Type: text/html; charset=UTF-8&#xD;
+Transfer-Encoding: chunked&#xD;
+Connection: keep-alive&#xD;
+X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1&#xD;
+Content-Encoding: gzip&#xD;
+&#xD;
+</raw_headers>
+        </response>
+        <dom>
+          <url>http://testphp.vulnweb.com/</url>
+          <transitions/>
+          <data_flow_sinks/>
+          <execution_flow_sinks/>
+        </dom>
+      </referring_page>
+      <signature/>
+      <proof>HTTP/1.1 302 Object moved</proof>
       <trusted>true</trusted>
       <platform_type/>
       <platform_name/>

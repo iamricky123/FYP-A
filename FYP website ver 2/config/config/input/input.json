@@ -1,5 +1,5 @@
 {
-    "url": null,
-    "profile": null,
-    "scan_id": "bee665bc2327aff9843e6754310d85ce"
+    "url": "http://testphp.vulnweb.com/",
+    "profile": "server",
+    "scan_id": "b44c0af64cdf6a626921da2d063d26af"
 }
