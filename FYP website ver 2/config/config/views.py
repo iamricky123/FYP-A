@@ -12,7 +12,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 from os import path
-from accounts.models import UserReport
+from accounts.models import UserReport, SaveScanID
 
 jsonscan = (os.path.dirname(__file__) + "\input\input.json")
 authscan = (os.path.dirname(__file__) + "\profiles\Authenticated/")
@@ -142,13 +142,14 @@ def url_in(insert_url):
     jsonOpen.close
     return URL
 
-def generateReport(request, website, scan_id):
+def generateReport(request, website, scan_id, scan_select):
     report_tree = ET.parse('reporthtml.xml')
     report_root = report_tree.getroot()
     solution_tree = ET.parse(solreport)
     solution_root = solution_tree.getroot()
     today = date.today()
     reportName = str(today)+"_ScanningReport.html"
+    scan_id_1 =""
 
     if (report_root.text == 'None'):
         f = open(reportName,"w")
@@ -208,7 +209,22 @@ def generateReport(request, website, scan_id):
                                                         saverecord.scan_website=website
                                                         saverecord.vulnerabilities=solution_description
                                                         saverecord.solutions=solution_solution
+                                                        saverecord.date = today
+                                                        saverecord.scan_type = scan_select
                                                         saverecord.save()
+
+                                                        savescanid = SaveScanID()
+                                                        scan_id_2 = scan_id
+                                                        if (scan_id_1 != scan_id_2):
+                                                            savescanid.scan_data = scan_id_2
+                                                            scan_id_1 = scan_id_2
+                                                            savescanid.date = today
+                                                            savescanid.scan_website = website
+                                                            savescanid.email = request
+                                                            savescanid.scan_type = scan_select
+                                                            savescanid.save()
+                                                        
+
                                                         
                                             
         f.write("</div>")
@@ -216,7 +232,8 @@ def generateReport(request, website, scan_id):
         f.write("</html>")  
         f.close()
 
-    
+        print(scan_select)
+
 
 # def main():
 #     client = ArachniClient()
@@ -332,12 +349,12 @@ def ArachniScan(request):
                 c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                generateReport(request.user, target_website, scan_id)
+                generateReport(request.user, target_website, scan_id, scan_select)
                 SendEmail(request.user)
                 break
 
         print(scan_type)
-        return redirect('arachni_redirect/')
+        return redirect('arachni_redirect/',)
     else:
         scan_type= "authenticated_scan"
 
@@ -360,9 +377,9 @@ def ArachniScan(request):
                 c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                generateReport(request.user, target_website, scan_id)
+                generateReport(request.user, target_website, scan_id, scan_select)
                 SendEmail(request.user)
                 break
 
         print(scan_type)
-        return redirect('arachni_redirect/')
+        return redirect('arachni_redirect/',)

@@ -1,7 +1,7 @@
 # pages/views.py
 from django.views.generic import TemplateView
 from accounts .models import CustomUser
-from accounts .models import UserReport
+from accounts .models import UserReport, SaveScanID
 from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
@@ -34,6 +34,7 @@ class ArachniRedirectView (TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         context['history'] = UserReport.objects.all()
+        context['savescanid'] = SaveScanID.objects.all()
         return context
 
 def Userregistration(request):
