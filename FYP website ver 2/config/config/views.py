@@ -10,20 +10,25 @@ from datetime import date as date
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
+from os import path
+from accounts.models import UserReport, SaveScanID
+
+jsonscan = (os.path.dirname(__file__) + "\input\input.json")
+authscan = (os.path.dirname(__file__) + "\profiles\Authenticated/")
+nonauthscan = (os.path.dirname(__file__) + "\profiles\ScanNon-authenticated/")
+solreport = (os.path.dirname(__file__) + "\solution.xml")
 
 # Create your views here.
 def external(request):
+    basedir = os.path.dirname(__file__)
+    newdir = (os.path.dirname(os.path.dirname(basedir)))
+    portscan = (newdir+"\portscan.py")
 
     uinput = request.POST.get('param')
-    #if(uinput==request.POST.get('param')):
-    messages.info(request, "Port Scanning is running....")
-    out = run([sys.executable,'.//nmap.py',uinput],shell=False,stdout=PIPE)
+    out = run([sys.executable,portscan,uinput],shell=False,stdout=PIPE)
     
     print(out)
-    
-    if uinput:
-        messages.success(request, "Port Scanning is completed.")
-        #return redirect('aboutus')
         
     return render(request,'home.html',{'data1':out.stdout})
 
@@ -32,26 +37,26 @@ def external(request):
 
 
 def start_scan(in_client,auth):
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(jsonscan, 'r')
     data = json.load(jsonOpen)
     url = data["url"]
     profile = data["profile"]
     jsonOpen.close()
 
     if(auth):
-        in_client.profile('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/'+ get_Profile() + '.json')
+        in_client.profile(authscan + get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
-        jsonOpen2 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+        jsonOpen2 = open(jsonscan, 'w')
         _id = container.get("id")
         data["scan_id"] = _id
         json.dump(data, jsonOpen2, indent=4)
         jsonOpen2.close()
     else:
-        in_client.profile('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Non-authenticated\\'+ get_Profile() + '.json')
+        in_client.profile(nonauthscan + get_Profile() + '.json')
         in_client.target(url) # set target url
         container = in_client.start_scan()
-        jsonOpen2 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+        jsonOpen2 = open(jsonscan, 'w')
         _id = container.get("id")
         data["scan_id"] = _id
         json.dump(data, jsonOpen2, indent=4)
@@ -59,29 +64,29 @@ def start_scan(in_client,auth):
 
 
 def auth_scan_parameters(URL, user, _pass):
-    file1 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'r') #open to get data from the json file
+    file1 = open(authscan + get_Profile() + '.json', 'r') #open to get data from the json file
     data = json.load(file1)
     file1.close()
     data["plugins"]["autologin"]["url"] = URL
     data["plugins"]["autologin"]["parameters"] = 'email='+user+'&password='+_pass
-    file1 = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\profiles\\Authenticated/' + get_Profile() + '.json', 'w') #open file to update the values
+    file1 = open(authscan + get_Profile() + '.json', 'w') #open file to update the values
     json.dump(data, file1, indent=4)
     file1.close()
 
 def userInput(URL):
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(jsonscan, 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
 
     #userinput inserted into the json file
     data["url"] = URL
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    jsonOpen = open(jsonscan, 'w')
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
 
 def get_ID():
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(jsonscan, 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
     if(data["scan_id"] != None):
@@ -91,19 +96,19 @@ def get_ID():
         print('No Scan ID found !')
 
 def get_Profile():
-    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
+    file = open(jsonscan, 'r')#open input json file 
     data = json.load(file)
     profile_Data = data["profile"]  #input selected profile
     file.close()
     return profile_Data
 
 def edit_profile(insert_prof):
-    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')#open input json file 
+    file = open(jsonscan, 'r')#open input json file 
     data = json.load(file)
     data["profile"] = insert_prof #input selected profile
     file.close()
 
-    file = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    file = open(jsonscan, 'w')
     json.dump(data,file, indent = 4)#write into json file
     file.close()
 
@@ -126,24 +131,25 @@ def edit_profile(insert_prof):
 def url_in(insert_url):
     URL = insert_url
     #open json file to get data
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'r')
+    jsonOpen = open(jsonscan, 'r')
     data = json.load(jsonOpen)
     jsonOpen.close()
 
     #userinput inserted into the json file
     data["url"] = URL
-    jsonOpen = open('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\input\\input.json', 'w')
+    jsonOpen = open(jsonscan, 'w')
     json.dump(data, jsonOpen, indent=4)
     jsonOpen.close
     return URL
 
-def generateReport():
+def generateReport(request, website, scan_id, scan_select):
     report_tree = ET.parse('reporthtml.xml')
     report_root = report_tree.getroot()
-    solution_tree = ET.parse('C:\\Users\\Ho Kah Ming\\Documents\\GitHub\\FYP-A\\FYP website ver 2\\config\\config\\solution.xml')
+    solution_tree = ET.parse(solreport)
     solution_root = solution_tree.getroot()
     today = date.today()
     reportName = str(today)+"_ScanningReport.html"
+    scan_id_1 =""
 
     if (report_root.text == 'None'):
         f = open(reportName,"w")
@@ -196,66 +202,88 @@ def generateReport():
                                                         f.write("<p class='description'>"+report_description+"</p>")
                                                         f.write("<p class='solution'>"+solution_solution+"</p>")
                                                         f.write("<p class='url'>"+report_url+"</p>")
+
+                                                        saverecord = UserReport()
+                                                        saverecord.email=request
+                                                        saverecord.scan_data=scan_id
+                                                        saverecord.scan_website=website
+                                                        saverecord.vulnerabilities=solution_description
+                                                        saverecord.solutions=solution_solution
+                                                        saverecord.date = today
+                                                        saverecord.scan_type = scan_select
+                                                        saverecord.save()
+
+                                                        savescanid = SaveScanID()
+                                                        scan_id_2 = scan_id
+                                                        if (scan_id_1 != scan_id_2):
+                                                            savescanid.scan_data = scan_id_2
+                                                            scan_id_1 = scan_id_2
+                                                            savescanid.date = today
+                                                            savescanid.scan_website = website
+                                                            savescanid.email = request
+                                                            savescanid.scan_type = scan_select
+                                                            savescanid.save()
                                                         
-                                                
 
-
+                                                        
+                                            
         f.write("</div>")
         f.write("</body>")
         f.write("</html>")  
         f.close()
 
-    webbrowser.open_new_tab(reportName)
+        print(scan_select)
 
-def main():
-    client = ArachniClient()
-    URL = url_in("http://testphp.vulnweb.com/")
-    auth = 0
-    username = ""
-    password = ""
-    profile = edit_profile("sql_injection")
 
-    if(auth):
-        auth_scan_parameters(URL, username, password)
-        start_scan(client, auth)
-        while(1):
-            if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-                 continue
-            else: 
-                scan_id = get_ID() 
-                print(client.get_status(scan_id))
-                print(client.get_report(get_ID(), 'xml'))
-                b = client.get_report(get_ID(), 'xml')
-                if (type(b) == bytes):
-                    b = b.decode("utf-8")
-                elif (b == None):
-                    b = "<?xml version='1.0'?><report>None</report>"
-                c = open("reporthtml.xml","w")
-                c.write(b)
-                c.close()
-                generateReport()
-                break
-    else:
-        start_scan(client, auth)
-        while(1):
-            if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-                continue
-            else: 
-                scan_id = get_ID() 
-                print(client.get_status(scan_id))
-                print(client.get_report(get_ID(), 'xml'))
-                b = client.get_report(get_ID(), 'xml')
-                if (type(b) == bytes):
-                    b = b.decode("utf-8")
-                elif (b == None):
-                    b = "<?xml version='1.0'?><report>None</report>"
-                c = open("reporthtml.xml","w")
-                c.write(b)
-                c.close()
-                generateReport()
-                break
+# def main():
+#     client = ArachniClient()
+#     URL = url_in("http://testphp.vulnweb.com/")
+#     auth = 0
+#     username = ""
+#     password = ""
+#     profile = edit_profile("sql_injection")
+
+#     if(auth):
+#         auth_scan_parameters(URL, username, password)
+#         start_scan(client, auth)
+#         while(1):
+#             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
+#                  continue
+#             else: 
+#                 scan_id = get_ID() 
+#                 print(client.get_status(scan_id))
+#                 print(client.get_report(get_ID(), 'xml'))
+#                 b = client.get_report(get_ID(), 'xml')
+#                 if (type(b) == bytes):
+#                     b = b.decode("utf-8")
+#                 elif (b == None):
+#                     b = "<?xml version='1.0'?><report>None</report>"
+#                 c = open("reporthtml.xml","w")
+#                 c.write(b)
+#                 c.close()
+#                 generateReport()
+#                 break
+#     else:
+#         start_scan(client, auth)
+#         while(1):
+#             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
+#                 continue
+#             else: 
+#                 scan_id = get_ID() 
+#                 print(client.get_status(scan_id))
+#                 print(client.get_report(get_ID(), 'xml'))
+#                 b = client.get_report(get_ID(), 'xml')
+#                 if (type(b) == bytes):
+#                     b = b.decode("utf-8")
+#                 elif (b == None):
+#                     b = "<?xml version='1.0'?><report>None</report>"
+#                 c = open("reporthtml.xml","w")
+#                 c.write(b)
+#                 c.close()
+#                 generateReport()
+#                 break
         
-def SendEmail():
+def SendEmail(request):
     mail_content = """Hello,
     This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
     Thank You"""
@@ -263,7 +291,7 @@ def SendEmail():
     #The mail addresses and password
     sender_address = "fypb4343@gmail.com"
     sender_pass = "@bcde_12345"
-    receiver_address = str(request.user)
+    receiver_address = str(request)
     #Setup the MIME
     message = MIMEMultipart()
     message['From'] = sender_address
@@ -279,6 +307,7 @@ def SendEmail():
     session.sendmail(sender_address, receiver_address, text)
     session.quit()
     print('Mail Sent')
+    
 
 
 
@@ -320,11 +349,12 @@ def ArachniScan(request):
                 c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                generateReport()
-                SendEmail()
+                generateReport(request.user, target_website, scan_id, scan_select)
+                SendEmail(request.user)
+                break
 
         print(scan_type)
-        return render(request,'arachni_redirect.html',{'data1':scan_type})
+        return redirect('arachni_redirect/',)
     else:
         scan_type= "authenticated_scan"
 
@@ -347,9 +377,9 @@ def ArachniScan(request):
                 c = open("reporthtml.xml","w")
                 c.write(b)
                 c.close()
-                generateReport()
-                SendEmail()
-                
+                generateReport(request.user, target_website, scan_id, scan_select)
+                SendEmail(request.user)
+                break
 
         print(scan_type)
-        return render(request,'arachni_redirect.html',{'data1':scan_type})
+        return redirect('arachni_redirect/',)
