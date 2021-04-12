@@ -12,5 +12,4 @@ urlpatterns = [
     path('arachni_form/', ArachniFormView.as_view() , name='arachni_form'),
     path('arachni_redirect/', ArachniRedirectView.as_view() , name='arachni_redirect'),
     path ('Userregistration',views.Userregistration),
-
 ]
