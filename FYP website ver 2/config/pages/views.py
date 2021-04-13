@@ -1,7 +1,7 @@
 # pages/views.py
 from django.views.generic import TemplateView
 from accounts .models import CustomUser
-from accounts .models import UserReport, SaveScanID
+from accounts .models import UserReport, SaveScanID, UserPortReport
 from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
@@ -35,6 +35,14 @@ class ArachniRedirectView (TemplateView):
         context = super().get_context_data(**kwargs)
         context['history'] = UserReport.objects.all()
         context['savescanid'] = SaveScanID.objects.all()
+        return context
+
+class PortScanRedirectView (TemplateView):
+    template_name = 'portscan_redirect.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['porthistory'] = UserPortReport.objects.all()
         return context
 
 def Userregistration(request):
