@@ -1,18 +1,14 @@
 from django.shortcuts import render,redirect
-import requests
-import sys
+import requests, sys, nmap, webbrowser, smtplib, os, json, socket
 from subprocess import run,PIPE #,Popen
 from django.contrib import messages
 from .arachni import *
 import xml.etree.ElementTree as ET
-import webbrowser
 from datetime import date as date
-import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import os
 from os import path
-from accounts.models import UserReport, SaveScanID
+from accounts.models import UserReport, SaveScanID, UserPortReport
 
 jsonscan = (os.path.dirname(__file__) + "\input\input.json")
 authscan = (os.path.dirname(__file__) + "\profiles\Authenticated/")
@@ -20,17 +16,38 @@ nonauthscan = (os.path.dirname(__file__) + "\profiles\ScanNon-authenticated/")
 solreport = (os.path.dirname(__file__) + "\solution.xml")
 
 # Create your views here.
-def external(request):
-    basedir = os.path.dirname(__file__)
-    newdir = (os.path.dirname(os.path.dirname(basedir)))
-    portscan = (newdir+"\portscan.py")
+def portscanscript(request):
+    portscanweb = request.POST.get('param')
+    portscandate = date.today()
+    try:
+        target = socket.gethostbyname(portscanweb)
+        print(target)
+        nm = nmap.PortScanner()
+        nm.scan(target,'1-500')
+    except:
+        print("Error has occured")
 
-    uinput = request.POST.get('param')
-    out = run([sys.executable,portscan,uinput],shell=False,stdout=PIPE)
-    
-    print(out)
-        
-    return render(request,'home.html',{'data1':out.stdout})
+
+    for host in nm.all_hosts():
+        print("Host : %s (%s)" % (host,target))
+        print("State : %s" % nm[host].state()) #get state of host(up|down|unknown|skipped)
+        # now write the loop for finding the protocol
+        for proto in nm[host].all_protocols(): #get all scanned protocols ['tcp', 'udp'] in (ip|tcp|udp|sctp)
+            print("----------" * 6)
+            print("Protocol : %s" % proto)
+            lport = nm[host][proto].keys() #get all ports for tcp/udp protocol
+            for port in sorted(lport):
+                print ("port : %s\tstate : %s" % (port,nm[host][proto][port]['state']))
+
+                saveportrecord = UserPortReport()
+                saveportrecord.date = portscandate
+                saveportrecord.host_data = target
+                saveportrecord.state = nm[host].state()
+                saveportrecord.protocol = port
+                saveportrecord.email = request.user
+                saveportrecord.save()
+
+    return redirect('portscan_redirect/')
 
 
 
