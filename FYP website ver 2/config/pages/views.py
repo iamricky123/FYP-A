@@ -2,7 +2,7 @@
 from django.views.generic import TemplateView
 from accounts .models import CustomUser
 from accounts .models import UserReport, SaveScanID, UserPortReport
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 
@@ -33,8 +33,15 @@ class ArachniRedirectView (TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['history'] = UserReport.objects.all()
         context['savescanid'] = SaveScanID.objects.all()
+        return context
+
+class ArachniReportView(TemplateView):
+    template_name = 'arachni_report.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['history'] = UserReport.objects.all()
         return context
 
 class PortScanRedirectView (TemplateView):
@@ -60,4 +67,21 @@ def Userregistration(request):
 
     else:
         return render(request, 'registration.html')
+
+def ShowArachniReport(request):
+    if request.method == "POST":
+        scan_id = request.POST.get('scan_id')
+        
+        
+        # report = UserReport.objects.raw("SELECT * From accounts_userreport")
+        report = UserReport.objects.raw("SELECT * From accounts_userreport Where scan_data=\'"+scan_id+"\'")
+        for r in report:
+            print(r.scan_data)
+        context ={
+            'report':report,
+            'scan_id':scan_id
+        }
+        # print (report)
+
+        return render(request, 'arachni_report.html', context)
 

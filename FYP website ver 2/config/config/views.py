@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-import requests, sys, nmap, webbrowser, smtplib, os, json, socket
+import requests, sys, webbrowser, smtplib, os, json, socket
 from subprocess import run,PIPE #,Popen
 from django.contrib import messages
 from .arachni import *

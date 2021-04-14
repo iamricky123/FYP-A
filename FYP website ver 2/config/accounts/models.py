@@ -16,10 +16,12 @@ class UserReport (models.Model):
     scan_data = models.CharField (max_length=100)
     scan_website = models.TextField()
     vulnerabilities = models.TextField()
+    vulnerabilities_description = models.TextField()
     solutions = models.TextField()
     email = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     date = models.TextField()
     scan_type = models.TextField()
+    report_url = models.TextField()
 
     class Meta:
         db_table:"accounts_userreport"

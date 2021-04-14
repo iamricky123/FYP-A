@@ -105,18 +105,23 @@
                                     <tbody>
                                         
                                         {% for s in savescanid %}
-                                            {% if s.email == user.email%}
-                                                <tr>
-                                                <th>{{s.scan_data}}</th>
-                                                <td>{{s.scan_website}}</td>
-                                                <td>{{s.scan_type}}</td>
-                                                <td>{{s.date}}</td>
-                                                </tr>
+                                            <form method='post' action="/showarachnireport">
+                                                {%csrf_token%}
+                                                {% if s.email == user.email%}
+                                                    <tr>
+                                                    <th>{{s.scan_data}}</th>
+                                                    <input type="text" name="scan_id" value={{s.scan_data}} hidden>
+                                                    <td>{{s.scan_website}}</td>
+                                                    <td>{{s.scan_type}}</td>
+                                                    <td>{{s.date}}</td>
+                                                    <td><input type="submit" value="view"></td>
+                                                    </tr>
+                                            </form>
 
-                                                
-                                            {%endif%}
-                                        
-                                        {% endfor %} 
+                                                    
+                                                {%endif%}
+                                            
+                                            {% endfor %} 
                                     </tbody>
                                     
                                 </table>
