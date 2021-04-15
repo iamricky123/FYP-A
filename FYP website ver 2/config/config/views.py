@@ -228,6 +228,7 @@ def generateReport(request, website, scan_id, scan_select):
                                                         saverecord.solutions=solution_solution
                                                         saverecord.date = today
                                                         saverecord.scan_type = scan_select
+                                                        saverecord.report_url = report_url
                                                         saverecord.save()
 
                                                         savescanid = SaveScanID()
