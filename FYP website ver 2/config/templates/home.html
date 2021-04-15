@@ -369,6 +369,11 @@
                     <p style="color:white">{{data1}}</p>
                     <br><br>
                     <input type="submit" value="Execute External Python Script">
+                    {%if messages %}
+                        {% for message in messages %}
+                                <script>alert("{{ message }}");</script>
+                        {% endfor %}
+                    {% endif %}
                 </form>
              </div>
 
