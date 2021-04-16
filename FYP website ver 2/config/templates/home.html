@@ -327,7 +327,7 @@
     <body class="d-flex h-100 text-center text-dark">
         
         <div class=" d-flex w-100 h-100 mx-auto flex-column">
-            <header class="p-3 mb-auto border-bottom bg-dark">
+            <header class="p-3 mb-auto bg-dark">
                 <div class="container">
                   <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -358,18 +358,24 @@
               </header>
             
               <div class="hero">
+                <div class="card" style="width: 30%; color:black;">
+                    <div class="card-body">
+                        <form action="/portscanscript" method="post"> <!--Portscanner-->
+                            {%csrf_token%}
+                            <h1 style=" margin-bottom: 20px;">Port Scanning</h1>
+                            <br>
+                            <p>Input Text:</p>
+                            <input type="text" name="param" required><br><br>
+                            {{data_external}}<br>
+                            <p>{{data1}}</p>
+                            <br><br>
+                            <input type="submit" value="Execute External Python Script">
+                        </form>
+                        
+                                
+                    </div>
+                  </div>
                 
-                <form action="/portscanscript" method="post"> <!--Portscanner-->
-                    {%csrf_token%}
-                    <h1 style="color: white; margin-bottom: 20%;">Port Scanning</h1>
-                    <br>
-                    <p class="text-white">Input Text:</p>
-                    <input type="text" name="param" required><br><br>
-                    {{data_external}}<br>
-                    <p style="color:white">{{data1}}</p>
-                    <br><br>
-                    <input type="submit" value="Execute External Python Script">
-                </form>
              </div>
 
              {%if messages %}

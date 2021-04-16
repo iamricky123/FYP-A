@@ -1,128 +1,625 @@
 {% load static %}
 {% load crispy_forms_tags %}
 <!doctype html>
-    <html lang="en" class="h-100">
+<html lang="en" class="h-100">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-        <title>Home</title>
-        <link href="{% static 'assets/dist/css/bootstrap.min.css '%}" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-        <link href="{% static 'css/headers.css ' %}" rel="stylesheet">
-        <link href="{% static 'css/cover.css ' %}" rel="stylesheet">
-        
-        <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-            }
+  <title>Home</title>
+  <link href="{% static 'assets/dist/css/bootstrap.min.css '%}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+  <link href="{% static 'css/headers.css ' %}" rel="stylesheet">
+  <link href="{% static 'css/cover.css ' %}" rel="stylesheet">
 
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-        </style>
-    </head>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-    <body class="d-flex h-100 text-center text-dark">
-        
-        <div class=" d-flex w-100 h-100 mx-auto flex-column">
-            <header class="p-3 mb-auto border-bottom bg-dark">
-                <div class="container">
-                  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                      Ricky's Team
-                    </a>
-              
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                      <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
-                        <li><a href="{% url 'aboutus' %}" class="nav-link px-2 text-white">About Us</a></li>
-                        <li><a href="{% url 'contactus' %}" class="nav-link px-2 text-white">Contact Us</a></li>
-                        <li><a href="{% url 'arachni_form' %}" class="nav-link px-2 link-secondary">Arachni Scan</a></li>
-                        <li><a href="{% url 'arachni_redirect' %}" class="nav-link px-2 text-white">Arachni Scan History</a></li>
-                    </ul>
-              
-                    <div class="flex-shrink-0 dropdown">
-                        <a href="#" class="d-block text-white text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                          
-                          <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ user.email }}</span>
-                          <img class="img-profile rounded-circle" alt="mdo" width="32" height="32" src="{% static 'img/undraw_profile.svg' %}">
-                        </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                          
-                          <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a></li>
-                        </ul>
-                      </div>
-                  </div>
-                </div>
-              </header>
-            
-              <div class="hero">
-                <section >
-                  
-                    <div class="row justify-content-md-center h-100">
-                      <div class="card-wrapper">
-                        
-                        <!-- templates/account/login.html -->
-                        <div class="card fat">
-                          <div class="card-body">
-                            <h1 style="color:black; font-weight: bold;" class="card-title">Website Penetration Scanning</h1>
-                            <br>
-                            <form action="/arachniscan" method="POST" class="my-login-validation">
-                              {% csrf_token %}
-                              <label for="target_website">Target Website:</label>
-                              <input type="text" name="target_website"><br><br>
-                              <label for="scan_select">Choose a Scanning Type:</label>
-                              <select name="scan_select">
-                                  <option value="full_audit" selected>Full Audit</option>
-                                  <option value="server">Web Scan</option>
-                                  <option value="sql_injection">SQL Injection</option>
-                              </select><br><br>
-                              <h5 style="color:black">Authenticated Scanning Details:<a> (optional)</a></h5>
-                              <label for="target_username">Target Username/E-mail</label>
-                              <input type="text" name="target_username">
-                              <br>
-                              <br>
-                              <label for="target_password">Target Password</label>
-                              <input type="password" name="target_password">
-                              <div class="form-group m-0">
-                                <br>
-                                <button type="submit" class="btn btn-primary btn-block">
-                                  Scan
-                                </button>
-              
-                                {{data1}}
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  
-                </section>
-                
-             </div>
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <style>
+    
 
-             
+    button {
+      width: 100%;
+      border: 1px solid #DDD;
+      border-right: 0;
+      border-top: 0;
+      padding: 10px;
+      background: #FFF;
+      font-size: 14px;
+      font-weight: bold;
+      height: 60px;
+      color: #999
+    }
 
-            <footer class="mt-auto text-dark-50">
-                
-                <span>Copyright &copy; Ricky's Team 2021</span>
-            </footer>
+    li.active button {
+      background: #F5F5F5;
+      color: #000;
+    }
+
+    table {
+      border-collapse: collapse;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    th {
+      background: #F5F5F5;
+      display: none;
+    }
+
+    td,
+    th {
+      border: 1px solid #DDD;
+      padding: 0.8%;
+      empty-cells: show;
+    }
+
+    td,
+    th {
+      text-align: left;
+    }
+
+    td+td,
+    th+th {
+      text-align: center;
+      display: none;
+    }
+
+    td.default {
+      display: table-cell;
+    }
+
+    .bg-purple {
+      border-top: 3px solid #A32362;
+    }
+
+    .bg-blue {
+      border-top: 3px solid #0097CF;
+    }
+
+    .sep {
+      background: #F5F5F5;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .txt-l {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .txt-top {
+      position: relative;
+      top: -9px;
+      left: -2px;
+    }
+
+    .tick {
+      font-size: 18px;
+      color: #2CA01C;
+    }
+
+    .hide {
+      border: 0;
+      background: none;
+    }
+
+    @media (min-width: 640px) {
+      ul {
+        display: none;
+      }
+
+      td,
+      th {
+        display: table-cell !important;
+      }
+
+      td,
+      th {
+        width: 330px;
+
+      }
+
+      td+td,
+      th+th {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex h-100 text-center text-dark">
+
+  <div class=" d-flex w-100 h-100 mx-auto flex-column">
+    <header class="p-3 mb-auto bg-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            Ricky's Team
+          </a>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="{% url 'aboutus' %}" class="nav-link px-2 text-white">About Us</a></li>
+            <li><a href="{% url 'contactus' %}" class="nav-link px-2 text-white">Contact Us</a></li>
+            <li><a href="{% url 'arachni_form' %}" class="nav-link px-2 link-secondary">Arachni Scan</a></li>
+            <li><a href="{% url 'arachni_redirect' %}" class="nav-link px-2 text-white">Arachni Scan History</a></li>
+          </ul>
+
+          <div class="flex-shrink-0 dropdown">
+            <a href="#" class="d-block text-white text-decoration-none dropdown-toggle" id="dropdownUser2"
+              data-bs-toggle="dropdown" aria-expanded="false">
+
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ user.email }}</span>
+              <img class="img-profile rounded-circle" alt="mdo" width="32" height="32"
+                src="{% static 'img/undraw_profile.svg' %}">
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+
+              <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a></li>
+            </ul>
+          </div>
         </div>
-        <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
-    </body>
+      </div>
+    </header>
 
-    </html>
+    <div class="hero">
+      
+
+        <div class="row justify-content-md-center h-100">
+          <div class="card-wrapper">
+
+            <!-- templates/account/login.html -->
+            <div class="card fat">
+              <div class="card-body">
+                <h1 style="color:black; font-weight: bold;" class="card-title">Website Penetration Scanning</h1>
+                <br>
+                <form action="/arachniscan" method="POST" class="my-login-validation">
+                  {% csrf_token %}
+                  <label for="target_website">Target Website:</label>
+                  <input type="text" name="target_website"><br><br>
+                  <label for="scan_select">Choose a Scanning Type:</label>
+                  <select name="scan_select">
+                    <option value="full_audit" selected>Full Audit</option>
+                    <option value="server">Web Scan</option>
+                    <option value="sql_injection">SQL Injection</option>
+                  </select><br><br>
+                  <h5 style="color:black">Authenticated Scanning Details:<a> (optional)</a></h5>
+                  <label for="target_username">Target Username/E-mail</label>
+                  <input type="text" name="target_username">
+                  <br>
+                  <br>
+                  <label for="target_password">Target Password</label>
+                  <input type="password" name="target_password">
+                  <div class="form-group m-0">
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block">
+                      Scan
+                    </button>
+
+                    {{data1}}
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+     
+
+    </div>
+    <ul>
+      <li class="bg-purple">
+        <button>Self-Employed</button>
+      </li>
+      <li class="bg-blue">
+        <button>Simple Start</button>
+      </li>
+      <li class="bg-blue active">
+        <button>Essentials</button>
+      </li>
+      <li class="bg-blue">
+        <button>Plus</button>
+      </li>
+    </ul>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Profiles</th>
+          <th class="bg-purple">Web App</th>
+          <th class="bg-blue">Server</th>
+          <th class="bg-blue default">Full Audit</th>
+        </tr>
+        <tr>
+          <th>Scanning Method</th>
+          <th colspan="3">ACTIVE SCAN</th>
+        </tr>
+        <tr>
+          <td>Code Injection</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Code injection (php://input wrapper)</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Code Injection (timing)</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>File Inclusion</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>LDAP Injection</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>NoSQL Injection</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Blind NoSQL injection (differential analysis)</td>
+          <td></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>OS command injection</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>OS command injection (timing)</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Path Traversal</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Response Splitting</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Remote File Inclusion</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Session Fixation</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Source Code disclosure</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>SQL Injection</td>
+          <td></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Blind SQL injection (timing attack)</td>
+          <td></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Trainer</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Unvalidated redirect</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Unvalidated DOM redirect</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>XPath Injection</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>XSS (Cross-site Scripting)</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>DOM XSS</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>DOM XSS in script context</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>XSS in HTML element event attribute</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>XSS in HTML tag</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>XML External Entity</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <th>Scanning Method</th>
+          <th colspan="3">PASSIVE SCAN</th>
+        </tr>
+        <tr>
+          <td>Allowed Methods</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Backdoors</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Backup Directories</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Backup Files</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Common admin interfaces</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Common files</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Cookie set for parent domain</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Credit Card number disclosure</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>CVS/SVN users</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Directory Listing</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>E-mail address</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Formed Based File Upload</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>HTTP Strict Transport Security</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>.htaccess LIMIT misconfiguration</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>HTTP objects</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>HttpOnly cookies</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>HTTP PUT</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Insecure client-access policy</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Insecure CORS policy</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Insecure cross-domain policy</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Interesting Responses</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>localstart.asp</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Mixed Resource</td>
+          <td></td>
+          <td><span class="tick">&#10004;</span></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Origin Spoof Access Restriction Bypass</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Password filed with auto-complete</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Private IP address finder</td>
+          <td><span class="tick">&#10004;</span></td>
+          <td></td>
+          <td class="default"><span class="tick">&#10004;</span></td>
+        </tr>
+      </tbody>
+      <tr>
+        <td>SSN (Social Security Number)</td>
+        <td><span class="tick">&#10004;</span></td>
+        <td></td>
+        <td class="default"><span class="tick">&#10004;</span></td>
+      </tr>
+      <tr>
+        <td>Unencrypted password forms</td>
+        <td><span class="tick">&#10004;</span></td>
+        <td></td>
+        <td class="default"><span class="tick">&#10004;</span></td>
+      </tr>
+      <tr>
+        <td>WebDAV</td>
+        <td><span class="tick">&#10004;</span></td>
+        <td></td>
+        <td class="default"><span class="tick">&#10004;</span></td>
+
+      </tr>
+      <tr>
+        <td>Missing X-Frame-Options header</td>
+        <td><span class="tick">&#10004;</span></td>
+        <td></td>
+        <td class="default"><span class="tick">&#10004;</span></td>
+      </tr>
+      <tr>
+        <td>XST (Cross Site Tracing)</td>
+        <td></td>
+        <td></td>
+        <td class="default"><span class="tick">&#10004;</span></td>
+      </tr>
+    </table>
+
+
+    <footer class="mt-auto text-dark-50">
+
+      <span>Copyright &copy; Ricky's Team 2021</span>
+    </footer>
+  </div>
+  <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

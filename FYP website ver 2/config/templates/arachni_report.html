@@ -50,8 +50,8 @@
                       <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
                         <li><a href="{% url 'aboutus' %}" class="nav-link px-2 text-white">About Us</a></li>
                         <li><a href="{% url 'contactus' %}" class="nav-link px-2 text-white">Contact Us</a></li>
-                        <li><a href="{% url 'arachni_form' %}" class="nav-link px-2 link-secondary">Arachni Scan</a></li>
-                        <li><a href="{% url 'arachni_redirect' %}" class="nav-link px-2 text-white">Arachni Scan History</a></li>
+                        <li><a href="{% url 'arachni_form' %}" class="nav-link px-2 text-white">Arachni Scan</a></li>
+                        <li><a href="{% url 'arachni_redirect' %}" class="nav-link px-2 link-secondary">Arachni Scan History</a></li>
                     </ul>
               
                     <div class="flex-shrink-0 dropdown">
@@ -69,63 +69,57 @@
                 </div>
               </header>
             
-              <div class="hero">
+              <div class="special">
                 <section >
-                  <!-- Begin Page Content -->
-                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class=" mb-2 text-white">Scan History</h1>
-                    
-
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h4 class="m-0 font-weight-bold text-primary">Databases Data</h4>
-                        </div>
+                    <div class="card" style="width: 100%; color:black;">
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <h1>Scanning Report for {{scan_id}}</h1>
-                                    <p class='name'>Issue(s) Found</p>
-                                    <p class='description'>Issue(s) Description</p>
-                                    <p class='solution'>Remedy Guidance</p>
-                                    <p class='url'>URL Detected</p>
-                                    {%for r in report%}
-                                    {% comment %} {%if h.email == user%} {% endcomment %}
-                                    {% comment %} {%if scan_id == h.scan_data%} {% endcomment %}
-                                    <p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-                                    <p class='name'>{{r.vulnerabilities}}</p>
-                                    <p class='description'>
-                                    {{r.vulnerabilities_description}}
-                                    </p>
-                                    <p class='solution'>{{r.solutions}}</p>
-                                    <p class='url'>{{r.report_url}}</p>
-                                    {% comment %} {%endif%} {% endcomment %}
-                                    {% comment %} {%endif%} {% endcomment %}
-                                    {%endfor%}
+                            <h1>Scanning Report for {{scan_id}}</h1>
+                            <p class='name'>Issue(s) Found</p>
+                            <p class='description'>Issue(s) Description</p>
+                            <p class='solution'>Remedy Guidance</p>
+                            <p class='url'>URL Detected</p>
+                            {%for r in report%}
+                            {% comment %} {%if h.email == user%} {% endcomment %}
+                            {% comment %} {%if scan_id == h.scan_data%} {% endcomment %}
+                            <p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                            <p class='name'>{{r.vulnerabilities}}</p>
+                            <p class='description'>
+                            {{r.vulnerabilities_description}}
+                            </p>
+                            <p class='solution'>{{r.solutions}}</p>
+                            <p class='url'>{{r.report_url}}</p>
+                            {% comment %} {%endif%} {% endcomment %}
+                            {% comment %} {%endif%} {% endcomment %}
+                            {%endfor%}
+                            
                                     
-                                </table>
-                            </div>
                         </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
+                      </div>
                     
                   
                 </section>
                 
              </div>
-
-             
-
-            <footer class="mt-auto text-dark-50">
-                
-                <span>Copyright &copy; Ricky's Team 2021</span>
-            </footer>
+            
+            
         </div>
         <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+        <!-- Page level plugins -->
+        <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+        <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
     </body>
 
     </html>
