@@ -216,11 +216,12 @@ def generateReport(request, website, scan_id, scan_select):
                                                         saverecord.email=request
                                                         saverecord.scan_data=scan_id
                                                         saverecord.scan_website=website
-                                                        saverecord.vulnerabilities=solution_description
+                                                        saverecord.vulnerabilities=report_name
                                                         saverecord.solutions=solution_solution
                                                         saverecord.date = today
                                                         saverecord.scan_type = scan_select
                                                         saverecord.report_url = report_url
+                                                        saverecord.vulnerabilities_description = report_description
                                                         saverecord.save()
 
                                                         savescanid = SaveScanID()

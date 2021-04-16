@@ -73,25 +73,29 @@
                 <section >
                     <div class="card" style="width: 100%; color:black;">
                         <div class="card-body">
-                            <h1>Scanning Report for {{scan_id}}</h1>
-                            <p class='name'>Issue(s) Found</p>
-                            <p class='description'>Issue(s) Description</p>
-                            <p class='solution'>Remedy Guidance</p>
-                            <p class='url'>URL Detected</p>
-                            {%for r in report%}
-                            {% comment %} {%if h.email == user%} {% endcomment %}
-                            {% comment %} {%if scan_id == h.scan_data%} {% endcomment %}
-                            <p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-                            <p class='name'>{{r.vulnerabilities}}</p>
-                            <p class='description'>
-                            {{r.vulnerabilities_description}}
-                            </p>
-                            <p class='solution'>{{r.solutions}}</p>
-                            <p class='url'>{{r.report_url}}</p>
-                            {% comment %} {%endif%} {% endcomment %}
-                            {% comment %} {%endif%} {% endcomment %}
-                            {%endfor%}
-                            
+                       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <div style="margin-left:10%, margin-right:10%, text-align:left;">
+                                    <h1>Scanning Report for {{scan_id}}</h1>
+                                    <tr>
+                                    <th><p class='name'>Issue(s) Found</p></th>
+                                    <th><p class='description'>Issue(s) Description</p></th>
+                                    <th><p class='solution'>Remedy Guidance</p></th>
+                                    <th><p class='url'>URL Detected</p></th>
+                                    </tr>
+                                    {%for r in report%}
+                                    {% comment %} {%if h.email == user%} {% endcomment %}
+                                    {% comment %} {%if scan_id == h.scan_data%} {% endcomment %}
+                                    <tr>
+                                    <td><p class='name'>{{r.vulnerabilities}}</p></td>
+                                    <td><p class='description'>{{r.vulnerabilities_description}}</p></td>
+                                    <td><p class='solution'>{{r.solutions}}</p></td>
+                                    <td><p class='url'>{{r.report_url}}</p></td>
+                                    </tr>
+                                    {% comment %} {%endif%} {% endcomment %}
+                                    {% comment %} {%endif%} {% endcomment %}
+                                    {%endfor%}
+                                    </div>
+                                </table>
                                     
                         </div>
                       </div>
