@@ -77,20 +77,23 @@
                                     <div style="margin-left:10%, margin-right:10%, text-align:left;">
                                     <h1>Scanning Report for {{scan_id}}</h1>
                                     <tr>
-                                    <th><p class='name'>Issue(s) Found</p></th>
-                                    <th><p class='description'>Issue(s) Description</p></th>
-                                    <th><p class='solution'>Remedy Guidance</p></th>
-                                    <th><p class='url'>URL Detected</p></th>
+                                    <th style="background-color:darkblue;"><p style="color:white;">No.</th>
+                                    <th style="background-color:darkblue;"><p style="color:white;" class='name'>URL Detected</p></th>
+                                    <th style="background-color:darkblue;"><p style="color:white;" class='description'>Issue(s) Found</p></th>
+                                    <th style="background-color:darkblue;"><p style="color:white;" class='solution'>Issue(s) Description</p></th>
+                                    <th style="background-color:darkblue;"><p style="color:white;" class='url'>Remedy Guidance</p></th>
                                     </tr>
                                     {%for r in report%}
                                     {% comment %} {%if h.email == user%} {% endcomment %}
                                     {% comment %} {%if scan_id == h.scan_data%} {% endcomment %}
                                     <tr>
-                                    <td><p class='name'>{{r.vulnerabilities}}</p></td>
-                                    <td><p class='description'>{{r.vulnerabilities_description}}</p></td>
-                                    <td><p class='solution'>{{r.solutions}}</p></td>
-                                    <td><p class='url'>{{r.report_url}}</p></td>
+                                    <th style="background-color:lightblue;"><p style="color:black;">{{forloop.counter}}</p></th>
+                                    <th><p class='name'>{{r.report_url}}</p></th>
+                                    <td><p class='description'>{{r.vulnerabilities}}</p></td>
+                                    <td><p class='solution'>{{r.vulnerabilities_description}}</p></td>
+                                    <td><p class='url'>{{r.solutions}}</p></td>
                                     </tr>
+                                    
                                     {% comment %} {%endif%} {% endcomment %}
                                     {% comment %} {%endif%} {% endcomment %}
                                     {%endfor%}
