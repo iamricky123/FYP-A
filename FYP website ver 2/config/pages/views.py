@@ -75,11 +75,15 @@ def ShowArachniReport(request):
         
         # report = UserReport.objects.raw("SELECT * From accounts_userreport")
         report = UserReport.objects.raw("SELECT * From accounts_userreport Where scan_data=\'"+scan_id+"\'")
+        counter = 0
         for r in report:
             print(r.scan_data)
+            counter += 1
+        print(counter)
         context ={
             'report':report,
-            'scan_id':scan_id
+            'scan_id':scan_id,
+            'counter':counter
         }
         # print (report)
 
