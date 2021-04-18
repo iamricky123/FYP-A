@@ -4,7 +4,7 @@ from subprocess import run,PIPE #,Popen
 from django.contrib import messages
 from .arachni import *
 import xml.etree.ElementTree as ET
-from datetime import date as date
+from datetime import datetime as datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from os import path
@@ -18,7 +18,7 @@ solreport = (os.path.dirname(__file__) + "\solution.xml")
 # Create your views here.
 def portscanscript(request):
     portscanweb = request.POST.get('param')
-    portscandate = date.today()
+    portscandate = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     success = False
     try:
         target = socket.gethostbyname(portscanweb)
