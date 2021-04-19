@@ -15,7 +15,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-        <title>History Page</title>
+        <title>Port Scan History Page</title>
         <link href="{% static 'assets/dist/css/bootstrap.min.css '%}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
         <link href="{% static 'css/headers.css ' %}" rel="stylesheet">
@@ -56,12 +56,12 @@
                     </a>
               
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                      <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+                      <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
                         <li><a href="{% url 'aboutus' %}" class="nav-link px-2 text-white">About Us</a></li>
                         <li><a href="{% url 'contactus' %}" class="nav-link px-2 text-white">Contact Us</a></li>
                         <li><a href="{% url 'arachni_form' %}" class="nav-link px-2 text-white">Arachni Scan</a></li>
                         <li><a href="{% url 'arachni_redirect' %}" class="nav-link px-2 text-white">Arachni Scan History</a></li>
-                        <li><a href="{% url 'portscan_redirect' %}" class="nav-link px-2 text-white">PortScan History</a></li>
+                        <li><a href="{% url 'portscan_redirect' %}" class="nav-link px-2  link-secondary">PortScan History</a></li>
                     </ul>
               
                     <div class="flex-shrink-0 dropdown">
@@ -84,13 +84,13 @@
                  <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">PortScan History</h1>
+                    <h1 class=" mb-2 text-white">PortScan History</h1>
                     
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Databases Tables</h6>
+                            <h4 class="m-0 font-weight-bold text-primary">Databases Tables Data</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
