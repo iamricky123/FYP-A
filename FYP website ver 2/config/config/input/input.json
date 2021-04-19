@@ -1,5 +1,5 @@
 {
     "url": "http://testphp.vulnweb.com/",
-    "profile": "server",
-    "scan_id": "bd46ba3d004763e0de7543f8a2a06479"
+    "profile": "sql_injection",
+    "scan_id": "c7e84574918075b7e8ff7cc7a6f1fff1"
 }

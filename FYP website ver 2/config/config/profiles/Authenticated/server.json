@@ -51,9 +51,9 @@
         "uniformity": {},
         "autothrottle": {},
         "autologin": {
-            "url": "http://testphp.vulnweb.com/",
+            "url": "https://1604b06a7747.ngrok.io/",
             "check": "logout",
-            "parameters": "email=1234&password="
+            "parameters": "email=laserdance188@gmail.com&password=123"
         },
         "healthmap": {},
         "timing_attacks": {},
