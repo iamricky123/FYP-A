@@ -1,5 +1,5 @@
 {
-    "url": "http://testphp.vulnweb.com/",
-    "profile": "sql_injection",
-    "scan_id": "c7e84574918075b7e8ff7cc7a6f1fff1"
+    "url": "http://blogfyp.byethost8.com/index.php",
+    "profile": "server",
+    "scan_id": "5f1d108048c9521c1f097b05b53b5c7e"
 }

@@ -129,8 +129,8 @@
     "platforms": [],
     "plugins": {
         "autologin": {
-            "url": "https://1604b06a7747.ngrok.io/",
-            "parameters": "email=laserdance188@gmail.com&password=123",
+            "url": "http://blogfyp.byethost8.com",
+            "parameters": "email=admin&password=admin",
             "check": "logout"
         },
         "autothrottle": {},
