@@ -10,6 +10,7 @@ from email.mime.text import MIMEText
 from os import path
 from accounts.models import UserReport, SaveScanID, UserPortReport
 from datetime import date
+from urllib.request import urlparse
 
 jsonscan = (os.path.dirname(__file__) + "\input\input.json")
 authscan = (os.path.dirname(__file__) + "\profiles\Authenticated/")
@@ -20,9 +21,11 @@ solreport = (os.path.dirname(__file__) + "\solution.xml")
 def portscanscript(request):
     portscanweb = request.POST.get('param')
     portscandate = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    success = False
     try:
-        target = socket.gethostbyname(portscanweb)
+        if(filterinput(portscanweb) == None):
+            target = socket.gethostbyname(portscanweb)
+        else:
+            target = socket.gethostbyname(filterinput(portscanweb))
         nm = nmap.PortScanner()
         nm.scan(target,'1-500')
         for host in nm.all_hosts():
@@ -41,6 +44,10 @@ def portscanscript(request):
         return render(request, 'home.html')
     
     return redirect('portscan_redirect/')  
+
+def filterinput(input):
+   x = urlparse(input)
+   return x.hostname
 
 
 
