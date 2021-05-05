@@ -1,0 +1,150 @@
+<html lang='en'><head><link rel='stylesheet' href='mystyle1.css'></head><body><div class='report'><h1>Scanning Report</h1><p class='name'>Issue(s) Found</p><p class='description'>Issue(s) Description</p><p class='solution'>Remedy Guidance</p><p class='url'>Issue(s) Site</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>HTTP Strict Transport Security</p><p class='description'>
+The HTTP protocol by itself is clear text, meaning that any data that is
+transmitted via HTTP can be captured and the contents viewed. To keep data
+private and prevent it from being intercepted, HTTP is often tunnelled through
+either Secure Sockets Layer (SSL) or Transport Layer Security (TLS).
+When either of these encryption standards are used, it is referred to as HTTPS.
+
+HTTP Strict Transport Security (HSTS) is an optional response header that can be
+configured on the server to instruct the browser to only communicate via HTTPS.
+This will be enforced by the browser even if the user requests a HTTP resource
+on the same server.
+
+Cyber-criminals will often attempt to compromise sensitive information passed
+from the client to the server using HTTP. This can be conducted via various
+Man-in-The-Middle (MiTM) attacks or through network packet captures.
+
+Arachni discovered that the affected application is using HTTPS however does not
+use the HSTS header.
+</p><p class='solution'>Restrict the instruct web browsers to only access the application using HTTPS. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p class='url'>https://ac093e9edfa0.ngrok.io/index.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>XST</p><p class='description'>
+The `TRACE` HTTP method allows a client so send a request to the server, and
+have the same request then send back in the server's response. This allows the
+client to determine if the server is receiving the request as expected or if
+specific parts of the request are not arriving as expected.
+For example incorrect encoding or a load balancer has filtered or changed a value.
+On many default installations the `TRACE` method is still enabled.
+
+While not vulnerable by itself, it does provide a method for cyber-criminals to
+bypass the `HTTPOnly` cookie flag, and therefore could allow a XSS attack to
+successfully access a session token.
+
+Arachni has discovered that the affected page permits the HTTP `TRACE` method.
+</p><p class='solution'>Set the TraceEnable ¡°off¡± in the main configuration file. More information can be found at https://www.computerweekly.com/tip/How-to-prevent-a-cross-site-tracing-vulnerability-exploit and https://owasp.org/www-community/attacks/Cross_Site_Tracing</p><p class='url'>https://ac093e9edfa0.ngrok.io/index.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Password field with auto-complete</p><p class='description'>
+In typical form-based web applications, it is common practice for developers to
+allow `autocomplete` within the HTML form to improve the usability of the page.
+With `autocomplete` enabled (default), the browser is allowed to cache previously
+entered form values.
+
+For legitimate purposes, this allows the user to quickly re-enter the same data
+when completing the form multiple times.
+
+When `autocomplete` is enabled on either/both the username and password fields,
+this could allow a cyber-criminal with access to the victim's computer the ability
+to have the victim's credentials automatically entered as the cyber-criminal
+visits the affected page.
+
+Arachni has discovered that the affected page contains a form containing a
+password field that has not disabled `autocomplete`.
+</p><p class='solution'>Include the attribute ¡®autocomplete=¡±off¡±¡¯ within the FORM tag of within the relevant INPUT tags to prevent browsers or applications from storing credentials entered into HTML forms. More information can be found at https://portswigger.net/kb/issues/00500800_password-field-with-autocomplete-enabled</p><p class='url'>https://ac093e9edfa0.ngrok.io/registration.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Password field with auto-complete</p><p class='description'>
+In typical form-based web applications, it is common practice for developers to
+allow `autocomplete` within the HTML form to improve the usability of the page.
+With `autocomplete` enabled (default), the browser is allowed to cache previously
+entered form values.
+
+For legitimate purposes, this allows the user to quickly re-enter the same data
+when completing the form multiple times.
+
+When `autocomplete` is enabled on either/both the username and password fields,
+this could allow a cyber-criminal with access to the victim's computer the ability
+to have the victim's credentials automatically entered as the cyber-criminal
+visits the affected page.
+
+Arachni has discovered that the affected page contains a form containing a
+password field that has not disabled `autocomplete`.
+</p><p class='solution'>Include the attribute ¡®autocomplete=¡±off¡±¡¯ within the FORM tag of within the relevant INPUT tags to prevent browsers or applications from storing credentials entered into HTML forms. More information can be found at https://portswigger.net/kb/issues/00500800_password-field-with-autocomplete-enabled</p><p class='url'>https://ac093e9edfa0.ngrok.io/login.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Missing X-Frame-Options header</p><p class='description'>
+Clickjacking (User Interface redress attack, UI redress attack, UI redressing)
+is a malicious technique of tricking a Web user into clicking on something different
+from what the user perceives they are clicking on, thus potentially revealing
+confidential information or taking control of their computer while clicking on
+seemingly innocuous web pages.
+
+The server didn't return an `X-Frame-Options` header which means that this website
+could be at risk of a clickjacking attack.
+
+The `X-Frame-Options` HTTP response header can be used to indicate whether or not
+a browser should be allowed to render a page inside a frame or iframe. Sites can
+use this to avoid clickjacking attacks, by ensuring that their content is not
+embedded into other sites.
+</p><p class='solution'>Employing defensive code in the UI to ensure that the current frame is the most top level window. More information can be found at https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-x-frame-options-header/</p><p class='url'>https://ac093e9edfa0.ngrok.io/index.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Password field with auto-complete</p><p class='description'>
+In typical form-based web applications, it is common practice for developers to
+allow `autocomplete` within the HTML form to improve the usability of the page.
+With `autocomplete` enabled (default), the browser is allowed to cache previously
+entered form values.
+
+For legitimate purposes, this allows the user to quickly re-enter the same data
+when completing the form multiple times.
+
+When `autocomplete` is enabled on either/both the username and password fields,
+this could allow a cyber-criminal with access to the victim's computer the ability
+to have the victim's credentials automatically entered as the cyber-criminal
+visits the affected page.
+
+Arachni has discovered that the affected page contains a form containing a
+password field that has not disabled `autocomplete`.
+</p><p class='solution'>Include the attribute ¡®autocomplete=¡±off¡±¡¯ within the FORM tag of within the relevant INPUT tags to prevent browsers or applications from storing credentials entered into HTML forms. More information can be found at https://portswigger.net/kb/issues/00500800_password-field-with-autocomplete-enabled</p><p class='url'>https://ac093e9edfa0.ngrok.io/accountsettings.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://ac093e9edfa0.ngrok.io/%3Cmy_tag_0179418cef39d4267bd4bb906f51742f/%3E</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://ac093e9edfa0.ngrok.io/login.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://ac093e9edfa0.ngrok.io/Arachni-0179418cef39d4267bd4bb906f51742f</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Insecure cookies</p><p class='description'>
+HTTP by itself is a stateless protocol. Therefore the server is unable to determine
+which requests are performed by which client, and which clients are authenticated
+or unauthenticated.
+
+The use of HTTP cookies within the headers, allows a web server to identify each
+individual client and can therefore determine which clients hold valid
+authentication, from those that do not. These are known as session cookies.
+
+When a cookie is set by the server (sent the header of an HTTP response) there
+are several flags that can be set to configure the properties of the cookie and
+how it is to be handled by the browser.
+
+One of these flags is known as the `secure` flag. When the secure flag is set,
+the browser will prevent it from being sent over a clear text channel (HTTP) and
+only allow it to be sent when an encrypted channel is used (HTTPS).
+
+Arachni discovered that a cookie was set by the server without the secure flag
+being set. Although the initial setting of this cookie was via an HTTPS
+connection, any HTTP link to the same server will result in the cookie being
+send in clear text.
+</p><p class='solution'>Cookies must be marked as secure and only be transmitted if the communications channel with the host is a secure one. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</p><p class='url'>https://ac093e9edfa0.ngrok.io/index.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>HttpOnly cookies</p><p class='description'>
+HTTP by itself is a stateless protocol. Therefore the server is unable to determine
+which requests are performed by which client, and which clients are authenticated
+or unauthenticated.
+
+The use of HTTP cookies within the headers, allows a web server to identify each
+individual client and can therefore determine which clients hold valid
+authentication, from those that do not. These are known as session cookies.
+
+When a cookie is set by the server (sent the header of an HTTP response) there
+are several flags that can be set to configure the properties of the cookie and
+how it is to be handled by the browser.
+
+The `HttpOnly` flag assists in the prevention of client side-scripts (such as
+JavaScript) accessing and using the cookie.
+
+This can help prevent XSS attacks targeting the cookies holding the client's
+session token (setting the `HttpOnly` flag does not prevent, nor safeguard against
+XSS vulnerabilities themselves).
+</p><p class='solution'>Implement HttpOnly Cookies in the application to prevent the session cookie being theft or modified by malicious script. More information can be found at https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes and https://owasp.org/www-community/HttpOnly</p><p class='url'>https://ac093e9edfa0.ngrok.io/index.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://ac093e9edfa0.ngrok.io/logout.php</p></div></body></html>

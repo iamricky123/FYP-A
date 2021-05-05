@@ -5,6 +5,7 @@ from accounts .models import UserReport, SaveScanID, UserPortReport
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth.models import User
 
 
 class HomePageView(TemplateView):
@@ -54,6 +55,7 @@ class PortScanRedirectView (TemplateView):
 
 def Userregistration(request):
     if request.method == "POST":
+        email = request.POST.get("email")
         if request.POST.get('first_name') and request.POST.get('last_name') and request.POST.get('email') and request.POST.get('password') and request.POST.get('username'):
             saverecord = CustomUser()
             saverecord.first_name = request.POST.get('first_name')
@@ -65,7 +67,10 @@ def Userregistration(request):
             messages.success(request, "Registered")
             return render (request, 'registration.html')
 
+        else:
+            messages.error(request, "Unsuccessful registration. Invalid Information")
     else:
+        messages.error(request, "Unsuccessful registration. Invalid Information")
         return render(request, 'registration.html')
 
 def ShowArachniReport(request):
