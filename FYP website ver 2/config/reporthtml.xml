@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Arachni/arachni/v1.5.1/components/reporters/xml/schema.xsd">
   <version>1.5.1</version>
+<<<<<<< Updated upstream
   <seed>aac0d6ba577b75b3b1b58ec990d67289</seed>
+=======
+  <seed>f58ce665bcd3fce9e3ca5e3759d51678</seed>
+>>>>>>> Stashed changes
   <options>---
 audit:
   parameter_values: true
@@ -26,7 +30,11 @@ browser_cluster:
   screen_height: 1200
 datastore:
   report_path: 
+<<<<<<< Updated upstream
   token: d3ad04f287d5c05f936e855a5c7b96de
+=======
+  token: de09843e66e394a1d950421c8f043201
+>>>>>>> Stashed changes
 http:
   user_agent: Arachni/v1.4
   request_timeout: 10000
@@ -140,6 +148,7 @@ platforms: []
 plugins: {}
 no_fingerprinting: false
 authorized_by: 
+<<<<<<< Updated upstream
 url: https://a7336daca9e7.ngrok.io/
 </options>
   <start_datetime>2021-05-15T16:45:41+08:00</start_datetime>
@@ -3972,5 +3981,13 @@ X-Powered-By: PHP/7.4.16&#xD;
       <platform_name/>
     </issue>
   </issues>
+=======
+url: http://testphp.vulnweb.com/
+</options>
+  <start_datetime>2021-05-12T13:42:52+08:00</start_datetime>
+  <finish_datetime>2021-05-12T13:43:36+08:00</finish_datetime>
+  <sitemap/>
+  <issues/>
+>>>>>>> Stashed changes
   <plugins/>
 </report>

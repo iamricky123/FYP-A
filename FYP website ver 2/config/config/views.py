@@ -80,12 +80,12 @@ def start_scan(in_client,auth):
         jsonOpen2.close()
 
 
-def auth_scan_parameters(URL, user, _pass):
+def auth_scan_parameters(URL, user, _pass, user_param, pass_param):
     file1 = open(authscan + get_Profile() + '.json', 'r') #open to get data from the json file
     data = json.load(file1)
     file1.close()
     data["plugins"]["autologin"]["url"] = URL
-    data["plugins"]["autologin"]["parameters"] = 'email='+user+'&password='+_pass
+    data["plugins"]["autologin"]["parameters"] = user_param+'='+user+'&'+pass_param+'='+ _pass
     file1 = open(authscan + get_Profile() + '.json', 'w') #open file to update the values
     json.dump(data, file1, indent=4)
     file1.close()
@@ -130,20 +130,6 @@ def edit_profile(insert_prof):
     file.close()
 
 
-# def ArachniScan(request):
-#     scan_type = "non_authenticated_scan"
-#     target_website = request.POST.get('target_website')
-#     scan_select = request.POST.get('scan_select')
-#     target_username = request.POST.get('target_username')
-#     target_password = request.POST.get('target_password')
-#     if (target_password == "" and target_username == "" ):
-#         #non authenticated scan
-#         print(scan_type)
-#         return render(request,'arachni_form.html',{'data1':scan_type})
-#     else:
-#         scan_type= "authenticated_scan"
-#         print(scan_type)
-#         return render(request,'arachni_form.html',{'data1':scan_type})
 
 def url_in(insert_url):
     URL = insert_url
@@ -254,58 +240,14 @@ def generateReport(request, website, scan_id, scan_select):
         print(scan_select)
 
 
-# def main():
-#     client = ArachniClient()
-#     URL = url_in("http://testphp.vulnweb.com/")
-#     auth = 0
-#     username = ""
-#     password = ""
-#     profile = edit_profile("sql_injection")
-
-#     if(auth):
-#         auth_scan_parameters(URL, username, password)
-#         start_scan(client, auth)
-#         while(1):
-#             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-#                  continue
-#             else: 
-#                 scan_id = get_ID() 
-#                 print(client.get_status(scan_id))
-#                 print(client.get_report(get_ID(), 'xml'))
-#                 b = client.get_report(get_ID(), 'xml')
-#                 if (type(b) == bytes):
-#                     b = b.decode("utf-8")
-#                 elif (b == None):
-#                     b = "<?xml version='1.0'?><report>None</report>"
-#                 c = open("reporthtml.xml","w")
-#                 c.write(b)
-#                 c.close()
-#                 generateReport()
-#                 break
-#     else:
-#         start_scan(client, auth)
-#         while(1):
-#             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-#                 continue
-#             else: 
-#                 scan_id = get_ID() 
-#                 print(client.get_status(scan_id))
-#                 print(client.get_report(get_ID(), 'xml'))
-#                 b = client.get_report(get_ID(), 'xml')
-#                 if (type(b) == bytes):
-#                     b = b.decode("utf-8")
-#                 elif (b == None):
-#                     b = "<?xml version='1.0'?><report>None</report>"
-#                 c = open("reporthtml.xml","w")
-#                 c.write(b)
-#                 c.close()
-#                 generateReport()
-#                 break
         
 def SendEmail(request):
     mail_content = """Hello,
-    This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
-    Thank You"""
+    Your scan is completed. You may visit rickyteama.com to retrieve your results.
+    
+    Yours sincerely,
+    Ricky Team
+    """
 
     #The mail addresses and password
     sender_address = "fypb4343@gmail.com"
@@ -331,74 +273,73 @@ def SendEmail(request):
 
 
 def ArachniScan(request):
+    try:
+        scan_type = "non_authenticated_scan"
+        target_website = request.POST.get('target_website')
+        scan_select = request.POST.get('scan_select')
+        target_username = request.POST.get('target_username')
+        target_password = request.POST.get('target_password')
+        
 
-    scan_type = "non_authenticated_scan"
-    target_website = request.POST.get('target_website')
-    scan_select = request.POST.get('scan_select')
-    target_username = request.POST.get('target_username')
-    target_password = request.POST.get('target_password')
+        client = ArachniClient()
+        URL = url_in(target_website)
+        auth = 0
+        username = target_username
+        password = target_password
+        profile = edit_profile(scan_select)
 
 
-    client = ArachniClient()
-    URL = url_in(target_website)
-    auth = 0
-    username = target_username
-    password = target_password
-    profile = edit_profile(scan_select)
+        if (target_password == "" and target_username == "" ):
+            #non authenticated scan
 
+            auth = False
 
-    if (target_password == "" and target_username == "" ):
-        #non authenticated scan
+            start_scan(client, auth)
+            while(1):
+                if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
+                    continue
+                else: 
+                    scan_id = get_ID()
+                    b = client.get_report(scan_id, 'xml')
+                    if (type(b) == bytes):
+                        b = b.decode("utf-8")
+                    elif (b == None):
+                        b = "<?xml version='1.0'?><report>None</report>"
+                    c = open("reporthtml.xml","w")
+                    c.write(b)
+                    c.close()
+                    generateReport(request.user, target_website, scan_id, scan_select)
+                    SendEmail(request.user)
+                    break
 
-        auth = False
+            print(scan_type)
+            return redirect('arachni_redirect/',)
+        else:
+            scan_type= "authenticated_scan"
 
-        start_scan(client, auth)
-        while(1):
-            if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-                continue
-            else: 
-                scan_id = get_ID()
-                print(client.get_status(scan_id))
-                print(client.get_report(scan_id, 'xml'))
-                b = client.get_report(scan_id, 'xml')
-                if (type(b) == bytes):
-                    b = b.decode("utf-8")
-                elif (b == None):
-                    b = "<?xml version='1.0'?><report>None</report>"
-                c = open("reporthtml.xml","w")
-                c.write(b)
-                c.close()
-                generateReport(request.user, target_website, scan_id, scan_select)
-                SendEmail(request.user)
-                break
+            auth = True
 
-        print(scan_type)
-        return redirect('arachni_redirect/',)
-    else:
-        scan_type= "authenticated_scan"
+            auth_scan_parameters(URL, username, password)
+            start_scan(client, auth)
+            while(1):
+                if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
+                    continue
+                else: 
+                    scan_id = get_ID()
+                    b = client.get_report(scan_id, 'xml')
+                    if (type(b) == bytes):
+                        b = b.decode("utf-8")
+                    elif (b == None):
+                        b = "<?xml version='1.0'?><report>None</report>"
+                    c = open("reporthtml.xml","w")
+                    c.write(b)
+                    c.close()
+                    generateReport(request.user, target_website, scan_id, scan_select)
+                    SendEmail(request.user)
+                    break
 
-        auth = True
-
-        auth_scan_parameters(URL, username, password)
-        start_scan(client, auth)
-        while(1):
-            if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
-                 continue
-            else: 
-                scan_id = get_ID()
-                print(client.get_status(scan_id))
-                print(client.get_report(scan_id, 'xml'))
-                b = client.get_report(scan_id, 'xml')
-                if (type(b) == bytes):
-                    b = b.decode("utf-8")
-                elif (b == None):
-                    b = "<?xml version='1.0'?><report>None</report>"
-                c = open("reporthtml.xml","w")
-                c.write(b)
-                c.close()
-                generateReport(request.user, target_website, scan_id, scan_select)
-                SendEmail(request.user)
-                break
-
-        print(scan_type)
-        return redirect('arachni_redirect/',)
+            print(scan_type)
+            return redirect('arachni_redirect/',)
+    except: 
+        messages.error(request, 'Could not connect to host, try again')
+        return render(request, 'home.html')
