@@ -1,0 +1,53 @@
+<html lang='en'><head><link rel='stylesheet' href='mystyle1.css'></head><body><div class='report'><h1>Scanning Report</h1><p class='name'>Issue(s) Found</p><p class='description'>Issue(s) Description</p><p class='solution'>Remedy Guidance</p><p class='url'>Issue(s) Site</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://9b5f5217dedf.ngrok.io/login.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://9b5f5217dedf.ngrok.io/%3E%22'%3E%3Cmy_tag_4db496c9b3e0a33f9d9b80ca66cec31f/%3E</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Interesting responses</p><p class='description'>
+The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.
+</p><p class='solution'>Select the most recent system restore point and run System Restore. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html</p><p class='url'>https://9b5f5217dedf.ngrok.io/Arachni-4db496c9b3e0a33f9d9b80ca66cec31f</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>Insecure cookies</p><p class='description'>
+HTTP by itself is a stateless protocol. Therefore the server is unable to determine
+which requests are performed by which client, and which clients are authenticated
+or unauthenticated.
+
+The use of HTTP cookies within the headers, allows a web server to identify each
+individual client and can therefore determine which clients hold valid
+authentication, from those that do not. These are known as session cookies.
+
+When a cookie is set by the server (sent the header of an HTTP response) there
+are several flags that can be set to configure the properties of the cookie and
+how it is to be handled by the browser.
+
+One of these flags is known as the `secure` flag. When the secure flag is set,
+the browser will prevent it from being sent over a clear text channel (HTTP) and
+only allow it to be sent when an encrypted channel is used (HTTPS).
+
+Arachni discovered that a cookie was set by the server without the secure flag
+being set. Although the initial setting of this cookie was via an HTTPS
+connection, any HTTP link to the same server will result in the cookie being
+send in clear text.
+</p><p class='solution'>Cookies must be marked as secure and only be transmitted if the communications channel with the host is a secure one. More information can be found at https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</p><p class='url'>https://9b5f5217dedf.ngrok.io/login.php</p><p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p><p class='name'>HttpOnly cookies</p><p class='description'>
+HTTP by itself is a stateless protocol. Therefore the server is unable to determine
+which requests are performed by which client, and which clients are authenticated
+or unauthenticated.
+
+The use of HTTP cookies within the headers, allows a web server to identify each
+individual client and can therefore determine which clients hold valid
+authentication, from those that do not. These are known as session cookies.
+
+When a cookie is set by the server (sent the header of an HTTP response) there
+are several flags that can be set to configure the properties of the cookie and
+how it is to be handled by the browser.
+
+The `HttpOnly` flag assists in the prevention of client side-scripts (such as
+JavaScript) accessing and using the cookie.
+
+This can help prevent XSS attacks targeting the cookies holding the client's
+session token (setting the `HttpOnly` flag does not prevent, nor safeguard against
+XSS vulnerabilities themselves).
+</p><p class='solution'>Implement HttpOnly Cookies in the application to prevent the session cookie being theft or modified by malicious script. More information can be found at https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes and https://owasp.org/www-community/HttpOnly</p><p class='url'>https://9b5f5217dedf.ngrok.io/login.php</p></div></body></html>

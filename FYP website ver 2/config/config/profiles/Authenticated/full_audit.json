@@ -129,8 +129,8 @@
     "platforms": [],
     "plugins": {
         "autologin": {
-            "url": "http://blogfyp.byethost8.com",
-            "parameters": "email=admin&password=admin",
+            "url": "https://7d1ed41de2ec.ngrok.io/login.php",
+            "parameters": "email=hi&password=123",
             "check": "logout"
         },
         "autothrottle": {},
