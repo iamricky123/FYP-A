@@ -1,11 +1,5 @@
 {
-<<<<<<< Updated upstream
-    "url": "https://a7336daca9e7.ngrok.io",
-    "profile": "full_audit",
-    "scan_id": "d3ad04f287d5c05f936e855a5c7b96de"
-=======
     "url": "http://testphp.vulnweb.com/",
-    "profile": "full_audit",
-    "scan_id": "de4d88998f9c18d9da3c9c277148376c"
->>>>>>> Stashed changes
+    "profile": "sql_injection",
+    "scan_id": "eaff5bee9cc1670124f5570dac6b7858"
 }

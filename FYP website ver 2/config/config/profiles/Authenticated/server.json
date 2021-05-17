@@ -51,9 +51,9 @@
         "uniformity": {},
         "autothrottle": {},
         "autologin": {
-            "url": "http://blogfyp.byethost8.com",
+            "url": "http://192.168.0.184/bWAPP/login.php",
             "check": "logout",
-            "parameters": "email=admin&password=admin"
+            "parameters": "login=bee&password=bug"
         },
         "healthmap": {},
         "timing_attacks": {},

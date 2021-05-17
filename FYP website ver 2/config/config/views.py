@@ -82,7 +82,7 @@ def start_scan(in_client,auth):
 
 
 def auth_scan_parameters(URL, user, _pass, user_param, pass_param):
-    input_parameters = str(user_param) + "=" + str(user) + "&" + str(pass_param) + "=" + str(_pass)
+    input_parameters = str(user_param) + '=' + str(user) + '&' + str(pass_param) + '=' + str(_pass)
     file1 = open(authscan + get_Profile() + '.json', 'r') #open to get data from the json file
     data = json.load(file1)
     file1.close()
@@ -329,8 +329,6 @@ def ArachniScan(request):
                 continue
             else: 
                 scan_id = get_ID()
-                print(client.get_status(scan_id))
-                print(client.get_report(scan_id, 'xml'))
                 b = client.get_report(scan_id, 'xml')
                 if (type(b) == bytes):
                     b = b.decode("utf-8")
