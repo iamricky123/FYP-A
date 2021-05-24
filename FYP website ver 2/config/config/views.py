@@ -152,92 +152,55 @@ def generateReport(request, website, scan_id, scan_select):
     report_root = report_tree.getroot()
     solution_tree = ET.parse(solreport)
     solution_root = solution_tree.getroot()
-    today = date.today()
-    reportName = str(today)+"_ScanningReport.html"
+    today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     scan_id_1 =""
 
-    if (report_root.text == 'None'):
-        f = open(reportName,"w")
-        f.write("<html lang='en'>")
-        f.write("<head>")
-        f.write("<link rel='stylesheet' href='mystyle1.css'>")
-        f.write("</head>")
-        f.write("<body>")
-        f.write("<div class='report'>")
-        f.write("<h1>Scanning Report</h1>")
-        f.write("<p class='name'>None</p>")
-        f.write("</div>")
-        f.write("</body>")
-        f.write("</html>")
-        f.close()
-    else:
-        f = open(reportName,"w")
-        f.write("<html lang='en'>")
-        f.write("<head>")
-        f.write("<link rel='stylesheet' href='mystyle1.css'>")
-        f.write("</head>")
-        f.write("<body>")
-        f.write("<div class='report'>")
-        f.write("<h1>Scanning Report</h1>")
-        f.write("<p class='name'>Issue(s) Found</p>")
-        f.write("<p class='description'>Issue(s) Description</p>")
-        f.write("<p class='solution'>Remedy Guidance</p>")
-        f.write("<p class='url'>Issue(s) Site</p>")
 
-        for report1 in report_root:
-            for report2 in report1:
-                for report3 in report2:
-                    for report4 in report2.findall('description'):
-                        for report5 in report3.findall('name'):
-                            report_description = report4.text
-                            report_name = report5.text
-                            for report6 in report2.findall('vector'):
-                                for report7 in report6.findall('url'):
-                                    report_url = report7.text
-                                    for solution1 in solution_root.findall('select'):
-                                        for solution2 in solution1.findall('name'):
-                                            for solution3 in solution1.findall('description'):
-                                                for solution4 in solution1.findall('solution'):
-                                                    solution_name = solution2.text
-                                                    solution_description = solution3.text
-                                                    solution_solution = solution4.text
-                                                    if (solution_name == report_name):
-                                                        f.write("<p class='container'>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>")
-                                                        f.write("<p class='name'>"+solution_name+"</p>")
-                                                        f.write("<p class='description'>"+report_description+"</p>")
-                                                        f.write("<p class='solution'>"+solution_solution+"</p>")
-                                                        f.write("<p class='url'>"+report_url+"</p>")
+    for report1 in report_root:
+        for report2 in report1:
+            for report3 in report2:
+                for report4 in report2.findall('description'):
+                    for report5 in report3.findall('name'):
+                        report_description = report4.text
+                        report_name = report5.text
+                        for report6 in report2.findall('vector'):
+                            for report7 in report6.findall('url'):
+                                report_url = report7.text
+                                for solution1 in solution_root.findall('select'):
+                                    for solution2 in solution1.findall('name'):
+                                        for solution3 in solution1.findall('description'):
+                                            for solution4 in solution1.findall('solution'):
+                                                solution_name = solution2.text
+                                                solution_description = solution3.text
+                                                solution_solution = solution4.text
+                                        
 
-                                                        saverecord = UserReport()
-                                                        saverecord.email=request
-                                                        saverecord.scan_data=scan_id
-                                                        saverecord.scan_website=website
-                                                        saverecord.vulnerabilities=report_name
-                                                        saverecord.solutions=solution_solution
-                                                        saverecord.date = today
-                                                        saverecord.scan_type = scan_select
-                                                        saverecord.report_url = report_url
-                                                        saverecord.vulnerabilities_description = report_description
-                                                        saverecord.save()
+                                                saverecord = UserReport()
+                                                saverecord.email=request
+                                                saverecord.scan_data=scan_id
+                                                saverecord.scan_website=website
+                                                saverecord.vulnerabilities=report_name
+                                                saverecord.solutions=solution_solution
+                                                saverecord.date = today
+                                                saverecord.scan_type = scan_select
+                                                saverecord.report_url = report_url
+                                                saverecord.vulnerabilities_description = report_description
+                                                saverecord.save()
 
-                                                        savescanid = SaveScanID()
-                                                        scan_id_2 = scan_id
-                                                        if (scan_id_1 != scan_id_2):
-                                                            savescanid.scan_data = scan_id_2
-                                                            scan_id_1 = scan_id_2
-                                                            savescanid.date = today
-                                                            savescanid.scan_website = website
-                                                            savescanid.email = request
-                                                            savescanid.scan_type = scan_select
-                                                            savescanid.save()
-                                                        
+                                                savescanid = SaveScanID()
+                                                scan_id_2 = scan_id
+                                                if (scan_id_1 != scan_id_2):
+                                                    savescanid.scan_data = scan_id_2
+                                                    scan_id_1 = scan_id_2
+                                                    savescanid.date = today
+                                                    savescanid.scan_website = website
+                                                    savescanid.email = request
+                                                    savescanid.scan_type = scan_select
+                                                    savescanid.save()
+                                                    
 
-                                                        
-                                            
-        f.write("</div>")
-        f.write("</body>")
-        f.write("</html>")  
-        f.close()
+                                                    
+                                    
 
         print(scan_select)
 
