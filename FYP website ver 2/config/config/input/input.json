@@ -1,5 +1,5 @@
 {
-    "url": "http://testphp.vulnweb.com/",
+    "url": "https://395d6e8dad93.ngrok.io",
     "profile": "sql_injection",
-    "scan_id": "eaff5bee9cc1670124f5570dac6b7858"
+    "scan_id": "27604c85cd7bb6b267a249fa78002d36"
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 import requests, sys, webbrowser, smtplib, os, json, socket, nmap
-from subprocess import run,PIPE #,Popen
+from subprocess import run,PIPE ,Popen
 from django.contrib import messages
 from .arachni import *
 import xml.etree.ElementTree as ET
@@ -245,7 +245,7 @@ def generateReport(request, website, scan_id, scan_select):
         
 def SendEmail(request):
     mail_content = """Hello,
-    This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
+    Your scan has been completed you may visit http://www.rickyteama.tk to retrieve your results
     Thank You"""
 
     #The mail addresses and password
@@ -268,11 +268,17 @@ def SendEmail(request):
     session.quit()
     print('Mail Sent')
     
-
+def start_arachni_server():
+    try:
+        currentDirectory = os.getcwd() + "\\arachni\\bin\\arachni_rest_server.bat"
+        p = Popen(currentDirectory)
+        time.sleep(30)
+    except:
+        pass
 
 
 def ArachniScan(request):
-
+    start_arachni_server
     scan_type = "non_authenticated_scan"
     target_website = request.POST.get('target_website')
     scan_select = request.POST.get('scan_select')
@@ -314,7 +320,7 @@ def ArachniScan(request):
                 SendEmail(request.user)
                 break
 
-        print(scan_type)
+
         return redirect('arachni_redirect/',)
     else:
         scan_type= "authenticated_scan"
@@ -341,5 +347,4 @@ def ArachniScan(request):
                 SendEmail(request.user)
                 break
 
-        print(scan_type)
         return redirect('arachni_redirect/',)
