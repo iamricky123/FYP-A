@@ -41,7 +41,7 @@ def portscanscript(request):
                     saveportrecord.email = request.user
                     saveportrecord.save() 
     except:
-        messages.error(request, 'Could not connect to host, try again')
+        
         return render(request, 'home.html')
     
     return redirect('portscan_redirect/')  
@@ -219,7 +219,7 @@ def SendEmail(request):
     message = MIMEMultipart()
     message['From'] = sender_address
     message['To'] = receiver_address
-    message['Subject'] = 'A test mail sent by Python. It has an attachment.'   #The subject line
+    message['Subject'] = 'Team-Ricky Web Scanner - Scan Completed.'   #The subject line
     #The body and the attachments for the mail
     message.attach(MIMEText(mail_content, 'plain'))
     #Create SMTP session for sending the mail
@@ -239,9 +239,33 @@ def start_arachni_server():
     except:
         pass
 
+def SendStartEmail(request):
+    mail_content = """Hello, your scan is in progress, you will receive another email once the scan is completed"""
+
+    #The mail addresses and password
+    sender_address = "fypb4343@gmail.com"
+    sender_pass = "@bcde_12345"
+    receiver_address = str(request)
+    #Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = receiver_address
+    message['Subject'] = 'Team-Ricky Web Scanner - Arachni scan is running.'   #The subject line
+    #The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'plain'))
+    #Create SMTP session for sending the mail
+    session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
+    session.starttls() #enable security
+    session.login(sender_address, sender_pass) #login with mail_id and password
+    text = message.as_string()
+    session.sendmail(sender_address, receiver_address, text)
+    session.quit()
+    print('Mail Sent')
 
 def ArachniScan(request):
+    
     start_arachni_server
+    SendStartEmail(request.user)
     scan_type = "non_authenticated_scan"
     target_website = request.POST.get('target_website')
     scan_select = request.POST.get('scan_select')
@@ -264,6 +288,7 @@ def ArachniScan(request):
 
         auth = False
 
+        
         start_scan(client, auth)
         while(1):
             if(client.get_report(get_ID(), 'xml') == None and client.get_status(get_ID())["busy"] == True):
