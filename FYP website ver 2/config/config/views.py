@@ -174,30 +174,30 @@ def generateReport(request, website, scan_id, scan_select):
                                                 solution_description = solution3.text
                                                 solution_solution = solution4.text
                                         
+                                                if (solution_name == report_name):
+                                                    saverecord = UserReport()
+                                                    saverecord.email=request
+                                                    saverecord.scan_data=scan_id
+                                                    saverecord.scan_website=website
+                                                    saverecord.vulnerabilities=report_name
+                                                    saverecord.solutions=solution_solution
+                                                    saverecord.date = today
+                                                    saverecord.scan_type = scan_select
+                                                    saverecord.report_url = report_url
+                                                    saverecord.vulnerabilities_description = report_description
+                                                    saverecord.save()
 
-                                                saverecord = UserReport()
-                                                saverecord.email=request
-                                                saverecord.scan_data=scan_id
-                                                saverecord.scan_website=website
-                                                saverecord.vulnerabilities=report_name
-                                                saverecord.solutions=solution_solution
-                                                saverecord.date = today
-                                                saverecord.scan_type = scan_select
-                                                saverecord.report_url = report_url
-                                                saverecord.vulnerabilities_description = report_description
-                                                saverecord.save()
+                                                    savescanid = SaveScanID()
+                                                    scan_id_2 = scan_id
+                                                    if (scan_id_1 != scan_id_2):
+                                                        savescanid.scan_data = scan_id_2
+                                                        scan_id_1 = scan_id_2
+                                                        savescanid.date = today
+                                                        savescanid.scan_website = website
+                                                        savescanid.email = request
+                                                        savescanid.scan_type = scan_select
+                                                        savescanid.save()
 
-                                                savescanid = SaveScanID()
-                                                scan_id_2 = scan_id
-                                                if (scan_id_1 != scan_id_2):
-                                                    savescanid.scan_data = scan_id_2
-                                                    scan_id_1 = scan_id_2
-                                                    savescanid.date = today
-                                                    savescanid.scan_website = website
-                                                    savescanid.email = request
-                                                    savescanid.scan_type = scan_select
-                                                    savescanid.save()
-                                                    
 
                                                     
                                     
